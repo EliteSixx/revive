@@ -45,13 +45,13 @@ Goal: every page from `design.md` section 10 exists with real layout and sample 
 
 - [x] Button, Input, Select, Textarea, Choice (checkbox and radio), ChoiceGroup, Field (label, helper, error)
 - [x] Card, Badge, VerificationBadge, StatusBadge
-- [x] DataTable (empty state, total count). Sorting and pagination deferred to Phase 3, when tables read real queries
+- [x] DataTable (empty state, total count, sorting, pagination)
 - [x] MetricTile (with n, verification share, suppression) and OutcomeSummaryTiles
 - [x] ChartCard with one Recharts wrapper for bar, stacked bar and line, plus "View as table"
 - [x] FilterBar (visual only in Phase 1)
 - [x] PageHeader, Breadcrumbs, EmptyState, SampleDataNotice, DraftNotice
 - [x] Dialog (confirmations), Tabs, Stepper
-- [ ] Toast: deferred until the first form saves (nothing saves in Phase 1)
+- [x] Toast (`useToast`), added in 1.7
 - [x] AppShell (top bar + sidebar, collapses below 1024px), TraineeShell (mobile single column)
 - [x] PublicHeader, PublicFooter (with disclaimer and legal links), PublicFrame
 - [x] `src/lib/navigation.ts`: sidebar items per portal
@@ -91,6 +91,15 @@ Government (M3 area):
 - [~] Accessibility checklist (`design.md` section 11): one `h1` and a unique title on every route verified; a full keyboard and screen reader pass is still to do
 - [x] Search the codebase for banned patterns: gradients, `rounded-full` on buttons/inputs, emoji, em dashes (only the auto-generated Next.js block in `AGENTS.md` has em dashes)
 - [x] Every portal page shows the "Sample data" notice (set once in the portal shells)
+- [x] Merge to `main` (pull request 2, 3 Oct 2026)
+
+### 1.7 Shared groundwork before splitting
+
+- [x] Toast messages for success and error (`src/components/ui/toast.tsx`, provider in the root layout)
+- [x] DataTable sorting (`sortValue`) and pagination (`pageSize`); shared outcome columns are sortable
+- [x] Frontend-phase mock layer: `createMockStore`, `useMockStore`, `simulateRequest`, `ActionError`, "Reset sample data" (`architecture.md` section 11)
+- [x] React Hook Form, Zod and resolvers installed and pinned, so no member needs to change `package.json` for forms
+- [ ] Fill in M1, M2 and M3 names in `memory.md`
 - [ ] Merge to `main`; each member creates their feature branch from it
 
 ## Phase 2: Shared foundation (together, on `main`, before splitting)

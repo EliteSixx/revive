@@ -88,6 +88,12 @@ Sample data is allowed **only** inside portals, only while features are unbuilt,
 - Every page exports `metadata` with a title in the form "Page name | Revive".
 - Follow the conventions of the installed Next.js version (for example, `params` and `searchParams` are Promises in Next.js 15 and later).
 
+### Changing data in the frontend phase
+
+- Change sample data only through your area's `src/features/<area>/mock-api.ts` functions (`architecture.md` section 11). Never call `setState` on a store from a page or component.
+- Show the result of every action with `useToast`, and disable the button while the action runs.
+- Do not add a second store, request helper or toast. Use the shared ones.
+
 ### Formatting values
 
 - Always use the helpers in `src/lib/format.ts` for numbers, currency, percentages and dates (`en-IN` locale). Do not call `toLocaleString` directly in components.

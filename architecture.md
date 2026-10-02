@@ -14,7 +14,7 @@ Read `prd.md` first. This document explains how Revive is built and where code b
 | UI primitives | shadcn/ui pattern: our own components in `src/components/ui`, built on Radix primitives (`radix-ui`) and `class-variance-authority`. The shadcn CLI is not used, so `globals.css` stays the only source of tokens | Accessible primitives that we own and can edit |
 | Icons | `lucide-react` | Consistent line icons; no emoji |
 | Charts | Recharts, wrapped in `src/components/charts` | Simple API; wrappers enforce our palette and the small-group rule |
-| Tables | Our own `DataTable` in `src/components/ui/table.tsx`. Static in Phase 1; sorting and pagination are added when tables read real queries | One small component instead of a table library |
+| Tables | Our own `DataTable` in `src/components/ui/table.tsx`: sortable columns (`sortValue`) and optional pagination (`pageSize`), done in the browser | One small component instead of a table library |
 | Forms | React Hook Form + Zod | One Zod schema validates both client and server |
 | Database | PostgreSQL | Relational, longitudinal data; strong aggregate queries |
 | ORM | Prisma | Typed queries, migrations |
@@ -130,19 +130,21 @@ revive/
         settings/page.tsx
     components/                   SHARED
       ui/                         primitives: button, card, badge, field, input, select, choice,
-                                  table, tabs, dialog, stepper, breadcrumbs, empty-state
+                                  table + data-table-view (sorting, pagination), tabs, dialog,
+                                  toast, stepper, breadcrumbs, empty-state
       layout/                     app-shell, trainee-shell, public-frame, public-header, public-footer,
                                   portal-nav, mobile-nav, page-header, long-form, logo, skip-link
       charts/                     chart-card, outcome-chart, chart-data, format-chart-value, palette, types
       domain/                     metric-tile, outcome-summary-tiles, outcome-columns, filter-bar,
                                   verification-badge, status-badge, remedial-action-list,
-                                  sample-data-notice, draft-notice
+                                  sample-data-notice, reset-sample-data-button, draft-notice
     features/
       trainee/                    M1: components used only by trainee screens (consent-card)
       agent/                      M1
       provider/                   M2
       employer/                   M2
       gov/                        M3 (gov-filters, breakdown-table)
+      <area>/mock-api.ts          frontend phase: that area's stores and mock actions (section 11)
     lib/                          SHARED, pure functions only (no I/O)
       cn.ts                       className helper
       format.ts                   en-IN numbers, rupees, percentages, dates
@@ -151,6 +153,8 @@ revive/
       navigation.ts               sidebar items per portal
       constants.ts                labels, reason codes, verification levels, follow-up windows
     mocks/                        SHARED, Phase 1 sample data (replaced by the database in Phase 2)
+      client-store.ts             createMockStore, useMockStore, resetAllMockStores
+      simulate-request.ts         simulateRequest, ActionResult, ActionError
       reference.ts                districts, programmes, courses, providers, centres, employers
       synthetic-trainees.ts       seeded generator for about 2,600 synthetic trainee records
       aggregate.ts  analytics.ts  counts and grouped datasets built from those records
@@ -271,6 +275,62 @@ In Phase 1 there is no database, no auth and no server code:
 - Pages read typed sample data from `src/mocks`. Dashboard figures are aggregated from one seeded set of synthetic trainee records, so totals agree across pages.
 - Rates are still calculated only through `src/lib/metrics.ts`, so the formulas carry over unchanged when real data arrives.
 - Sign-in pages are static forms. The sign-in page lists every portal under "Prototype preview" so the team can open each one.
-- Buttons have no handlers and forms do not submit. Filters are visual only.
+- In the merged UI shell, buttons have no handlers and forms do not submit. Filters are visual only. Each member adds frontend behaviour for their own area using section 11.
 - `AppShell` and `TraineeShell` show the "Sample data" notice on every portal page. Remove it from the shells when real data is connected.
 - No `src/server` folder exists yet.
+
+## 11. Frontend phase: simulating actions
+
+Until the backend exists, actions such as "Withdraw consent", "Confirm employment" or "Create action" change sample data held in the browser. Everyone uses the same pattern, so Phase 2 only has to replace one layer.
+
+**Shared pieces (do not copy them):**
+
+| File | Purpose |
+| --- | --- |
+| `src/mocks/client-store.ts` | `createMockStore(name, initialData)` holds data that can change; `useMockStore(store)` reads it in a client component. Kept in `sessionStorage` for the tab, so changes survive page changes and reset when the tab closes |
+| `src/mocks/simulate-request.ts` | `simulateRequest(fn)` runs a change after a short delay and returns `ActionResult` (`{ ok: true, data }` or `{ ok: false, error }`). Throw `ActionError("message")` for errors the user should see |
+| `src/components/ui/toast.tsx` | `useToast().showToast("success" \| "error", message)` |
+| "Reset sample data" in the sample-data notice | Puts every store back to its starting data, for demos |
+
+**Each area owns one mock API file:** `src/features/<area>/mock-api.ts` (for example `src/features/employer/mock-api.ts`). It creates that area's stores and exports async functions named like the future server actions. Pages and components never change a store directly; they call these functions.
+
+```ts
+// src/features/employer/mock-api.ts
+import { createMockStore } from "@/mocks/client-store";
+import { ActionError, simulateRequest } from "@/mocks/simulate-request";
+import { VERIFICATION_REQUESTS } from "@/mocks/employer-portal";
+
+export const verificationRequestsStore = createMockStore("employer-verification-requests", VERIFICATION_REQUESTS);
+
+export function confirmEmployment(requestId: string) {
+  return simulateRequest(() => {
+    const request = verificationRequestsStore.getState().find((item) => item.id === requestId);
+    if (!request) throw new ActionError("This request no longer exists. Refresh the page.");
+    verificationRequestsStore.setState((requests) =>
+      requests.map((item) => (item.id === requestId ? { ...item, status: "CONFIRMED" } : item)),
+    );
+  });
+}
+```
+
+```tsx
+// A client component in src/features/employer/
+const requests = useMockStore(verificationRequestsStore);
+const { showToast } = useToast();
+const [isPending, startTransition] = useTransition();
+
+function handleConfirm(requestId: string) {
+  startTransition(async () => {
+    const result = await confirmEmployment(requestId);
+    showToast(result.ok ? "success" : "error", result.ok ? "Employment confirmed." : result.error);
+  });
+}
+```
+
+Rules for this phase:
+
+1. Parts of a page that show changeable data are client components that read `useMockStore`. The rest of the page stays a server component.
+2. Forms use React Hook Form with a Zod schema. Keep each schema in the area's folder; Phase 2 reuses it to validate on the server.
+3. Store names are unique and start with the area, e.g. `"trainee-consent-events"`.
+4. Only store plain JSON data (no functions, dates as ISO strings).
+5. In Phase 2, each `mock-api.ts` function is replaced by a server action with the same name, inputs and `ActionResult` output, and `useMockStore` reads are replaced by server data.

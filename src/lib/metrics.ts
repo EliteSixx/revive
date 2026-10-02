@@ -80,10 +80,15 @@ export function formatBase(count: number, description: string): string {
     : `n = ${formatNumber(count)} ${description}`;
 }
 
+/** The value of a rate, or null when it is suppressed or not yet available. */
+export function rateValue(rate: RateResult | null): number | null {
+  return rate === null || rate.isSuppressed ? null : rate.value;
+}
+
 /** Sort value for a rate: suppressed or missing rates sort after every real value. */
 export function rateSortValue(rate: RateResult | null): number {
   // MAX_VALUE rather than Infinity so two missing rates compare as equal (Infinity - Infinity is NaN).
-  return rate === null || rate.isSuppressed ? Number.MAX_VALUE : rate.value;
+  return rateValue(rate) ?? Number.MAX_VALUE;
 }
 
 /** Median values are suppressed under the same small-group rule as rates. */

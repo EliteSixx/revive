@@ -32,7 +32,7 @@ export default async function ProviderBatchPage(
           caption="Trainees in this batch"
           rows={summary.trainees}
           getRowKey={(trainee) => trainee.id}
-          totalCount={summary.trainees.length}
+          pageSize={20}
           columns={[
             {
               key: "name",
