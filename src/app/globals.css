@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. Source of truth: design.md sections 3 to 5.
+ * Tailwind's default colours, radii, shadows and font sizes are reset so that
+ * only these tokens can be used in class names.
+ */
+@theme {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-page: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f0f2f5;
+  --color-border: #d9dde3;
+  --color-border-strong: #b8bfc9;
+  --color-fg: #16191f;
+  --color-fg-muted: #545b67;
+  --color-fg-subtle: #6b7280;
+  --color-primary: #1f4e8c;
+  --color-primary-hover: #183e70;
+  --color-primary-subtle: #e8eef7;
+  --color-success: #1e7a46;
+  --color-success-subtle: #e7f3ec;
+  --color-warning: #9a5b00;
+  --color-warning-subtle: #fbf1e2;
+  --color-danger: #b42318;
+  --color-danger-subtle: #fbeae8;
+  --color-info-subtle: #eef2f7;
+
+  --radius-*: initial;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  --shadow-*: initial;
+  --shadow-overlay: 0 4px 16px rgb(22 25 31 / 0.12);
+
+  --text-*: initial;
+  --text-display: 2rem;
+  --text-display--line-height: 2.5rem;
+  --text-display--font-weight: 600;
+  --text-h1: 1.5rem;
+  --text-h1--line-height: 2rem;
+  --text-h1--font-weight: 600;
+  --text-h2: 1.25rem;
+  --text-h2--line-height: 1.75rem;
+  --text-h2--font-weight: 600;
+  --text-h3: 1rem;
+  --text-h3--line-height: 1.5rem;
+  --text-h3--font-weight: 600;
+  --text-body-lg: 1rem;
+  --text-body-lg--line-height: 1.5rem;
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.5rem;
+  --text-small: 0.8125rem;
+  --text-small--line-height: 1.25rem;
+  --text-label: 0.8125rem;
+  --text-label--line-height: 1.25rem;
+  --text-label--font-weight: 500;
+  --text-metric: 1.75rem;
+  --text-metric--line-height: 2.25rem;
+  --text-metric--font-weight: 600;
+}
+
+@theme inline {
+  --font-sans: var(--font-noto-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-border);
+  }
+
+  html {
+    background-color: var(--color-page);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0ms !important;
+      animation-duration: 0ms !important;
+    }
+  }
+}

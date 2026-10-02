@@ -10,9 +10,9 @@ Shared memory for the team and for AI assistants. Read this first in every sessi
 | --- | --- |
 | Project | Revive, SIH 2026, Problem Statement 26135 |
 | Client | Government of Maharashtra, Department of Skills, Employment, Entrepreneurship and Innovation (Maharashtra State Innovation Society) |
-| Current phase | Phase 0 done (documentation). Phase 1 (UI shell) not started |
+| Current phase | Phase 1 (frontend UI shell) built on `feature/sinu`, not yet merged to `main` |
 | Current branch | `feature/sinu` |
-| Next step | Team reviews the docs, then Phase 1 UI shell is built and merged to `main` |
+| Next step | Team reviews the UI and docs, then merges to `main` and branches by stakeholder. Frontend only: no backend work until the team decides to start Phase 2 |
 
 ## 2. Team
 
@@ -40,6 +40,15 @@ Shared memory for the team and for AI assistants. Read this first in every sessi
 | 2 Oct 2026 | External integrations (SMS, WhatsApp, IVR, EPFO, SIDH, GSTIN/Udyam) are adapters with simulated implementations in the prototype | No real API access during the hackathon; labelled in the UI |
 | 2 Oct 2026 | No official government emblems or logos; footer carries a prototype disclaimer | Not authorised to use them; avoids misleading users |
 | 2 Oct 2026 | Phase 1 is UI only, built on one branch and merged to `main` before the split | Minimises UI conflicts between the three branches |
+| 3 Oct 2026 | **Frontend prototype only for now.** No backend: no database, auth, API routes, server actions or `src/server`. Every screen reads sample data from `src/mocks`. Phase 2 (backend) starts only when the team says so | The current goal is to show a frontend prototype |
+| 3 Oct 2026 | Stakeholder pages stay as UI shells: no form submits, buttons have no handlers, filters are visual only | Each member builds their own stakeholder's frontend behaviour in their own branch |
+| 3 Oct 2026 | shadcn/ui pattern without the CLI: own components on `radix-ui` + `class-variance-authority` | The CLI would overwrite our tokens in `globals.css` |
+| 3 Oct 2026 | TanStack Table dropped; own static `DataTable` | Latest TanStack Table is a new major version (v9); a small table is enough for Phase 1 |
+| 3 Oct 2026 | Tailwind default colours, radii, shadows and font sizes are reset in `globals.css`; colour tokens are named `fg`, `fg-muted`, `fg-subtle` for text | Only design tokens can be used; `text-fg` reads better than `text-text` |
+| 3 Oct 2026 | Dashboard sample data comes from a seeded generator (`src/mocks/synthetic-trainees.ts`, about 2,600 synthetic trainees, seed 26135) | Totals agree across every page; Phase 2 seed script can reuse it |
+| 3 Oct 2026 | Small-group suppression also hides counts and base lines ("n = ..."), not only rates | A visible base of 8 would reveal a suppressed group |
+| 3 Oct 2026 | The "Sample data" notice lives in `AppShell` and `TraineeShell` | Shown on every portal page; removed in one place later |
+| 3 Oct 2026 | Programme names in sample data are generic ("Central short-term training (sample)"); provider and employer names are invented | Avoids presenting real schemes or organisations with fake figures |
 
 ## 4. Open questions
 
@@ -50,10 +59,35 @@ Shared memory for the team and for AI assistants. Read this first in every sessi
 | 3 | Which real programme to model the demo on (PMKVY Short Term Training, a state MSSDS scheme, or both)? | All | Open |
 | 4 | Final wording of privacy policy and terms (needs team review) | All | Open |
 | 5 | Fill in team member names for M1, M2, M3 | All | Open |
+| 6 | Team contact email for the Contact page (`TODO(copy)` in `src/app/(public)/contact/page.tsx`) | All | Open |
+| 7 | When to start Phase 2 (backend) | All | Open: frontend prototype first |
 
 ## 5. Installed versions
 
-To be recorded during Phase 1 setup (Node, Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Recharts, TanStack Table, lucide-react).
+Exact versions are pinned in `package.json`. Recorded 3 Oct 2026.
+
+| Package | Version |
+| --- | --- |
+| Node.js | 24.19.0 (npm 11.17.0) |
+| next | 16.3.8 (Turbopack is the default bundler) |
+| react, react-dom | 19.2.8 |
+| typescript | 5.9.3 |
+| tailwindcss, @tailwindcss/postcss | 4.3.3 |
+| radix-ui | 1.6.7 |
+| class-variance-authority | 0.7.1 |
+| clsx | 2.1.1 |
+| tailwind-merge | 3.7.0 |
+| lucide-react | 1.50.0 |
+| recharts | 3.10.1 |
+| eslint | 9.39.5 (eslint-config-next 16.3.8) |
+| prettier | 3.9.9 (prettier-plugin-tailwindcss 0.8.1) |
+
+Notes for this Next.js version:
+- `params` and `searchParams` are Promises; type pages with the global `PageProps<"/route/[id]">` helper.
+- `npm run typecheck` runs `next typegen` first so those route types exist.
+- `next lint` no longer exists; `npm run lint` runs ESLint directly.
+- Middleware is now called `proxy` (relevant in Phase 2).
+- Bundled docs: `node_modules/next/dist/docs/`.
 
 ## 6. Glossary
 
@@ -78,6 +112,14 @@ To be recorded during Phase 1 setup (Node, Next.js, React, TypeScript, Tailwind 
 | MSInS | Maharashtra State Innovation Society |
 
 ## 7. Log
+
+### 3 Oct 2026
+
+- Synced `feature/sinu` with `main` (fast-forward to the merge of the docs pull request).
+- Built the Phase 1 frontend UI shell: 37 routes across public pages and the trainee, follow-up desk, provider, employer and government portals. See `tasks.md` Phase 1.
+- Frontend only, as agreed: no backend, no stakeholder features. Forms and buttons are static.
+- Checks: lint, typecheck and production build pass; every route has no sideways scroll at 375px and has one `h1` and a unique title; banned-pattern search is clean.
+- Still to do before merging: full keyboard and screen reader pass, team review of privacy and terms text, team contact email.
 
 ### 2 Oct 2026
 

@@ -22,77 +22,80 @@ Goal: every page from `design.md` section 10 exists with real layout and sample 
 
 ### 1.1 Project setup
 
-- [ ] Create Next.js app (App Router, TypeScript, Tailwind CSS v4, ESLint, `src/` directory, npm)
-- [ ] Add Prettier; scripts `lint`, `typecheck`, `format`, `build`
-- [ ] Add `.nvmrc` (Node 24), `.env.example`, update `.gitignore`
-- [ ] Install `lucide-react`, `recharts`, `@tanstack/react-table`, `clsx`, `tailwind-merge`
-- [ ] Initialise shadcn/ui and add only the primitives we use
-- [ ] Record exact installed versions in `memory.md`
+- [x] Create Next.js app (App Router, TypeScript, Tailwind CSS v4, ESLint, `src/` directory, npm)
+- [x] Add Prettier; scripts `lint`, `typecheck`, `format`, `format:check`, `build`
+- [x] Add `.nvmrc` (Node 24), `.env.example`, update `.gitignore`
+- [x] Install `lucide-react`, `recharts`, `radix-ui`, `class-variance-authority`, `clsx`, `tailwind-merge` (TanStack Table dropped; see `memory.md`)
+- [x] shadcn/ui pattern without the CLI: our own primitives on Radix (see `architecture.md` section 1)
+- [x] Record exact installed versions in `memory.md`
 
 ### 1.2 Foundations (shared)
 
-- [ ] Design tokens in `src/app/globals.css` (`design.md` sections 3 to 5)
-- [ ] Noto Sans via `next/font/google`; check tabular figures render
-- [ ] Root layout with default metadata and title template "%s | Revive"
-- [ ] `src/lib/cn.ts`, `src/lib/format.ts` (en-IN numbers, ₹, %, dates)
-- [ ] `src/lib/metrics.ts`: metric definitions from PRD section 8 and `suppressSmallGroup()`
-- [ ] `src/lib/constants.ts`: verification levels, outcome types, reason codes, follow-up windows, consent purposes
-- [ ] `src/types/domain.ts`: domain types from `architecture.md` section 4
-- [ ] `src/mocks/`: synthetic sample data (districts, programmes, courses, providers, batches, trainees, outcomes, follow-ups, employers, actions)
-- [ ] Logotype component and favicon set (`design.md` section 9)
+- [x] Design tokens in `src/app/globals.css` (`design.md` sections 3 to 5); Tailwind defaults switched off
+- [x] Noto Sans via `next/font/google`; digits checked to be equal width
+- [x] Root layout with default metadata and title template "%s | Revive"
+- [x] `src/lib/cn.ts`, `src/lib/format.ts` (en-IN numbers, rupees, %, dates)
+- [x] `src/lib/metrics.ts`: metric definitions from PRD section 8, rates and small-group suppression
+- [x] `src/lib/constants.ts`: labels, verification levels, outcome types, reason codes, follow-up windows, consent purposes
+- [x] `src/types/domain.ts` and `src/types/analytics.ts`
+- [x] `src/mocks/`: seeded synthetic trainee records plus portal sample data
+- [x] Logotype component and favicon set (`design.md` section 9)
 
 ### 1.3 Shared components
 
-- [ ] Button, Input, Select, Textarea, Checkbox, RadioGroup, Label, FieldError
-- [ ] Card, Badge, VerificationBadge, StatusBadge
-- [ ] DataTable (sorting, pagination, empty state)
-- [ ] MetricTile (with n, verification share, suppression)
-- [ ] ChartCard + BarChart, StackedBarChart, LineChart wrappers with "View as table"
-- [ ] FilterBar
-- [ ] PageHeader, Breadcrumbs, EmptyState, SampleDataNotice
-- [ ] Dialog, Toast, Tabs, Stepper
-- [ ] AppShell (top bar + sidebar, collapses below 1024px), TraineeShell (mobile single column)
-- [ ] PublicHeader, PublicFooter (with disclaimer and legal links)
-- [ ] `src/lib/navigation.ts`: sidebar items per role
+- [x] Button, Input, Select, Textarea, Choice (checkbox and radio), ChoiceGroup, Field (label, helper, error)
+- [x] Card, Badge, VerificationBadge, StatusBadge
+- [x] DataTable (empty state, total count). Sorting and pagination deferred to Phase 3, when tables read real queries
+- [x] MetricTile (with n, verification share, suppression) and OutcomeSummaryTiles
+- [x] ChartCard with one Recharts wrapper for bar, stacked bar and line, plus "View as table"
+- [x] FilterBar (visual only in Phase 1)
+- [x] PageHeader, Breadcrumbs, EmptyState, SampleDataNotice, DraftNotice
+- [x] Dialog (confirmations), Tabs, Stepper
+- [ ] Toast: deferred until the first form saves (nothing saves in Phase 1)
+- [x] AppShell (top bar + sidebar, collapses below 1024px), TraineeShell (mobile single column)
+- [x] PublicHeader, PublicFooter (with disclaimer and legal links), PublicFrame
+- [x] `src/lib/navigation.ts`: sidebar items per portal
 
 ### 1.4 Public pages (shared)
 
-- [ ] Home (FR-S-01)
-- [ ] How it works (FR-S-02)
-- [ ] Privacy policy (FR-S-03): draft content, marked for team review
-- [ ] Terms and conditions (FR-S-04): draft content, marked for team review
-- [ ] Contact (FR-S-05)
-- [ ] Accessibility statement (FR-S-06)
-- [ ] Sign in (role tabs, static forms; links into each portal for now)
-- [ ] 404 page
+- [x] Home (FR-S-01)
+- [x] How it works (FR-S-02)
+- [x] Privacy policy (FR-S-03): draft content, marked for team review
+- [x] Terms and conditions (FR-S-04): draft content, marked for team review
+- [x] Contact (FR-S-05): team contact details still to be added (`TODO(copy)`)
+- [x] Accessibility statement (FR-S-06)
+- [x] Sign in (role tabs, static forms; links into each portal for now)
+- [x] 404 page
 
 ### 1.5 Portal page shells (layout + sample data, no logic)
 
 Trainee (M1 area):
-- [ ] Dashboard, Consent, Follow-up form (stepper, static), Report outcome, Profile
+- [x] Home, Consent, Follow-up form (stepper, first question only), Report a change, Profile
 
 Follow-up agent (M1 area):
-- [ ] Work queue, Call screen
+- [x] Work queue, Call screen
 
 Training provider (M2 area):
-- [ ] Scorecard, Batches, Batch detail, Upload roster, Record placement, Actions
+- [x] Scorecard, Batches, Batch detail, Upload roster, Record placement, Actions
 
 Employer (M2 area):
-- [ ] Dashboard, Verifications, Hires, Skill feedback, Register
+- [x] Dashboard, Verifications, Hires, Skill feedback, Register
 
 Government (M3 area):
-- [ ] Overview, Cohorts, Providers, Provider detail, Districts, District detail, Demographics, Skill gaps, Data quality, Actions, Definitions, Settings
+- [x] Overview, Cohorts, Providers, Provider detail, Districts, District detail, Demographics, Skill gaps, Data quality, Actions, Definitions, Settings
 
 ### 1.6 Phase 1 check before merging to `main`
 
-- [ ] Lint, typecheck and build pass
-- [ ] Every page checked at 360px, 768px and 1280px
-- [ ] Accessibility checklist (`design.md` section 11) on every page
-- [ ] Search the codebase for banned patterns: gradients, `rounded-full` on buttons/inputs, emoji, em dashes
-- [ ] Every portal page shows the "Sample data" notice
+- [x] Lint, typecheck and build pass
+- [x] Every route checked at 375px with no sideways page scroll; staff pages spot-checked at 800px and 1280px
+- [~] Accessibility checklist (`design.md` section 11): one `h1` and a unique title on every route verified; a full keyboard and screen reader pass is still to do
+- [x] Search the codebase for banned patterns: gradients, `rounded-full` on buttons/inputs, emoji, em dashes (only the auto-generated Next.js block in `AGENTS.md` has em dashes)
+- [x] Every portal page shows the "Sample data" notice (set once in the portal shells)
 - [ ] Merge to `main`; each member creates their feature branch from it
 
 ## Phase 2: Shared foundation (together, on `main`, before splitting)
+
+**On hold.** The team is building a frontend prototype first (`memory.md`, decision of 3 Oct 2026). Do not start any item below until the team agrees.
 
 Do this first so the three branches do not each invent their own database and auth.
 

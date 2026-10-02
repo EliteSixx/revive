@@ -2,7 +2,7 @@
 
 Revive is a public-sector tool used by trainees on basic phones and by officials making funding decisions. The design has to look trustworthy, plain and precise: closer to a well-made government service than a startup landing page. If a design choice draws attention to itself rather than to the data, remove it.
 
-Tokens below are the only allowed values. If a new value is needed, add it here first, then to `src/app/globals.css`.
+Tokens below are the only allowed values. If a new value is needed, add it here first, then to `src/app/globals.css`. Tailwind's default colours, radii, shadows and font sizes are switched off there, so a class such as `bg-blue-500` or `rounded-lg` does nothing. Each `--color-x` token is used as `bg-x`, `text-x` or `border-x`.
 
 ---
 
@@ -44,9 +44,9 @@ Light theme only in v1.
 | `--color-surface-muted` | `#F0F2F5` | Table header, subtle fills, read-only fields |
 | `--color-border` | `#D9DDE3` | Card and table borders, dividers |
 | `--color-border-strong` | `#B8BFC9` | Input borders |
-| `--color-text` | `#16191F` | Body and headings |
-| `--color-text-muted` | `#545B67` | Secondary text, captions, helper text |
-| `--color-text-subtle` | `#6B7280` | Placeholders, disabled text (never for essential info) |
+| `--color-fg` | `#16191F` | Body and headings (`text-fg`) |
+| `--color-fg-muted` | `#545B67` | Secondary text, captions, helper text (`text-fg-muted`) |
+| `--color-fg-subtle` | `#6B7280` | Placeholders, disabled text, never for essential info (`text-fg-subtle`) |
 
 ### Brand and status
 
@@ -104,6 +104,7 @@ Verification levels always use the same colours in charts. Each is at least 3:1 
 | `text-h1` | 24 / 32 | 600 | Page title |
 | `text-h2` | 20 / 28 | 600 | Section title |
 | `text-h3` | 16 / 24 | 600 | Card title |
+| `text-body-lg` | 16 / 24 | 400 | Default text on trainee screens |
 | `text-body` | 15 / 24 | 400 | Default text |
 | `text-small` | 13 / 20 | 400 | Helper text, table secondary text |
 | `text-metric` | 28 / 36 | 600 | Metric tile value |
@@ -163,7 +164,7 @@ All shared components live in `src/components`. Feature folders must not create 
 | **ConsentCard** | Purpose title, plain-language explanation (2 sentences max), required/optional label, current state, toggle or button, last changed date. |
 | **Stepper** | For trainee follow-up: "Question 2 of 5" text plus a thin progress bar. |
 | **Dialog** | Used for confirmations only. Destructive confirm button uses `danger`. |
-| **Toast** | Bottom-right on desktop, bottom on mobile. Success and error only. Auto-dismiss after 5 seconds; errors stay until dismissed. |
+| **Toast** | Bottom-right on desktop, bottom on mobile. Success and error only. Auto-dismiss after 5 seconds; errors stay until dismissed. Not built in Phase 1 (nothing saves yet); add it to `src/components/ui` when the first form saves. |
 
 ## 7. Icons
 
@@ -183,8 +184,8 @@ All shared components live in `src/components`. Feature folders must not create 
 
 ## 9. Logo and favicon
 
-- Logotype: the word "Revive" set in Noto Sans semibold in `--color-text`, with a small square mark in `--color-primary` to its left. No tagline.
-- Favicon: the square mark as `public/favicon.svg`, plus `favicon.ico` (32px) and `apple-touch-icon.png` (180px).
+- Logotype: the word "Revive" set in Noto Sans semibold in `--color-fg`, with a small square mark in `--color-primary` to its left. No tagline.
+- Favicon: the square mark as `src/app/icon.svg`, plus `src/app/favicon.ico` (32px) and `src/app/apple-icon.png` (180px). Next.js adds the `<link>` tags from these file names.
 - Footer disclaimer on every public page: "Revive is a prototype built for Smart India Hackathon 2026 (Problem Statement 26135). It is not an official Government of Maharashtra website."
 
 ## 10. Page inventory (Phase 1 UI shell)
