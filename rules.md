@@ -24,7 +24,7 @@ The full banned list is in `design.md`, section 2.
 Revive is not launched (shared publicly, submitted as a live link, or demoed on a public URL) until all of these are true:
 
 - [ ] Custom domain connected, with HTTPS
-- [ ] Favicon added (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`)
+- [ ] Favicon added (`src/app/icon.svg`, `src/app/favicon.ico`, `src/app/apple-icon.png`)
 - [ ] Any "Made with AI", "Built with ..." or hosting/builder badge removed
 - [ ] Privacy policy page live and linked from the footer
 - [ ] Terms and conditions page live and linked from the footer
@@ -83,7 +83,7 @@ Sample data is allowed **only** inside portals, only while features are unbuilt,
 - One component per file. Keep files under about 200 lines; split when larger.
 - No inline `style={{}}` except for values computed at runtime (for example, chart dimensions).
 - Use the `cn()` helper from `src/lib/cn.ts` for conditional classes.
-- Use Tailwind classes that map to design tokens (`bg-surface`, `text-muted`, `border-border`). Never write raw hex values in components.
+- Use Tailwind classes that map to design tokens (`bg-surface`, `text-fg-muted`, `border-border`). Never write raw hex values in components.
 - Use `next/link` for internal links and `next/image` for images.
 - Every page exports `metadata` with a title in the form "Page name | Revive".
 - Follow the conventions of the installed Next.js version (for example, `params` and `searchParams` are Promises in Next.js 15 and later).

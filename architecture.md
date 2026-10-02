@@ -11,10 +11,10 @@ Read `prd.md` first. This document explains how Revive is built and where code b
 | Framework | Next.js (App Router) with React | One repo for UI and server code; server components keep trainee pages light |
 | Language | TypeScript, `strict: true` | Shared domain types across all three stakeholder areas |
 | Styling | Tailwind CSS v4, design tokens in `src/app/globals.css` (`@theme`) | Tokens defined in one place; no ad-hoc colours |
-| UI primitives | shadcn/ui (copied into `src/components/ui`, restyled to `design.md`) | Accessible Radix-based primitives that we own and can edit |
+| UI primitives | shadcn/ui pattern: our own components in `src/components/ui`, built on Radix primitives (`radix-ui`) and `class-variance-authority`. The shadcn CLI is not used, so `globals.css` stays the only source of tokens | Accessible primitives that we own and can edit |
 | Icons | `lucide-react` | Consistent line icons; no emoji |
 | Charts | Recharts, wrapped in `src/components/charts` | Simple API; wrappers enforce our palette and the small-group rule |
-| Tables | TanStack Table, wrapped in `src/components/ui/data-table` | Sorting, filtering, pagination for staff screens |
+| Tables | Our own `DataTable` in `src/components/ui/table.tsx`. Static in Phase 1; sorting and pagination are added when tables read real queries | One small component instead of a table library |
 | Forms | React Hook Form + Zod | One Zod schema validates both client and server |
 | Database | PostgreSQL | Relational, longitudinal data; strong aggregate queries |
 | ORM | Prisma | Typed queries, migrations |
@@ -64,55 +64,58 @@ Exact package versions are pinned in `package.json` at setup time and recorded i
 
 ```
 revive/
-  prd.md  architecture.md  design.md  rules.md  tasks.md  memory.md
-  public/
-    favicon.svg
+  prd.md  architecture.md  design.md  rules.md  tasks.md  memory.md  README.md
+  AGENTS.md  CLAUDE.md            instructions for AI assistants (the Next.js block is auto-generated)
   prisma/                         (Phase 2)
     schema.prisma
     migrations/
     seed.ts
   src/
     app/
-      layout.tsx                  root layout: font, metadata, global styles
+      layout.tsx                  root layout: font, metadata, title template
       globals.css                 Tailwind import + design tokens (@theme)
+      icon.svg  favicon.ico  apple-icon.png    favicon set (Next.js file conventions)
       not-found.tsx
       (public)/                   SHARED
-        layout.tsx                public header + footer
+        layout.tsx                public header + footer (PublicFrame)
         page.tsx                  home
         how-it-works/page.tsx
         privacy/page.tsx
         terms/page.tsx
         contact/page.tsx
         accessibility/page.tsx
-        login/page.tsx            role chooser + sign-in forms
+        login/page.tsx            sign-in tabs + prototype portal links
       trainee/                    M1
-        layout.tsx
-        page.tsx                  dashboard
+        layout.tsx                TraineeShell
+        page.tsx                  home
         consent/page.tsx
         follow-ups/[followUpId]/page.tsx
         outcomes/new/page.tsx
         profile/page.tsx
       agent/                      M1
-        layout.tsx
+        layout.tsx                AppShell
         page.tsx                  work queue
         tasks/[taskId]/page.tsx   call screen
       provider/                   M2
-        layout.tsx
-        page.tsx                  scorecard / dashboard
+        layout.tsx                AppShell
+        page.tsx                  scorecard
         batches/page.tsx
         batches/[batchId]/page.tsx
         batches/upload/page.tsx
         placements/new/page.tsx
         actions/page.tsx
       employer/                   M2
-        layout.tsx
-        page.tsx                  dashboard
-        verifications/page.tsx
-        hires/page.tsx
-        feedback/page.tsx
-        register/page.tsx
+        (portal)/                 signed-in pages, AppShell layout
+          layout.tsx
+          page.tsx                dashboard
+          verifications/page.tsx
+          hires/page.tsx
+          feedback/page.tsx
+        register/                 before sign-in, PublicFrame layout
+          layout.tsx
+          page.tsx
       gov/                        M3
-        layout.tsx
+        layout.tsx                AppShell
         page.tsx                  overview
         cohorts/page.tsx
         providers/page.tsx
@@ -126,25 +129,36 @@ revive/
         definitions/page.tsx
         settings/page.tsx
     components/                   SHARED
-      ui/                         primitives (button, input, select, table, badge, dialog, ...)
-      layout/                     app-shell, sidebar, top-bar, public-header, public-footer, page-header
-      charts/                     bar-chart, line-chart, stacked-bar, chart-card
-      domain/                     shared domain widgets (verification-badge, metric-tile, suppressed-value)
+      ui/                         primitives: button, card, badge, field, input, select, choice,
+                                  table, tabs, dialog, stepper, breadcrumbs, empty-state
+      layout/                     app-shell, trainee-shell, public-frame, public-header, public-footer,
+                                  portal-nav, mobile-nav, page-header, long-form, logo, skip-link
+      charts/                     chart-card, outcome-chart, chart-data, format-chart-value, palette, types
+      domain/                     metric-tile, outcome-summary-tiles, outcome-columns, filter-bar,
+                                  verification-badge, status-badge, remedial-action-list,
+                                  sample-data-notice, draft-notice
     features/
-      trainee/                    M1: components and hooks used only by trainee screens
+      trainee/                    M1: components used only by trainee screens (consent-card)
       agent/                      M1
       provider/                   M2
       employer/                   M2
-      gov/                        M3
+      gov/                        M3 (gov-filters, breakdown-table)
     lib/                          SHARED, pure functions only (no I/O)
       cn.ts                       className helper
-      format.ts                   en-IN numbers, ₹ currency, dates
-      metrics.ts                  metric definitions + small-group suppression
-      navigation.ts               sidebar items per role
-      constants.ts                reason codes, verification levels, follow-up windows
-    mocks/                        SHARED in Phase 1, sample data typed against src/types
+      format.ts                   en-IN numbers, rupees, percentages, dates
+      metrics.ts                  metric definitions, rates, small-group suppression
+      consent.ts                  current consent state from consent events
+      navigation.ts               sidebar items per portal
+      constants.ts                labels, reason codes, verification levels, follow-up windows
+    mocks/                        SHARED, Phase 1 sample data (replaced by the database in Phase 2)
+      reference.ts                districts, programmes, courses, providers, centres, employers
+      synthetic-trainees.ts       seeded generator for about 2,600 synthetic trainee records
+      aggregate.ts  analytics.ts  counts and grouped datasets built from those records
+      trainee-portal.ts  agent-queue.ts  batches.ts  employer-portal.ts
+      remedial-actions.ts  data-quality.ts
     types/
       domain.ts                   SHARED domain types
+      analytics.ts                OutcomeCounts and other aggregate shapes
     server/                       (Phase 2)
       db/                         Prisma client
       auth/                       session, role guards
@@ -157,7 +171,7 @@ Ownership labels (SHARED, M1, M2, M3) are binding. See `rules.md`, section 4.
 
 ## 4. Domain model
 
-Phase 1 uses these as TypeScript types in `src/types/domain.ts`. Phase 2 turns them into a Prisma schema with the same names.
+Phase 1 uses these as TypeScript types in `src/types/domain.ts` (aggregate shapes are in `src/types/analytics.ts`). Phase 2 turns them into a Prisma schema with the same names.
 
 ```
 District (code, name)
@@ -254,7 +268,9 @@ Secrets live in `.env.local` (never committed). `.env.example` lists every varia
 
 In Phase 1 there is no database, no auth and no server code:
 
-- Pages read typed sample data from `src/mocks`.
-- Sign-in pages are static forms. A visible role switcher in development lets the team open each portal.
-- Every dashboard shows a "Sample data" label.
-- No `src/server` folder is created yet.
+- Pages read typed sample data from `src/mocks`. Dashboard figures are aggregated from one seeded set of synthetic trainee records, so totals agree across pages.
+- Rates are still calculated only through `src/lib/metrics.ts`, so the formulas carry over unchanged when real data arrives.
+- Sign-in pages are static forms. The sign-in page lists every portal under "Prototype preview" so the team can open each one.
+- Buttons have no handlers and forms do not submit. Filters are visual only.
+- `AppShell` and `TraineeShell` show the "Sample data" notice on every portal page. Remove it from the shells when real data is connected.
+- No `src/server` folder exists yet.
