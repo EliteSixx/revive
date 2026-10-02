@@ -1,7 +1,13 @@
-import type { ReactNode } from "react";
-import { cn } from "@/lib/cn";
-import { formatNumber } from "@/lib/format";
+import { Fragment, type ReactNode } from "react";
+import {
+  DataTableView,
+  type ColumnMeta,
+  type PreparedRow,
+  type SortValue,
+} from "./data-table-view";
 import { EmptyState } from "./empty-state";
+
+export type { SortValue };
 
 export interface Column<Row> {
   key: string;
@@ -9,6 +15,11 @@ export interface Column<Row> {
   align?: "left" | "right";
   /** Renders the cell. Numbers should be formatted with src/lib/format.ts. */
   cell: (row: Row) => ReactNode;
+  /**
+   * Makes the column sortable. Return a number or string to sort by, or null for
+   * values that should always sort last (for example suppressed figures).
+   */
+  sortValue?: (row: Row) => SortValue;
   /** Let long text wrap. Other cells stay on one line and the table scrolls sideways. */
   wrap?: boolean;
 }
@@ -20,14 +31,16 @@ interface DataTableProps<Row> {
   getRowKey: (row: Row) => string;
   emptyTitle?: string;
   emptyDescription?: string;
-  /** Total number of records, when only part of the list is shown. */
+  /** Rows per page. Leave out to show every row. */
+  pageSize?: number;
+  /** Total number of records, when `rows` holds only part of them. */
   totalCount?: number;
   className?: string;
 }
 
 /**
- * Static data table (design.md section 6). Sorting and pagination are added in
- * Phase 3 when tables are backed by real queries.
+ * Data table (design.md section 6). Works in server and client components:
+ * cells are rendered here, then the interactive view sorts and pages them.
  */
 export function DataTable<Row>({
   caption,
@@ -36,6 +49,7 @@ export function DataTable<Row>({
   getRowKey,
   emptyTitle = "Nothing to show",
   emptyDescription = "There are no records for the selected filters.",
+  pageSize,
   totalCount,
   className,
 }: DataTableProps<Row>) {
@@ -43,55 +57,31 @@ export function DataTable<Row>({
     return <EmptyState title={emptyTitle} description={emptyDescription} />;
   }
 
+  const columnMeta: ColumnMeta[] = columns.map((column) => ({
+    key: column.key,
+    header: column.header,
+    align: column.align ?? "left",
+    wrap: column.wrap ?? false,
+    isSortable: column.sortValue !== undefined,
+  }));
+
+  const preparedRows: PreparedRow[] = rows.map((row) => ({
+    key: getRowKey(row),
+    // Keyed fragments: the cells travel to the client view as an array of elements.
+    cells: columns.map((column) => (
+      <Fragment key={column.key}>{column.cell(row)}</Fragment>
+    )),
+    sortValues: columns.map((column) => column.sortValue?.(row) ?? null),
+  }));
+
   return (
-    <div className={cn("overflow-x-auto", className)}>
-      <table className="w-full border-collapse text-left">
-        <caption className="sr-only">{caption}</caption>
-        <thead className="bg-surface-muted">
-          <tr>
-            {columns.map((column) => (
-              <th
-                key={column.key}
-                scope="col"
-                className={cn(
-                  "border-b border-border px-4 py-2.5 text-label whitespace-nowrap text-fg-muted",
-                  column.align === "right" && "text-right",
-                )}
-              >
-                {column.header}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row) => (
-            <tr
-              key={getRowKey(row)}
-              className="border-b border-border last:border-b-0"
-            >
-              {columns.map((column) => (
-                <td
-                  key={column.key}
-                  className={cn(
-                    "h-11 px-4 py-2 align-middle",
-                    column.wrap
-                      ? "min-w-60 whitespace-normal"
-                      : "whitespace-nowrap",
-                    column.align === "right" && "text-right tabular-nums",
-                  )}
-                >
-                  {column.cell(row)}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      {totalCount !== undefined && (
-        <p className="border-t border-border px-4 py-2.5 text-small text-fg-muted">
-          Showing {formatNumber(rows.length)} of {formatNumber(totalCount)}
-        </p>
-      )}
-    </div>
+    <DataTableView
+      caption={caption}
+      columns={columnMeta}
+      rows={preparedRows}
+      pageSize={pageSize}
+      totalCount={totalCount}
+      className={className}
+    />
   );
 }

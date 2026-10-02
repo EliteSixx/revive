@@ -116,7 +116,7 @@ Trainee screens use a minimum body size of 16px for readability on phones.
 
 - **Spacing scale (px):** 4, 8, 12, 16, 20, 24, 32, 40, 48, 64. Use Tailwind's default scale which matches these.
 - **Radius:** `--radius-sm` 4px (buttons, inputs, badges, checkboxes), `--radius-md` 6px (cards, dialogs, tables). Nothing rounder. No `rounded-full` on buttons or inputs (allowed only for avatars and status dots).
-- **Elevation:** borders, not shadows. Cards use a 1px `--color-border`. Only dialogs and dropdown menus get a shadow: `0 4px 16px rgba(22, 25, 31, 0.12)`.
+- **Elevation:** borders, not shadows. Cards use a 1px `--color-border`. Only dialogs, dropdown menus and toasts get a shadow: `0 4px 16px rgba(22, 25, 31, 0.12)`.
 - **Max content width:** 1280px for staff portals, 720px for trainee screens and long-form public pages (privacy, terms).
 - **Breakpoints:** Tailwind defaults (`sm` 640, `md` 768, `lg` 1024, `xl` 1280).
 
@@ -153,7 +153,7 @@ All shared components live in `src/components`. Feature folders must not create 
 | **Checkbox / Radio** | Whole row is clickable. Radio groups for 2 to 6 options; Select for more. |
 | **Card** | White surface, 1px border, radius 6px, 20px or 24px padding. Optional header with title and one action. |
 | **MetricTile** | Label, value (`text-metric`, tabular), base line ("n = 1,240 certified"), and verification share where relevant ("62% employer or EPFO verified"). Shows "Fewer than 10" when suppressed. No arrows or trend colours unless a comparison period is defined. |
-| **DataTable** | Header in `--color-surface-muted`, 13px medium labels. Numbers right-aligned and tabular. Row height 44px. Sticky header on long tables. Sorting shown with an icon and `aria-sort`. Pagination at the bottom with total count. |
+| **DataTable** | Header in `--color-surface-muted`, 13px medium labels. Numbers right-aligned and tabular. Row height 44px. A column is sortable when it has `sortValue`: the header becomes a button with an icon and `aria-sort`, and suppressed values always sort last. Pass `pageSize` for Previous and Next buttons and a "Showing 1 to 25 of 248" line. |
 | **VerificationBadge** | Text label plus small icon, e.g. "Employer confirmed". Colours from section 3. Square-ish (radius 4px), never a pill. |
 | **StatusBadge** | For follow-up and action status (Scheduled, Sent, Responded, Unreachable, Open, Done). Text always visible. |
 | **ChartCard** | Card with title, one-line description of what is plotted, the chart, and a "View as table" toggle for accessibility. Axis labels and units always shown. |
@@ -164,7 +164,7 @@ All shared components live in `src/components`. Feature folders must not create 
 | **ConsentCard** | Purpose title, plain-language explanation (2 sentences max), required/optional label, current state, toggle or button, last changed date. |
 | **Stepper** | For trainee follow-up: "Question 2 of 5" text plus a thin progress bar. |
 | **Dialog** | Used for confirmations only. Destructive confirm button uses `danger`. |
-| **Toast** | Bottom-right on desktop, bottom on mobile. Success and error only. Auto-dismiss after 5 seconds; errors stay until dismissed. Not built in Phase 1 (nothing saves yet); add it to `src/components/ui` when the first form saves. |
+| **Toast** | Bottom-right on desktop, bottom on mobile. Success and error only. Auto-dismiss after 5 seconds; errors stay until dismissed. Use `useToast().showToast("success" | "error", message)` from `src/components/ui/toast.tsx`. |
 
 ## 7. Icons
 

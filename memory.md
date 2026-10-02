@@ -10,9 +10,9 @@ Shared memory for the team and for AI assistants. Read this first in every sessi
 | --- | --- |
 | Project | Revive, SIH 2026, Problem Statement 26135 |
 | Client | Government of Maharashtra, Department of Skills, Employment, Entrepreneurship and Innovation (Maharashtra State Innovation Society) |
-| Current phase | Phase 1 (frontend UI shell) built on `feature/sinu`, not yet merged to `main` |
+| Current phase | Phase 1 UI shell merged to `main` (pull request 2). Shared groundwork (1.7) built on `feature/sinu` |
 | Current branch | `feature/sinu` |
-| Next step | Team reviews the UI and docs, then merges to `main` and branches by stakeholder. Frontend only: no backend work until the team decides to start Phase 2 |
+| Next step | Merge the shared groundwork to `main`, then each member branches by stakeholder and builds their area's frontend behaviour with the mock layer. Frontend only: no backend work until the team decides to start Phase 2 |
 
 ## 2. Team
 
@@ -48,6 +48,10 @@ Shared memory for the team and for AI assistants. Read this first in every sessi
 | 3 Oct 2026 | Dashboard sample data comes from a seeded generator (`src/mocks/synthetic-trainees.ts`, about 2,600 synthetic trainees, seed 26135) | Totals agree across every page; Phase 2 seed script can reuse it |
 | 3 Oct 2026 | Small-group suppression also hides counts and base lines ("n = ..."), not only rates | A visible base of 8 would reveal a suppressed group |
 | 3 Oct 2026 | The "Sample data" notice lives in `AppShell` and `TraineeShell` | Shown on every portal page; removed in one place later |
+| 3 Oct 2026 | Frontend actions go through `src/features/<area>/mock-api.ts`, using the shared `createMockStore` and `simulateRequest` (`architecture.md` section 11) | One pattern for all three areas; Phase 2 swaps only this layer for server actions |
+| 3 Oct 2026 | Sample data changes are kept in `sessionStorage` per browser tab, with a "Reset sample data" button | Changes survive page changes during a demo and are easy to undo |
+| 3 Oct 2026 | Toast provider lives in the root layout; one shared `useToast` | Avoids three competing toast components |
+| 3 Oct 2026 | Table sorting and pagination happen in the browser inside `DataTable`; suppressed values always sort last | Works with sample data now; server-side paging can replace it in Phase 2 |
 | 3 Oct 2026 | Programme names in sample data are generic ("Central short-term training (sample)"); provider and employer names are invented | Avoids presenting real schemes or organisations with fake figures |
 
 ## 4. Open questions
@@ -81,6 +85,9 @@ Exact versions are pinned in `package.json`. Recorded 3 Oct 2026.
 | recharts | 3.10.1 |
 | eslint | 9.39.5 (eslint-config-next 16.3.8) |
 | prettier | 3.9.9 (prettier-plugin-tailwindcss 0.8.1) |
+| react-hook-form | 7.89.0 |
+| zod | 4.6.5 |
+| @hookform/resolvers | 5.9.1 |
 
 Notes for this Next.js version:
 - `params` and `searchParams` are Promises; type pages with the global `PageProps<"/route/[id]">` helper.
@@ -112,6 +119,12 @@ Notes for this Next.js version:
 | MSInS | Maharashtra State Innovation Society |
 
 ## 7. Log
+
+### 3 Oct 2026 (later)
+
+- Phase 1 UI shell merged to `main` through pull request 2.
+- Built the shared groundwork on `feature/sinu`: toast, table sorting and pagination, the frontend mock layer, and form libraries. See `tasks.md` 1.7.
+- No stakeholder features and no backend were added.
 
 ### 3 Oct 2026
 
