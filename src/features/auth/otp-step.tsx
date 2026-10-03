@@ -85,12 +85,12 @@ export function OtpStep({
 
       <div
         role="note"
-        aria-label="Simulated SMS"
+        aria-label="SMS preview"
         className="rounded-md border border-primary/20 bg-info-subtle p-4"
       >
         <p className="flex items-center gap-2 text-label text-primary">
           <MessageSquare className="size-4" aria-hidden="true" />
-          Simulated SMS (prototype only)
+          SMS preview
         </p>
         <p className="mt-1">
           Your Revive sign-in code is{" "}

@@ -7,7 +7,7 @@ export default function ProviderLayout({ children }: { children: ReactNode }) {
     <AppShell
       portal="provider"
       scopeLabel={CURRENT_PROVIDER.name}
-      userName="Centre manager (sample)"
+      userName="Centre manager"
     >
       {children}
     </AppShell>

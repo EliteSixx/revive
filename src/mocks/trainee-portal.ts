@@ -85,7 +85,7 @@ export const CURRENT_TRAINEE_OUTCOMES: readonly (OutcomeRecord & {
     source: "TRAINEE",
     verificationLevel: "EMPLOYER_CONFIRMED",
     employerId: "e-precision-auto",
-    employerName: "Precision Auto Parts Pvt Ltd (sample)",
+    employerName: "Precision Auto Parts Pvt Ltd",
     jobRole: "Electrician helper",
     monthlyWage: 14200,
     employmentType: "FULL_TIME",

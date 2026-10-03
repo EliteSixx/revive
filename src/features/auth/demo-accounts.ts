@@ -26,27 +26,27 @@ export const DEMO_STAFF_ACCOUNTS: readonly DemoStaffAccount[] = [
   {
     role: "AGENT",
     email: "desk.agent@revive.test",
-    displayName: "Desk agent (sample)",
+    displayName: "Desk agent",
   },
   {
     role: "PROVIDER_STAFF",
     email: "centre.sahyadri@revive.test",
-    displayName: "Centre manager, Sahyadri Trades Institute (sample)",
+    displayName: "Centre manager, Sahyadri Trades Institute",
   },
   {
     role: "EMPLOYER",
     email: "hr.precision@revive.test",
-    displayName: "HR desk, Precision Auto Parts (sample)",
+    displayName: "HR desk, Precision Auto Parts",
   },
   {
     role: "DISTRICT_OFFICER",
     email: "district.pune@revive.test",
-    displayName: "District officer, Pune (sample)",
+    displayName: "District officer, Pune",
   },
   {
     role: "STATE_ADMIN",
     email: "state.admin@revive.test",
-    displayName: "State admin (sample)",
+    displayName: "State admin",
   },
 ];
 

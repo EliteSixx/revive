@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { DraftNotice } from "@/components/domain/draft-notice";
 import { LongFormPage } from "@/components/layout/long-form";
 
 export const metadata = { title: "Terms and conditions" };
@@ -7,21 +6,12 @@ export const metadata = { title: "Terms and conditions" };
 // TODO(copy): legal review of these terms is a launch blocker (rules.md, section B).
 export default function TermsPage() {
   return (
-    <LongFormPage
-      title="Terms and conditions"
-      meta="Last updated 3 Oct 2026"
-      notice={
-        <DraftNotice>
-          Draft for team review. These terms must be reviewed before Revive is
-          launched.
-        </DraftNotice>
-      }
-    >
+    <LongFormPage title="Terms and conditions" meta="Last updated 4 Oct 2026">
       <h2>About Revive</h2>
       <p>
-        Revive is a prototype built for Smart India Hackathon 2026 (Problem
-        Statement 26135). It is not an official Government of Maharashtra
-        service. Data shown in the prototype is synthetic.
+        Revive records what happens to trainees after skilling courses, so that
+        trainees, training providers, employers and government departments can
+        see verified outcomes.
       </p>
 
       <h2>Using Revive</h2>
@@ -65,9 +55,10 @@ export default function TermsPage() {
 
       <h2>Availability</h2>
       <p>
-        Revive is provided as a prototype without any guarantee of availability
-        or fitness for a particular purpose. Figures shown should not be used
-        for funding or legal decisions while Revive is a prototype.
+        Revive is provided without any guarantee of availability or fitness for
+        a particular purpose. Pages marked as using sample data show figures
+        that are not real results; do not use them for funding or legal
+        decisions.
       </p>
 
       <h2>Changes to these terms</h2>
