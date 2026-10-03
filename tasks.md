@@ -93,6 +93,13 @@ Government (M3 area):
 - [x] Every portal page shows the "Sample data" notice (set once in the portal shells)
 - [x] Merge to `main` (pull request 2, 3 Oct 2026)
 
+### 1.8 Working sign-in (frontend only)
+
+- [x] Trainee sign-in with mobile number and simulated SMS one-time password
+- [x] Staff, employer and official sign-in with email and password
+- [x] Prototype accounts panel; redirect to the right portal per role; sign-out
+- [ ] Protect portals (redirect to sign-in when signed out): not yet, by team decision
+
 ### 1.7 Shared groundwork before splitting
 
 - [x] Toast messages for success and error (`src/components/ui/toast.tsx`, provider in the root layout)

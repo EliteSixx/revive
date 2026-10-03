@@ -120,7 +120,7 @@ Sample data is allowed **only** inside portals, only while features are unbuilt,
 | Trainee + Follow-up agent | M1 | `src/app/trainee/**`, `src/app/agent/**`, `src/features/trainee/**`, `src/features/agent/**` |
 | Training provider + Employer | M2 | `src/app/provider/**`, `src/app/employer/**`, `src/features/provider/**`, `src/features/employer/**` |
 | Government (district + state) | M3 | `src/app/gov/**`, `src/features/gov/**` |
-| Shared | All (review required) | `src/app/(public)/**`, `src/app/layout.tsx`, `src/app/globals.css`, `src/components/**`, `src/lib/**`, `src/types/**`, `src/mocks/**`, `prisma/**`, `package.json`, config files, all `.md` docs |
+| Shared | All (review required) | `src/app/(public)/**`, `src/features/auth/**`, `src/app/layout.tsx`, `src/app/globals.css`, `src/components/**`, `src/lib/**`, `src/types/**`, `src/mocks/**`, `prisma/**`, `package.json`, config files, all `.md` docs |
 
 Rules:
 
