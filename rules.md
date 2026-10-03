@@ -36,7 +36,13 @@ Revive is not launched (shared publicly, submitted as a live link, or demoed on 
 3. Custom cursor effects or cursor animations
 4. Fake customer, user or placement counters
 
-Sample data is allowed **only** inside portals, only while features are unbuilt, and only with the "Sample data" notice visible.
+Sample data is allowed **only** inside portals, only while features are unbuilt, and only with the sample-data label visible ("Figures shown use sample data").
+
+### Presentation
+
+- Present the product simply as Revive: no references to hackathons, competitions, student projects, prototypes, demos, coding assistants or how the site was built, in anything a user can see.
+- Do not claim that Revive is an official Government of Maharashtra service, and do not use government emblems or logos.
+- Sample figures must stay identifiable as sample data (the quiet label above), so they are never taken for real results.
 
 ## D. Make no mistake
 

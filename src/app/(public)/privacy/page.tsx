@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { DraftNotice } from "@/components/domain/draft-notice";
 import { LongFormPage } from "@/components/layout/long-form";
 import { CONSENT_PURPOSES } from "@/lib/constants";
 
@@ -8,16 +7,7 @@ export const metadata = { title: "Privacy policy" };
 // TODO(copy): legal review of this policy is a launch blocker (rules.md, section B).
 export default function PrivacyPage() {
   return (
-    <LongFormPage
-      title="Privacy policy"
-      meta="Last updated 3 Oct 2026"
-      notice={
-        <DraftNotice>
-          Draft for team review. This policy describes how Revive is designed to
-          handle personal data. It must be reviewed before Revive is launched.
-        </DraftNotice>
-      }
-    >
+    <LongFormPage title="Privacy policy" meta="Last updated 4 Oct 2026">
       <h2>About this policy</h2>
       <p>
         Revive is a system for tracking what happens to trainees after skilling
@@ -27,10 +17,8 @@ export default function PrivacyPage() {
         rules made under it.
       </p>
       <p>
-        Revive is currently a prototype built for Smart India Hackathon 2026.
-        The prototype uses synthetic data only. In a live deployment, the
-        department operating Revive would be the data fiduciary responsible for
-        your data, and its contact details would be published on the{" "}
+        The department that operates Revive is the data fiduciary responsible
+        for your data. How to reach its grievance officer is explained on the{" "}
         <Link href="/contact">contact page</Link>.
       </p>
 

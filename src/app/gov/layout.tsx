@@ -6,7 +6,7 @@ export default function GovLayout({ children }: { children: ReactNode }) {
     <AppShell
       portal="gov"
       scopeLabel="State view: all districts"
-      userName="State admin (sample)"
+      userName="State admin"
     >
       {children}
     </AppShell>

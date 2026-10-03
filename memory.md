@@ -56,6 +56,9 @@ Shared memory for the team and for AI assistants. Read this first in every sessi
 | 3 Oct 2026 | Portals are not protected yet; anyone can open them without signing in | Lets teammates build their areas without signing in every time |
 | 3 Oct 2026 | Prototype accounts panel on the sign-in page fills the form; staff accounts use the reserved `.test` domain and the password `Revive@2026`; trainee demo number `9000012341` | Easy demos, clearly labelled as prototype, no real credentials |
 | 3 Oct 2026 | Sign-in work was committed straight to `main`, as a one-off exception agreed by the team lead | All other work still goes through feature branches and pull requests |
+| 4 Oct 2026 | Product presented simply as Revive: hackathon, student-team, prototype and draft wording removed from every user-facing page; "(sample)" removed from names; sign-in panel renamed "Sample accounts" and the code box "SMS preview" | New direction from the team lead: a professional, production-oriented public-sector product |
+| 4 Oct 2026 | Kept two honesty guards: no claim to be an official Government of Maharashtra service, and a quiet "Figures shown use sample data" label on portal pages | Synthetic figures must not be mistaken for real results |
+| 4 Oct 2026 | Home page "Who uses Revive" is a carousel (shared `Carousel` component), with no auto-play | Team lead request; auto-rotation is hard to read and to use with assistive technology |
 | 3 Oct 2026 | Programme names in sample data are generic ("Central short-term training (sample)"); provider and employer names are invented | Avoids presenting real schemes or organisations with fake figures |
 
 ## 4. Open questions

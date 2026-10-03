@@ -16,7 +16,7 @@ interface DemoAccountsPanelProps {
   onChooseStaff: (account: DemoStaffAccount) => void;
 }
 
-/** Prototype accounts for demos. Choosing one fills the form; it never signs in by itself. */
+/** Sample accounts for exploring Revive. Choosing one fills the form; it never signs in by itself. */
 export function DemoAccountsPanel({
   onChooseTrainee,
   onChooseStaff,
@@ -24,8 +24,8 @@ export function DemoAccountsPanel({
   return (
     <Card className="mt-10">
       <CardHeader
-        title="Prototype accounts"
-        description={`Sample accounts for the demo. Choose one to fill the form, then sign in. Every staff account uses the password ${DEMO_STAFF_PASSWORD}.`}
+        title="Sample accounts"
+        description={`Choose an account to fill the form, then sign in. Staff accounts use the password ${DEMO_STAFF_PASSWORD}.`}
       />
       <ul>
         {DEMO_TRAINEE_ACCOUNTS.map((account) => (

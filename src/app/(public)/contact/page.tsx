@@ -1,34 +1,55 @@
+import Link from "next/link";
 import { LongFormPage } from "@/components/layout/long-form";
 
 export const metadata = { title: "Contact" };
 
-// TODO(copy): add the team's contact email and, for a live deployment, the operating
-// department's grievance officer. Both are needed before launch.
+// TODO(copy): add the grievance officer's name, email and postal address for the
+// department that operates Revive. Needed before launch (prd.md section 9).
 export default function ContactPage() {
   return (
     <LongFormPage title="Contact">
-      <p>
-        Revive is a prototype built by a student team for Smart India Hackathon
-        2026 (Problem Statement 26135). It is not an official Government of
-        Maharashtra website.
-      </p>
+      <p>Find the right place for your question below.</p>
 
-      <h2>Questions about the prototype</h2>
-      <p>The team&apos;s contact details will be added here before launch.</p>
+      <h2>Trainees</h2>
+      <ul>
+        <li>
+          For questions about your course, batch or certificate, contact your
+          training centre.
+        </li>
+        <li>
+          To change your mobile number, update your work details or manage
+          consent, <Link href="/login">sign in</Link> and use your Profile or
+          Consent page.
+        </li>
+      </ul>
+
+      <h2>Training providers and employers</h2>
+      <ul>
+        <li>
+          For help signing in or with your account, contact the administrator of
+          your organisation.
+        </li>
+        <li>
+          If your business is not registered yet,{" "}
+          <Link href="/employer/register">register your business</Link>.
+        </li>
+      </ul>
 
       <h2>Personal data and grievances</h2>
       <p>
-        In a live deployment, the operating department would publish the name
-        and contact details of its grievance officer here. Trainees could use
-        them to ask about their data, correct it, withdraw consent or raise a
-        complaint.
+        You can see your data, correct it and withdraw consent from your own
+        account. For anything you cannot do yourself, or to raise a complaint
+        about how your data is used, contact the grievance officer of the
+        department that operates Revive. Read the{" "}
+        <Link href="/privacy">privacy policy</Link> for your rights.
       </p>
 
-      <h2>If you are a trainee</h2>
+      <h2>Accessibility problems</h2>
       <p>
-        For questions about your course or certificate, contact your training
-        centre. For questions about follow-ups or consent, sign in and use the
-        Consent page.
+        If any part of Revive is hard to use, contact the grievance officer.
+        Describe the page and what went wrong. The{" "}
+        <Link href="/accessibility">accessibility statement</Link> explains the
+        standards Revive follows.
       </p>
     </LongFormPage>
   );

@@ -33,7 +33,7 @@ export const REMEDIAL_ACTIONS: readonly RemedialAction[] = [
     targetId: "c-sewing",
     targetName: "Sewing Machine Operator",
     title: "Review wages offered by partner employers",
-    assigneeName: "State skills cell (sample)",
+    assigneeName: "State skills cell",
     status: "OPEN",
     dueDate: "2026-12-15",
     notes:
@@ -58,7 +58,7 @@ export const REMEDIAL_ACTIONS: readonly RemedialAction[] = [
     targetId: "2025-10-01",
     targetName: "Oct 2025 cohort",
     title: "Refresher sessions for trainees not placed at W3",
-    assigneeName: "State skills cell (sample)",
+    assigneeName: "State skills cell",
     status: "DONE",
     dueDate: "2026-04-30",
     notes: "Completed in four districts.",

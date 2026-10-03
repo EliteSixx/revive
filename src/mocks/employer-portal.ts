@@ -8,7 +8,7 @@ import type {
 
 export const CURRENT_EMPLOYER = {
   id: "e-precision-auto",
-  legalName: "Precision Auto Parts Pvt Ltd (sample)",
+  legalName: "Precision Auto Parts Pvt Ltd",
   districtName: "Pune",
   contactName: "HR desk",
 };
