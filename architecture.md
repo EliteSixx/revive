@@ -144,6 +144,8 @@ revive/
       provider/                   M2
       employer/                   M2
       gov/                        M3 (gov-filters, breakdown-table)
+      auth/                       SHARED: prototype sign-in (demo accounts, session store,
+                                  simulated one-time password, mock-api, sign-in forms)
       <area>/mock-api.ts          frontend phase: that area's stores and mock actions (section 11)
     lib/                          SHARED, pure functions only (no I/O)
       cn.ts                       className helper

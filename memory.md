@@ -52,6 +52,10 @@ Shared memory for the team and for AI assistants. Read this first in every sessi
 | 3 Oct 2026 | Sample data changes are kept in `sessionStorage` per browser tab, with a "Reset sample data" button | Changes survive page changes during a demo and are easy to undo |
 | 3 Oct 2026 | Toast provider lives in the root layout; one shared `useToast` | Avoids three competing toast components |
 | 3 Oct 2026 | Table sorting and pagination happen in the browser inside `DataTable`; suppressed values always sort last | Works with sample data now; server-side paging can replace it in Phase 2 |
+| 3 Oct 2026 | Sign-in works in the frontend: trainee mobile number with a simulated SMS one-time password (random 6 digits, 5 minutes, 30 second resend wait, 5 tries), staff email and password, role-based redirect, sign-out. Session kept in `sessionStorage` (`src/features/auth`) | Demo needs a working sign-in before the backend exists |
+| 3 Oct 2026 | Portals are not protected yet; anyone can open them without signing in | Lets teammates build their areas without signing in every time |
+| 3 Oct 2026 | Prototype accounts panel on the sign-in page fills the form; staff accounts use the reserved `.test` domain and the password `Revive@2026`; trainee demo number `9000012341` | Easy demos, clearly labelled as prototype, no real credentials |
+| 3 Oct 2026 | Sign-in work was committed straight to `main`, as a one-off exception agreed by the team lead | All other work still goes through feature branches and pull requests |
 | 3 Oct 2026 | Programme names in sample data are generic ("Central short-term training (sample)"); provider and employer names are invented | Avoids presenting real schemes or organisations with fake figures |
 
 ## 4. Open questions
@@ -119,6 +123,11 @@ Notes for this Next.js version:
 | MSInS | Maharashtra State Innovation Society |
 
 ## 7. Log
+
+### 3 Oct 2026 (evening)
+
+- Sign-in page made fully working in the frontend (see Decisions). Tested in the browser: validation, unknown number, wrong and correct code, staff wrong and correct password, prototype account fill, redirect per role, sign-out from portal and from the sign-in page, 375px layout.
+- Found on `main`: commit 9822847 added `node_modules/` and a `dist/` folder to git. `npm run lint` now fails because ESLint checks `dist/`. Needs a team decision to remove them from git.
 
 ### 3 Oct 2026 (later)
 

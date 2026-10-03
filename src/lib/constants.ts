@@ -10,6 +10,7 @@ import type {
   RemedialActionStatus,
   RemedialActionTarget,
   ResidenceType,
+  Role,
   SocialCategory,
   VerificationLevel,
   VerificationRequestStatus,
@@ -229,4 +230,13 @@ export const REMEDIAL_ACTION_TARGET_LABELS: Record<
   COURSE: "Course",
   DISTRICT: "District",
   COHORT: "Cohort",
+};
+
+export const ROLE_LABELS: Record<Role, string> = {
+  TRAINEE: "Trainee",
+  AGENT: "Follow-up desk agent",
+  PROVIDER_STAFF: "Training provider",
+  EMPLOYER: "Employer",
+  DISTRICT_OFFICER: "District officer",
+  STATE_ADMIN: "State admin",
 };
