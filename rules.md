@@ -139,6 +139,7 @@ Rules:
 - One logical change per commit. Pull requests stay small (aim for under 400 changed lines, excluding lockfiles).
 - Pull request description: what changed, why, screenshots at 360px and 1280px for UI changes, and which PRD requirement IDs it covers (for example `FR-G-03`).
 - Squash-merge pull requests into `main`.
+- Never commit `node_modules`, `dist`, `.next` or other generated folders. Stage files by name, and if `git status` lists any of them, stop and fix `.gitignore` first.
 
 ## 6. Definition of done
 

@@ -127,7 +127,7 @@ Notes for this Next.js version:
 ### 3 Oct 2026 (evening)
 
 - Sign-in page made fully working in the frontend (see Decisions). Tested in the browser: validation, unknown number, wrong and correct code, staff wrong and correct password, prototype account fill, redirect per role, sign-out from portal and from the sign-in page, 375px layout.
-- Found on `main`: commit 9822847 added `node_modules/` and a `dist/` folder to git. `npm run lint` now fails because ESLint checks `dist/`. Needs a team decision to remove them from git.
+- Found on `main`: commit 9822847 added `node_modules/` and a `dist/` folder to git. `npm run lint` now fails because ESLint checks `dist/`. Resolved the same day: both folders removed from git (files kept on disk) and `/dist` added to `.gitignore`.
 
 ### 3 Oct 2026 (later)
 
