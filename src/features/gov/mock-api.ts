@@ -20,13 +20,17 @@ import type { RemedialAction } from "@/types/domain";
 // In Phase 2 these become server actions enforcing the same rule via session cookie.
 
 /** Returns provider rows scoped to a district, or all providers for state admin. */
-export function getScopedProviderRows(districtCode: string | null): readonly ProviderRow[] {
+export function getScopedProviderRows(
+  districtCode: string | null,
+): readonly ProviderRow[] {
   if (districtCode === null) return PROVIDER_ROWS;
   return PROVIDER_ROWS.filter((row) => row.districtCode === districtCode);
 }
 
 /** Returns district rows. District officers only get their own row. State admin gets all. */
-export function getScopedDistrictRows(districtCode: string | null): readonly DistrictRow[] {
+export function getScopedDistrictRows(
+  districtCode: string | null,
+): readonly DistrictRow[] {
   if (districtCode === null) return DISTRICT_ROWS;
   return DISTRICT_ROWS.filter((row) => row.district.code === districtCode);
 }
@@ -34,14 +38,20 @@ export function getScopedDistrictRows(districtCode: string | null): readonly Dis
 /** Returns cohort rows scoped by district, or all cohorts for state admin. */
 export function getScopedCohortRows(districtCode: string | null) {
   if (districtCode === null) return COHORT_ROWS;
-  const trainees = SYNTHETIC_TRAINEES.filter((t) => t.districtCode === districtCode);
+  const trainees = SYNTHETIC_TRAINEES.filter(
+    (t) => t.districtCode === districtCode,
+  );
   return getCohortRows(trainees);
 }
 
 /** Returns aggregate outcome counts scoped by district, or the state total for state admin. */
-export function getScopedStateCounts(districtCode: string | null): OutcomeCounts {
+export function getScopedStateCounts(
+  districtCode: string | null,
+): OutcomeCounts {
   if (districtCode === null) return STATE_COUNTS;
-  const trainees = SYNTHETIC_TRAINEES.filter((t) => t.districtCode === districtCode);
+  const trainees = SYNTHETIC_TRAINEES.filter(
+    (t) => t.districtCode === districtCode,
+  );
   return countOutcomes(trainees);
 }
 
@@ -62,15 +72,20 @@ export function getScopedAttritionReasons(districtCode: string | null) {
 }
 
 /** Remedial actions scoped by district: district officers see only actions for their district or its providers. */
-export function getScopedActions(districtCode: string | null): readonly RemedialAction[] {
+export function getScopedActions(
+  districtCode: string | null,
+): readonly RemedialAction[] {
   if (districtCode === null) return REMEDIAL_ACTIONS;
   const districtProviderIds = new Set(
-    PROVIDER_ROWS.filter((r) => r.districtCode === districtCode).map((r) => r.provider.id),
+    PROVIDER_ROWS.filter((r) => r.districtCode === districtCode).map(
+      (r) => r.provider.id,
+    ),
   );
   return REMEDIAL_ACTIONS.filter(
     (action) =>
       (action.targetType === "DISTRICT" && action.targetId === districtCode) ||
-      (action.targetType === "PROVIDER" && districtProviderIds.has(action.targetId)) ||
+      (action.targetType === "PROVIDER" &&
+        districtProviderIds.has(action.targetId)) ||
       action.targetType === "COHORT" ||
       action.targetType === "COURSE",
   );

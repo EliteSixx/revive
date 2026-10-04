@@ -37,7 +37,7 @@ export default async function GovDistrictPage(
       <PageHeader
         title={row.district.name}
         description="Outcomes for trainees from training centres in this district."
-        breadcrumbs={[{ label: "Districts", href: "/gov/districts" }]}
+        breadcrumbs={[{ label: "Outcomes", href: "/gov/outcomes?tab=districts" }]}
       />
       <OutcomeSummaryTiles counts={row.counts} />
 

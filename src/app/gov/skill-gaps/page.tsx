@@ -1,3 +1,5 @@
+"use client";
+
 import { ChartCard } from "@/components/charts/chart-card";
 import { toReasonChartData } from "@/components/charts/chart-data";
 import { CHART_COLORS } from "@/components/charts/palette";
@@ -5,25 +7,29 @@ import { FilterBar } from "@/components/domain/filter-bar";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardHeader } from "@/components/ui/card";
 import { DataTable } from "@/components/ui/table";
-import { GOV_FILTERS } from "@/features/gov/gov-filters";
+import { DisclosureExpander } from "@/features/gov/disclosure-expander";
+import { getGovFilters } from "@/features/gov/gov-filters";
+import { useGovScope } from "@/features/gov/gov-session";
+import {
+  getScopedAttritionReasons,
+  getScopedNonPlacementReasons,
+} from "@/features/gov/mock-api";
 import { ATTRITION_REASONS, NON_PLACEMENT_REASONS } from "@/lib/constants";
 import { formatNumber, formatPercent } from "@/lib/format";
-import {
-  ATTRITION_REASONS_STATE,
-  NON_PLACEMENT_REASONS_STATE,
-} from "@/mocks/analytics";
 import { EMPLOYER_SKILL_GAPS } from "@/mocks/data-quality";
 
-export const metadata = { title: "Skill gaps" };
-
 export default function GovSkillGapsPage() {
+  const scope = useGovScope();
+  const nonPlacementReasons = getScopedNonPlacementReasons(scope.districtCode);
+  const attritionReasons = getScopedAttritionReasons(scope.districtCode);
+
   return (
     <>
       <PageHeader
-        title="Skill gaps"
-        description="Why trainees are not placed or leave jobs, and which skills employers say are missing."
+        title="Skill gaps and reasons"
+        description={`${scope.scopeLabel}. Why trainees are not placed or leave jobs, and which skills employers say are missing.`}
       />
-      <FilterBar filters={GOV_FILTERS} />
+      <FilterBar filters={getGovFilters(scope.districtCode)} />
 
       <div className="mb-6 grid gap-6 xl:grid-cols-2">
         <ChartCard
@@ -31,10 +37,7 @@ export default function GovSkillGapsPage() {
           description="Number of trainees not working at W3, by the main reason they gave."
           kind="bar"
           isHorizontal
-          data={toReasonChartData(
-            NON_PLACEMENT_REASONS_STATE,
-            NON_PLACEMENT_REASONS,
-          )}
+          data={toReasonChartData(nonPlacementReasons, NON_PLACEMENT_REASONS)}
           categoryKey="label"
           categoryLabel="Reason"
           series={[{ key: "count", label: "Trainees", color: CHART_COLORS[0] }]}
@@ -46,7 +49,7 @@ export default function GovSkillGapsPage() {
           description="Number of trainees in work at W3 but not at W6, by the main reason they gave."
           kind="bar"
           isHorizontal
-          data={toReasonChartData(ATTRITION_REASONS_STATE, ATTRITION_REASONS)}
+          data={toReasonChartData(attritionReasons, ATTRITION_REASONS)}
           categoryKey="label"
           categoryLabel="Reason"
           series={[{ key: "count", label: "Trainees", color: CHART_COLORS[3] }]}
@@ -55,10 +58,10 @@ export default function GovSkillGapsPage() {
         />
       </div>
 
-      <Card>
+      <Card className="mb-6">
         <CardHeader
           title="Skills employers say are missing"
-          description="From employer feedback forms on trainees they hired."
+          description="From employer feedback forms on trainees they hired across target job roles."
         />
         <DataTable
           caption="Employer-reported skill gaps"
@@ -83,6 +86,67 @@ export default function GovSkillGapsPage() {
           ]}
         />
       </Card>
+
+      <div className="flex flex-col gap-4">
+        <DisclosureExpander label="Methodology and survey cadence">
+          <div className="space-y-3 text-body text-fg-muted">
+            <p>
+              Trainee reasons are collected during structured telephonic and
+              digital surveys:
+            </p>
+            <ul className="list-disc space-y-1 pl-5">
+              <li>
+                <strong className="text-fg">
+                  W3 follow-up (3 months post-certification):
+                </strong>{" "}
+                Identifies placement status and primary roadblocks for
+                non-working trainees.
+              </li>
+              <li>
+                <strong className="text-fg">
+                  W6 follow-up (6 months post-certification):
+                </strong>{" "}
+                Measures job retention. For trainees who exited their initial
+                job, the primary reason is recorded using standard state
+                taxonomy codes.
+              </li>
+              <li>
+                <strong className="text-fg">Employer feedback:</strong>{" "}
+                Collected concurrently with employment verification
+                confirmations.
+              </li>
+            </ul>
+          </div>
+        </DisclosureExpander>
+
+        <DisclosureExpander label="Recommended remedial actions by reason type">
+          <div className="space-y-2 text-body text-fg-muted">
+            <p>
+              When a specific reason exceeds 25% of unplaced or departed
+              trainees in a district or provider:
+            </p>
+            <ul className="list-disc space-y-1 pl-5">
+              <li>
+                <strong className="text-fg">Location / Travel:</strong> Work
+                with local employers within 15km or coordinate transport
+                stipends.
+              </li>
+              <li>
+                <strong className="text-fg">Wage below expectations:</strong>{" "}
+                Trigger course-level wage benchmarking action with industry
+                partners.
+              </li>
+              <li>
+                <strong className="text-fg">
+                  Lacked required practical skills:
+                </strong>{" "}
+                Create provider-targeted curriculum audit and practical lab
+                remediation action.
+              </li>
+            </ul>
+          </div>
+        </DisclosureExpander>
+      </div>
     </>
   );
 }

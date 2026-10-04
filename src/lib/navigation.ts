@@ -1,8 +1,6 @@
 import {
   Activity,
-  BookOpen,
   Briefcase,
-  Building2,
   ChartColumn,
   ClipboardCheck,
   ClipboardList,
@@ -12,7 +10,6 @@ import {
   Layers,
   LayoutDashboard,
   ListChecks,
-  MapPin,
   MessageSquareWarning,
   Settings,
   ShieldCheck,
@@ -21,7 +18,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-export type Portal = "trainee" | "agent" | "provider" | "employer" | "gov" | "gov-district";
+export type Portal =
+  "trainee" | "agent" | "provider" | "employer" | "gov" | "gov-district";
 
 export interface NavItem {
   label: string;
@@ -78,18 +76,34 @@ export const NAVIGATION: Record<Portal, readonly NavItem[]> = {
   gov: [
     { label: "Overview", href: "/gov", icon: LayoutDashboard },
     { label: "Outcomes", href: "/gov/outcomes", icon: Activity },
-    { label: "Skill gaps and reasons", href: "/gov/skill-gaps", icon: ChartColumn },
+    {
+      label: "Skill gaps and reasons",
+      href: "/gov/skill-gaps",
+      icon: ChartColumn,
+    },
     { label: "Actions", href: "/gov/actions", icon: ClipboardList },
-    { label: "Data quality and definitions", href: "/gov/data-quality", icon: Database },
+    {
+      label: "Data quality and definitions",
+      href: "/gov/data-quality",
+      icon: Database,
+    },
     { label: "Settings", href: "/gov/settings", icon: Settings },
   ],
   /** District officer variant: no Settings, no Districts tab. */
   "gov-district": [
     { label: "Overview", href: "/gov", icon: LayoutDashboard },
     { label: "Outcomes", href: "/gov/outcomes", icon: Activity },
-    { label: "Skill gaps and reasons", href: "/gov/skill-gaps", icon: ChartColumn },
+    {
+      label: "Skill gaps and reasons",
+      href: "/gov/skill-gaps",
+      icon: ChartColumn,
+    },
     { label: "Actions", href: "/gov/actions", icon: ClipboardList },
-    { label: "Data quality and definitions", href: "/gov/data-quality", icon: Database },
+    {
+      label: "Data quality and definitions",
+      href: "/gov/data-quality",
+      icon: Database,
+    },
   ],
 };
 

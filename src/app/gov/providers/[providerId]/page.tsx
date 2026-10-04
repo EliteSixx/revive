@@ -40,7 +40,7 @@ export default async function GovProviderPage(
       <PageHeader
         title={row.provider.name}
         description={`${row.districtName}. Registration ${row.provider.registrationRef}.`}
-        breadcrumbs={[{ label: "Providers", href: "/gov/providers" }]}
+        breadcrumbs={[{ label: "Outcomes", href: "/gov/outcomes?tab=providers" }]}
         actions={
           <Button>
             <Plus aria-hidden="true" />

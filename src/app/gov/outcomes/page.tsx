@@ -11,8 +11,7 @@ import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardHeader } from "@/components/ui/card";
 import { DataTable } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { DisclosureExpander } from "@/features/gov/disclosure-expander";
-import { GOV_FILTERS } from "@/features/gov/gov-filters";
+import { getGovFilters } from "@/features/gov/gov-filters";
 import { useGovScope } from "@/features/gov/gov-session";
 import {
   getScopedCohortRows,
@@ -33,14 +32,15 @@ import {
   RESIDENCE_TYPE_LABELS,
   SOCIAL_CATEGORY_LABELS,
 } from "@/lib/constants";
+import type { GroupedCounts } from "@/mocks/aggregate";
 import { DEMOGRAPHIC_BREAKDOWNS } from "@/mocks/analytics";
 import { AGE_BANDS } from "@/mocks/reference";
-import type { ProviderRow, DistrictRow } from "@/mocks/analytics";
-
-export const metadata = { title: "Outcomes | Revive" };
 
 const AGE_LABELS = Object.fromEntries(AGE_BANDS.map((band) => [band, band]));
-const DISABILITY_LABELS = { YES: "Persons with disability", NO: "Without disability" };
+const DISABILITY_LABELS = {
+  YES: "Persons with disability",
+  NO: "Without disability",
+};
 
 const DEFAULT_TAB = "cohorts";
 const PAGE_SIZE = 5;
@@ -79,7 +79,7 @@ export default function GovOutcomesPage() {
         title="Outcomes"
         description={`${scope.scopeLabel}. Placement, retention and demographics across certified trainees.`}
       />
-      <FilterBar filters={GOV_FILTERS} />
+      <FilterBar filters={getGovFilters(scope.districtCode)} />
 
       <Tabs value={activeTab} onValueChange={handleTabChange}>
         <TabsList>
@@ -99,13 +99,29 @@ export default function GovOutcomesPage() {
               title="Outcomes by cohort"
               description="Placement at W3 (3 months) and retention at W6 (6 months) and W12 (12 months) among those in work at W3."
               kind="line"
-              data={toRateChartData(cohortGroups, ["placementRate", "retentionW6", "retentionW12"])}
+              data={toRateChartData(cohortGroups, [
+                "placementRate",
+                "retentionW6",
+                "retentionW12",
+              ])}
               categoryKey="label"
               categoryLabel="Cohort"
               series={[
-                { key: "placementRate", label: "Placement (W3, 3 months)", color: CHART_COLORS[0] },
-                { key: "retentionW6", label: "Retention (W6, 6 months)", color: CHART_COLORS[2] },
-                { key: "retentionW12", label: "Retention (W12, 12 months)", color: CHART_COLORS[3] },
+                {
+                  key: "placementRate",
+                  label: "Placement (W3, 3 months)",
+                  color: CHART_COLORS[0],
+                },
+                {
+                  key: "retentionW6",
+                  label: "Retention (W6, 6 months)",
+                  color: CHART_COLORS[2],
+                },
+                {
+                  key: "retentionW12",
+                  label: "Retention (W12, 12 months)",
+                  color: CHART_COLORS[3],
+                },
               ]}
               valueFormat="percent"
             />
@@ -122,7 +138,11 @@ export default function GovOutcomesPage() {
               pageSize={PAGE_SIZE}
               totalCount={cohortGroups.length}
               columns={[
-                { key: "cohort", header: "Certified in", cell: (row) => row.label },
+                {
+                  key: "cohort",
+                  header: "Certified in",
+                  cell: (row) => row.label,
+                },
                 {
                   key: "certified",
                   header: "Certified",
@@ -134,22 +154,25 @@ export default function GovOutcomesPage() {
                   header: "Response (W3)",
                   align: "right",
                   cell: (row) =>
-                    formatRate(computeOutcomeRates(row.counts).responseRate) ?? SUPPRESSED_LABEL,
+                    formatRate(computeOutcomeRates(row.counts).responseRate) ??
+                    SUPPRESSED_LABEL,
                 },
                 {
                   key: "placement",
                   header: "Placement (W3)",
                   align: "right",
                   cell: (row) =>
-                    formatRate(computeOutcomeRates(row.counts).placementRate) ?? SUPPRESSED_LABEL,
+                    formatRate(computeOutcomeRates(row.counts).placementRate) ??
+                    SUPPRESSED_LABEL,
                 },
                 {
                   key: "verified",
                   header: "Verified (W3)",
                   align: "right",
                   cell: (row) =>
-                    formatRate(computeOutcomeRates(row.counts).verifiedPlacementRate) ??
-                    SUPPRESSED_LABEL,
+                    formatRate(
+                      computeOutcomeRates(row.counts).verifiedPlacementRate,
+                    ) ?? SUPPRESSED_LABEL,
                 },
               ]}
             />
@@ -196,24 +219,31 @@ export default function GovOutcomesPage() {
                     if (row.counts.certified < 30) {
                       return (
                         <span className="text-fg-subtle">
-                          {formatRate(rates.verifiedPlacementRate) ?? SUPPRESSED_LABEL}
+                          {formatRate(rates.verifiedPlacementRate) ??
+                            SUPPRESSED_LABEL}
                           <span className="ml-1 rounded-sm bg-warning-subtle px-1 text-label text-warning">
                             Low base
                           </span>
                         </span>
                       );
                     }
-                    return formatRate(rates.verifiedPlacementRate) ?? SUPPRESSED_LABEL;
+                    return (
+                      formatRate(rates.verifiedPlacementRate) ??
+                      SUPPRESSED_LABEL
+                    );
                   },
                   sortValue: (row) =>
-                    rateSortValue(computeOutcomeRates(row.counts).verifiedPlacementRate),
+                    rateSortValue(
+                      computeOutcomeRates(row.counts).verifiedPlacementRate,
+                    ),
                 },
                 {
                   key: "response",
                   header: "Response %",
                   align: "right",
                   cell: (row) =>
-                    formatRate(computeOutcomeRates(row.counts).responseRate) ?? SUPPRESSED_LABEL,
+                    formatRate(computeOutcomeRates(row.counts).responseRate) ??
+                    SUPPRESSED_LABEL,
                 },
                 {
                   key: "retention",
@@ -275,10 +305,13 @@ export default function GovOutcomesPage() {
                     header: "Verified %",
                     align: "right",
                     cell: (row) =>
-                      formatRate(computeOutcomeRates(row.counts).verifiedPlacementRate) ??
-                      SUPPRESSED_LABEL,
+                      formatRate(
+                        computeOutcomeRates(row.counts).verifiedPlacementRate,
+                      ) ?? SUPPRESSED_LABEL,
                     sortValue: (row) =>
-                      rateSortValue(computeOutcomeRates(row.counts).verifiedPlacementRate),
+                      rateSortValue(
+                        computeOutcomeRates(row.counts).verifiedPlacementRate,
+                      ),
                   },
                   {
                     key: "retention",
@@ -301,11 +334,36 @@ export default function GovOutcomesPage() {
         <TabsContent value="demographics">
           <div className="flex flex-col gap-6">
             {[
-              { title: "By gender", groupHeader: "Gender", groups: DEMOGRAPHIC_BREAKDOWNS.gender, labels: GENDER_LABELS },
-              { title: "By age", groupHeader: "Age", groups: DEMOGRAPHIC_BREAKDOWNS.ageBand, labels: AGE_LABELS },
-              { title: "By social category", groupHeader: "Category", groups: DEMOGRAPHIC_BREAKDOWNS.socialCategory, labels: SOCIAL_CATEGORY_LABELS },
-              { title: "By disability", groupHeader: "Group", groups: DEMOGRAPHIC_BREAKDOWNS.disability, labels: DISABILITY_LABELS },
-              { title: "By residence", groupHeader: "Residence", groups: DEMOGRAPHIC_BREAKDOWNS.residence, labels: RESIDENCE_TYPE_LABELS },
+              {
+                title: "By gender",
+                groupHeader: "Gender",
+                groups: DEMOGRAPHIC_BREAKDOWNS.gender,
+                labels: GENDER_LABELS,
+              },
+              {
+                title: "By age",
+                groupHeader: "Age",
+                groups: DEMOGRAPHIC_BREAKDOWNS.ageBand,
+                labels: AGE_LABELS,
+              },
+              {
+                title: "By social category",
+                groupHeader: "Category",
+                groups: DEMOGRAPHIC_BREAKDOWNS.socialCategory,
+                labels: SOCIAL_CATEGORY_LABELS,
+              },
+              {
+                title: "By disability",
+                groupHeader: "Group",
+                groups: DEMOGRAPHIC_BREAKDOWNS.disability,
+                labels: DISABILITY_LABELS,
+              },
+              {
+                title: "By residence",
+                groupHeader: "Residence",
+                groups: DEMOGRAPHIC_BREAKDOWNS.residence,
+                labels: RESIDENCE_TYPE_LABELS,
+              },
             ].map(({ title, groupHeader, groups, labels }) => (
               <Card key={title}>
                 <CardHeader
@@ -320,16 +378,19 @@ export default function GovOutcomesPage() {
                     {
                       key: "group",
                       header: groupHeader,
-                      cell: (group) => (labels as Record<string, string>)[group.key] ?? group.key,
+                      cell: (group) =>
+                        (labels as Record<string, string>)[group.key] ??
+                        group.key,
                     },
-                    ...outcomeColumns((group) => group.counts),
+                    ...outcomeColumns<GroupedCounts>((group) => group.counts),
                   ]}
                 />
               </Card>
             ))}
           </div>
           <p className="mt-4 text-small text-fg-subtle">
-            Cells with fewer than 10 trainees are suppressed. Figures include only trainees who consented to analytics.
+            Cells with fewer than 10 trainees are suppressed. Figures include
+            only trainees who consented to analytics.
           </p>
         </TabsContent>
       </Tabs>

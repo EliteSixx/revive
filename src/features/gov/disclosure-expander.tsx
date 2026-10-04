@@ -36,7 +36,10 @@ export function DisclosureExpander({
       >
         {label}
         <ChevronDown
-          className={cn("size-4 shrink-0 transition-transform duration-150", open && "rotate-180")}
+          className={cn(
+            "size-4 shrink-0 transition-transform duration-150",
+            open && "rotate-180",
+          )}
           aria-hidden="true"
         />
       </button>

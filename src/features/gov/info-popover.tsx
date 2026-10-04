@@ -1,6 +1,6 @@
 "use client";
 
-import * as Popover from "radix-ui/react-popover";
+import { Popover } from "radix-ui";
 import { Info } from "lucide-react";
 import { cn } from "@/lib/cn";
 
@@ -16,7 +16,12 @@ interface InfoPopoverProps {
  * Small (i) button that opens a popover with a metric definition.
  * Keeps definitions out of inline text (design principle 5).
  */
-export function InfoPopover({ label, definition, formula, className }: InfoPopoverProps) {
+export function InfoPopover({
+  label,
+  definition,
+  formula,
+  className,
+}: InfoPopoverProps) {
   return (
     <Popover.Root>
       <Popover.Trigger asChild>

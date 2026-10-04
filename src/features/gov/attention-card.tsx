@@ -13,7 +13,12 @@ interface AttentionCardProps {
 
 const SEVERITY_CONFIG: Record<
   Severity,
-  { label: string; icon: typeof AlertTriangle; wrapperClass: string; iconClass: string }
+  {
+    label: string;
+    icon: typeof AlertTriangle;
+    wrapperClass: string;
+    iconClass: string;
+  }
 > = {
   high: {
     label: "High",
@@ -39,7 +44,12 @@ const SEVERITY_CONFIG: Record<
  * One-line card in the "Needs attention" list.
  * Severity is shown as a text badge plus icon so colour is never the only signal (design principle 4).
  */
-export function AttentionCard({ title, severity, action, className }: AttentionCardProps) {
+export function AttentionCard({
+  title,
+  severity,
+  action,
+  className,
+}: AttentionCardProps) {
   const cfg = SEVERITY_CONFIG[severity];
   const Icon = cfg.icon;
 
@@ -52,9 +62,18 @@ export function AttentionCard({ title, severity, action, className }: AttentionC
       )}
     >
       <div className="flex min-w-0 items-center gap-2">
-        <Icon className={cn("size-4 shrink-0", cfg.iconClass)} aria-hidden="true" />
+        <Icon
+          className={cn("size-4 shrink-0", cfg.iconClass)}
+          aria-hidden="true"
+        />
         <span className="text-small text-fg">{title}</span>
-        <span className={cn("rounded-sm px-1.5 py-0.5 text-label", cfg.iconClass, "border border-current bg-white/60")}>
+        <span
+          className={cn(
+            "rounded-sm px-1.5 py-0.5 text-label",
+            cfg.iconClass,
+            "border border-current bg-white/60",
+          )}
+        >
           {cfg.label}
         </span>
       </div>

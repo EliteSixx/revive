@@ -24,7 +24,10 @@ export function useGovScope(): GovScope {
   const session = useMockStore(sessionStore);
 
   // Fallback: unauthenticated demo navigation still works (architecture.md 10).
-  if (!session || (session.role !== "DISTRICT_OFFICER" && session.role !== "STATE_ADMIN")) {
+  if (
+    !session ||
+    (session.role !== "DISTRICT_OFFICER" && session.role !== "STATE_ADMIN")
+  ) {
     return {
       role: "STATE_ADMIN",
       districtCode: null,
