@@ -103,6 +103,7 @@ export function verifyOtp(phone: string, code: string) {
       role: "TRAINEE",
       displayName: account.displayName,
       portalPath: PORTAL_PATH_BY_ROLE.TRAINEE,
+      districtCode: null,
     });
   });
 }
@@ -122,6 +123,7 @@ export function signInStaff(email: string, password: string) {
       role: account.role,
       displayName: account.displayName,
       portalPath: PORTAL_PATH_BY_ROLE[account.role],
+      districtCode: account.districtCode,
     });
   });
 }

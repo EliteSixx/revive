@@ -21,7 +21,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-export type Portal = "trainee" | "agent" | "provider" | "employer" | "gov";
+export type Portal = "trainee" | "agent" | "provider" | "employer" | "gov" | "gov-district";
 
 export interface NavItem {
   label: string;
@@ -35,6 +35,7 @@ export const PORTAL_NAMES: Record<Portal, string> = {
   provider: "Training provider",
   employer: "Employer",
   gov: "Government",
+  "gov-district": "Government",
 };
 
 export const NAVIGATION: Record<Portal, readonly NavItem[]> = {
@@ -76,15 +77,19 @@ export const NAVIGATION: Record<Portal, readonly NavItem[]> = {
   ],
   gov: [
     { label: "Overview", href: "/gov", icon: LayoutDashboard },
-    { label: "Cohorts", href: "/gov/cohorts", icon: Activity },
-    { label: "Providers", href: "/gov/providers", icon: Building2 },
-    { label: "Districts", href: "/gov/districts", icon: MapPin },
-    { label: "Demographics", href: "/gov/demographics", icon: Users },
-    { label: "Skill gaps", href: "/gov/skill-gaps", icon: ChartColumn },
-    { label: "Data quality", href: "/gov/data-quality", icon: Database },
+    { label: "Outcomes", href: "/gov/outcomes", icon: Activity },
+    { label: "Skill gaps and reasons", href: "/gov/skill-gaps", icon: ChartColumn },
     { label: "Actions", href: "/gov/actions", icon: ClipboardList },
-    { label: "Definitions", href: "/gov/definitions", icon: BookOpen },
+    { label: "Data quality and definitions", href: "/gov/data-quality", icon: Database },
     { label: "Settings", href: "/gov/settings", icon: Settings },
+  ],
+  /** District officer variant: no Settings, no Districts tab. */
+  "gov-district": [
+    { label: "Overview", href: "/gov", icon: LayoutDashboard },
+    { label: "Outcomes", href: "/gov/outcomes", icon: Activity },
+    { label: "Skill gaps and reasons", href: "/gov/skill-gaps", icon: ChartColumn },
+    { label: "Actions", href: "/gov/actions", icon: ClipboardList },
+    { label: "Data quality and definitions", href: "/gov/data-quality", icon: Database },
   ],
 };
 

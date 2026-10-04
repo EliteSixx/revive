@@ -9,7 +9,7 @@ import { SignOutLink } from "./sign-out-link";
 import { SkipLink } from "./skip-link";
 
 interface AppShellProps {
-  portal: Exclude<Portal, "trainee">;
+  portal: Portal;
   /** Whose data this user can see, e.g. "All districts" or a provider name. */
   scopeLabel: string;
   userName: string;

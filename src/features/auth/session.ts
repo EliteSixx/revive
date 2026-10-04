@@ -9,6 +9,8 @@ export interface Session {
   displayName: string;
   portalPath: string;
   signedInAt: string;
+  /** For DISTRICT_OFFICER: the district code they are scoped to. Null for STATE_ADMIN. */
+  districtCode: string | null;
 }
 
 export const sessionStore = createMockStore<Session | null>(
