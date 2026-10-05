@@ -15,8 +15,11 @@ export interface GovScope {
   districtCode: string | null;
   districtName: string | null;
   displayName: string;
+  email: string | null;
+  signedInAt: string | null;
   /** Header scope label, e.g. "District view: Pune" or "State view: all districts". */
   scopeLabel: string;
+  isAuthenticated: boolean;
 }
 
 /** Reads the current gov scope from the session store. Falls back to state admin for unauthenticated demo access. */
@@ -33,9 +36,18 @@ export function useGovScope(): GovScope {
       districtCode: null,
       districtName: null,
       displayName: "State admin (sample)",
+      email: null,
+      signedInAt: null,
       scopeLabel: "State view: all districts",
+      isAuthenticated: false,
     };
   }
+
+  const email =
+    session.email ??
+    (session.role === "DISTRICT_OFFICER"
+      ? "district.pune@revive.test"
+      : "state.admin@revive.test");
 
   if (session.role === "DISTRICT_OFFICER" && session.districtCode) {
     const districtName = getDistrictName(session.districtCode);
@@ -44,7 +56,10 @@ export function useGovScope(): GovScope {
       districtCode: session.districtCode,
       districtName,
       displayName: session.displayName,
+      email,
+      signedInAt: session.signedInAt ?? null,
       scopeLabel: `District view: ${districtName}`,
+      isAuthenticated: true,
     };
   }
 
@@ -53,6 +68,9 @@ export function useGovScope(): GovScope {
     districtCode: null,
     districtName: null,
     displayName: session.displayName,
+    email,
+    signedInAt: session.signedInAt ?? null,
     scopeLabel: "State view: all districts",
+    isAuthenticated: true,
   };
 }

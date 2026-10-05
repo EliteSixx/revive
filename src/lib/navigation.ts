@@ -89,7 +89,7 @@ export const NAVIGATION: Record<Portal, readonly NavItem[]> = {
     },
     { label: "Settings", href: "/gov/settings", icon: Settings },
   ],
-  /** District officer variant: no Settings, no Districts tab. */
+  /** District officer variant: no Districts tab. */
   "gov-district": [
     { label: "Overview", href: "/gov", icon: LayoutDashboard },
     { label: "Outcomes", href: "/gov/outcomes", icon: Activity },
@@ -104,6 +104,7 @@ export const NAVIGATION: Record<Portal, readonly NavItem[]> = {
       href: "/gov/data-quality",
       icon: Database,
     },
+    { label: "Settings", href: "/gov/settings", icon: Settings },
   ],
 };
 

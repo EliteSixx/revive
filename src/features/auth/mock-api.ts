@@ -124,6 +124,7 @@ export function signInStaff(email: string, password: string) {
       displayName: account.displayName,
       portalPath: PORTAL_PATH_BY_ROLE[account.role],
       districtCode: account.districtCode,
+      email: account.email,
     });
   });
 }

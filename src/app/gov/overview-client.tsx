@@ -13,7 +13,7 @@ import { PageHeader } from "@/components/layout/page-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardBody, CardHeader } from "@/components/ui/card";
 import { AttentionCard } from "@/features/gov/attention-card";
-import { DisclosureExpander } from "@/features/gov/disclosure-expander";
+import { CollapsibleCard } from "@/features/gov/collapsible-card";
 import { InfoPopover } from "@/features/gov/info-popover";
 import { useGovScope } from "@/features/gov/gov-session";
 import { getGovFilters } from "@/features/gov/gov-filters";
@@ -83,9 +83,9 @@ export default function GovOverviewClient() {
       />
       <FilterBar filters={getGovFilters(scope.districtCode)} />
 
-      {/* 4 headline KPI cards */}
+      {/* 4 headline KPI cards visible at-a-glance */}
       <div className="mb-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <div className="rounded-md border border-border bg-surface p-4">
+        <div className="rounded-md border border-border bg-surface p-4 shadow-2xs">
           <div className="flex items-center gap-1.5 text-label text-fg-muted">
             Verified placement rate
             <span className="rounded-sm bg-surface-muted px-1 py-0.5 text-label text-fg-subtle">
@@ -115,7 +115,7 @@ export default function GovOverviewClient() {
           )}
         </div>
 
-        <div className="rounded-md border border-border bg-surface p-4">
+        <div className="rounded-md border border-border bg-surface p-4 shadow-2xs">
           <div className="flex items-center gap-1.5 text-label text-fg-muted">
             Placement rate, all sources
             <span className="rounded-sm bg-surface-muted px-1 py-0.5 text-label text-fg-subtle">
@@ -135,7 +135,7 @@ export default function GovOverviewClient() {
           </p>
         </div>
 
-        <div className="rounded-md border border-border bg-surface p-4">
+        <div className="rounded-md border border-border bg-surface p-4 shadow-2xs">
           <div className="flex items-center gap-1.5 text-label text-fg-muted">
             Retention
             <span className="rounded-sm bg-surface-muted px-1 py-0.5 text-label text-fg-subtle">
@@ -158,7 +158,7 @@ export default function GovOverviewClient() {
           </p>
         </div>
 
-        <div className="rounded-md border border-border bg-surface p-4">
+        <div className="rounded-md border border-border bg-surface p-4 shadow-2xs">
           <div className="flex items-center gap-1.5 text-label text-fg-muted">
             Response rate
             <span className="rounded-sm bg-surface-muted px-1 py-0.5 text-label text-fg-subtle">
@@ -179,27 +179,11 @@ export default function GovOverviewClient() {
         </div>
       </div>
 
-      {/* Main chart: verification breakdown by provider */}
-      <div className="mb-6">
-        <ChartCard
-          title="Placement verification breakdown"
-          description="How placements are verified for each provider. Each bar is 100% of certified trainees."
-          kind="stacked-bar"
-          isHorizontal
-          data={chartData}
-          categoryKey="label"
-          categoryLabel="Provider"
-          series={VERIFICATION_SERIES}
-          valueFormat="percent"
-          height={providerRows.length * 52 + 80}
-        />
-      </div>
-
-      {/* Needs attention */}
+      {/* Urgent flags / Needs attention visible at-a-glance */}
       <Card className="mb-6">
         <CardHeader
           title="Needs attention"
-          description="The 3 items most likely to need action. Expand each for detail."
+          description="The 3 priority operational flags requiring supervisory action."
         />
         <CardBody className="flex flex-col gap-2">
           {lowestProvider && (
@@ -250,9 +234,46 @@ export default function GovOverviewClient() {
             </Button>
           </Link>
         </CardBody>
+      </Card>
 
-        {/* More metrics expander */}
-        <DisclosureExpander label="More metrics">
+      {/* Task 2: Collapsible Deep-dive Sections */}
+      <div className="mb-6 space-y-4">
+        {/* Collapsible Chart: verification breakdown */}
+        <CollapsibleCard
+          title="Placement verification breakdown"
+          description="How placements are verified for each provider. Each bar is 100% of certified trainees."
+          badge={
+            <span className="rounded-sm bg-surface-muted px-2 py-0.5 text-2xs font-medium text-fg-muted">
+              {providerRows.length} providers
+            </span>
+          }
+          defaultOpen={false}
+        >
+          <ChartCard
+            title="Placement verification breakdown"
+            description="How placements are verified for each provider. Each bar is 100% of certified trainees."
+            kind="stacked-bar"
+            isHorizontal
+            data={chartData}
+            categoryKey="label"
+            categoryLabel="Provider"
+            series={VERIFICATION_SERIES}
+            valueFormat="percent"
+            height={providerRows.length * 52 + 80}
+          />
+        </CollapsibleCard>
+
+        {/* Collapsible Secondary Metrics */}
+        <CollapsibleCard
+          title="Secondary outcome metrics & wage benchmarks"
+          description="Wage levels at placement, 12-month wage progression, and self-employment shares."
+          badge={
+            <span className="rounded-sm bg-surface-muted px-2 py-0.5 text-2xs font-medium text-fg-muted">
+              4 benchmark metrics
+            </span>
+          }
+          defaultOpen={false}
+        >
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             <MetricTile
               label="Median wage at placement"
@@ -282,12 +303,12 @@ export default function GovOverviewClient() {
               baseText="Among trainees in work at W3"
             />
           </div>
-        </DisclosureExpander>
-      </Card>
+        </CollapsibleCard>
+      </div>
 
       {/* Consent scope note */}
       <p className="text-small text-fg-subtle">
-        Figures include only trainees who consented to analytics.
+        Figures include only trainees who consented to analytics. Sample data notice applies.
       </p>
     </>
   );
