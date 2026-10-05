@@ -1,10 +1,40 @@
-import type { Metadata } from "next";
-import GovOverviewClient from "./overview-client";
+"use client";
 
-export const metadata: Metadata = { title: "Overview | Revive" };
+import Link from "next/link";
+import { Plus } from "lucide-react";
+import { ChartCard } from "@/components/charts/chart-card";
+import {
+  toVerificationChartData,
+  VERIFICATION_SERIES,
+} from "@/components/charts/chart-data";
+import { FilterBar } from "@/components/domain/filter-bar";
+import { MetricTile } from "@/components/domain/metric-tile";
+import { PageHeader } from "@/components/layout/page-header";
+import { Button } from "@/components/ui/button";
+import { Card, CardBody, CardHeader } from "@/components/ui/card";
+import { AttentionCard } from "@/features/gov/attention-card";
+import { DisclosureExpander } from "@/features/gov/disclosure-expander";
+import { InfoPopover } from "@/features/gov/info-popover";
+import { useGovScope } from "@/features/gov/gov-session";
+import { getGovFilters } from "@/features/gov/gov-filters";
+import {
+  getScopedProviderRows,
+  getScopedStateCounts,
+} from "@/features/gov/mock-api";
+import { formatNumber, formatPercent, formatRupees } from "@/lib/format";
+import {
+  computeOutcomeRates,
+  formatBase,
+  formatRate,
+  isSmallGroup,
+  NOT_YET_DUE_LABEL,
+  rateSortValue,
+  suppressMedian,
+} from "@/lib/metrics";
+import { STATE_COUNTS } from "@/mocks/analytics";
 
-export default function GovOverviewPage() {
-  return <GovOverviewClient />;
+export default function GovOverviewClient() {
+  const scope = useGovScope();
   const counts = getScopedStateCounts(scope.districtCode);
   const rates = computeOutcomeRates(counts);
   const verifiedShare = formatRate(rates.verifiedShare, 0);
