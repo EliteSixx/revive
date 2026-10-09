@@ -4,6 +4,7 @@ import {
   COHORT_MONTHS,
   COURSES,
   DISTRICTS,
+  getDistrictName,
   PROGRAMMES,
 } from "@/mocks/reference";
 
@@ -50,3 +51,30 @@ export const GOV_FILTERS: readonly FilterDefinition[] = [
     ],
   },
 ];
+
+/** Returns filters tailored to the role. District officers can only select their own district. */
+export function getGovFilters(
+  districtCode: string | null,
+): readonly FilterDefinition[] {
+  const districtOptions = districtCode
+    ? [{ value: districtCode, label: getDistrictName(districtCode) }]
+    : [
+        { value: "all", label: "All districts" },
+        ...DISTRICTS.map((district) => ({
+          value: district.code,
+          label: district.name,
+        })),
+      ];
+
+  return [
+    GOV_FILTERS[0],
+    GOV_FILTERS[1],
+    {
+      id: "district",
+      label: "District",
+      options: districtOptions,
+      defaultValue: districtCode ?? "all",
+    },
+    GOV_FILTERS[3],
+  ];
+}

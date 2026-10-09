@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://github.com/rudythetechy/revive/pull/8/conflicts -->
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark" data-a11y-animated-images="system" data-a11y-link-underlines="true" data-turbo-loaded="" class="js-focus-visible" data-js-focus-visible=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/pull-requests.73d354db42807f43.module.css" media="all" crossorigin="anonymous" data-precedence="default"><link rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/pull-requests-00ebbc4aead61d58.css" media="all" crossorigin="anonymous" data-precedence="default"><link rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/copilot-code-review-e950277080a9b21d.css" media="all" crossorigin="anonymous" data-precedence="default"><link rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/actions-5fbab84bbce55307.css" media="all" crossorigin="anonymous" data-precedence="default"><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 2147483647;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style><style>
+:root {
+  --fontStack-monospace: "Monaspace Neon", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
+}
+</style>
+
+
+
+
+  
+    
+  
+  
+  
+  
+  
+  
+
+<script src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/javascript-e904272d2f2a9dc4.js.download" crossorigin="anonymous"></script><script src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/xml-552e16f249980692.js.download" crossorigin="anonymous"></script><script src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/jsx-5ee506c147331f59.js.download" crossorigin="anonymous"></script><script type="importmap">{"imports":{"react":"https://github.githubassets.com/assets/react-e27d1b3e03961e68.js","react-dom":"https://github.githubassets.com/assets/react-dom-e5fd46a22d5c4058.js","react-dom/client":"https://github.githubassets.com/assets/react-dom-client-1b4a3ee065998cea.js","react-is":"https://github.githubassets.com/assets/react-is-e0b593954b4706d8.js","react-reconciler":"https://github.githubassets.com/assets/react-reconciler-8e99e505c4429605.js","react/compiler-runtime":"https://github.githubassets.com/assets/react-compiler-runtime-4610bd6d3de9c049.js","react/jsx-dev-runtime":"https://github.githubassets.com/assets/react-jsx-dev-runtime-ea55d68667d559e5.js","react/jsx-runtime":"https://github.githubassets.com/assets/react-jsx-runtime-4915cb0f5b3aff04.js","scheduler":"https://github.githubassets.com/assets/scheduler-58b860b049ca307c.js"}}</script>
+
+<meta name="react-import-map" content="react,react-dom,react-dom/client,react-dom/profiling,react-is,react-reconciler,react/compiler-runtime,react/jsx-dev-runtime,react/jsx-runtime,scheduler@777f63f87cd0" data-turbo-track="reload">
+
+
+
+
+
+
+
+
+
+  
+
+
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/light-99f877e9ddfc0e51.css"><link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/dark-79ad2ace604703b3.css"><link data-color-theme="light_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_high_contrast-48fdd0811afbab3c.css"><link data-color-theme="light_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind-f4bf1142976e4bbf.css"><link data-color-theme="light_colorblind_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind_high_contrast-f661b49995ba0bd8.css"><link data-color-theme="light_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia-0b38d22346321c92.css"><link data-color-theme="light_tritanopia_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia_high_contrast-f1c62c9e70259b9f.css"><link data-color-theme="dark_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_high_contrast-24484a076f02295f.css"><link data-color-theme="dark_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind-f50cacf0a86b9929.css"><link data-color-theme="dark_colorblind_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind_high_contrast-e61d4f4ca17852c2.css"><link data-color-theme="dark_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia-39c10993d5603fac.css"><link data-color-theme="dark_tritanopia_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia_high_contrast-73236c840c0c7d90.css"><link data-color-theme="dark_dimmed" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed-0de76f07cc035b10.css"><link data-color-theme="dark_dimmed_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed_high_contrast-fd1500c8744e40d6.css">
+
+  <style type="text/css">
+    :root {
+      --tab-size-preference: 4;
+    }
+
+    pre, code {
+      tab-size: var(--tab-size-preference);
+    }
+  </style>
+
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/primer-primitives-ed9ca172356fd545.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/primer-tailwind-compatible-ec7f30b2efac8de6.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/global-54ba76e934a49d7c.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/github-7338c07b3a07b8be.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/tailwind-92662733dbb08889.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/repository-11ee8a031c040c1a.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/code-2d56bdb0166c0238.css">
+
+  
+
+  <script type="application/json" id="client-env">{"locale":"en","featureFlags":["actions_enable_background_steps","actions_new_hosted_runner_image_select_sizes_and_versions","actions_workflow_language_service_allow_case_function","activity_diff_file_tree","activity_repos_file_tree","activity_repos_overview_header","activity_repos_overview_sidebar","agent_author_search_expansion","agent_author_search_expansion_ui_pulls","alternate_user_config_repo","async_conversion_coverage_enabled","billing_billable_licenses_cost_center_bucket_fix","billing_budget_expiration","billing_cost_center_list_assigned_resources","billing_discount_threshold_notification","ccr_implement_suggestion_refresh","code_quality_enablement_banner_targeting","code_quality_remove_preview","code_view_checks_live_updates","code_view_raf_sticky_lines","codemirror_inp_optimizations","codespaces_prebuild_region_target_update","coding_agent_third_party_model_ui","copilot_agent_snippy","copilot_api_agentic_issue_marshal_yaml","copilot_automation_repo_mcp_servers","copilot_automations_pagination","copilot_base_model_policy_row","copilot_chat_auto_mode_v2","copilot_chat_clear_model_selection_for_default_change","copilot_chat_disable_model_picker_while_streaming","copilot_chat_increase_token_padding","copilot_chat_persist_session_drafts","copilot_chat_vision_dotcom_chat_ga_gate","copilot_css_textarea_autosize","copilot_custom_copilots","copilot_custom_copilots_feature_preview","copilot_duplicate_thread","copilot_extensions_removal_on_marketplace","copilot_fix_failed_workflows_all_skus","copilot_global_agents_menu_persist_sessions","copilot_hide_hovercard","copilot_immersive_task_hyperlinking","copilot_issue_list_show_more","copilot_mc_cli_resume_any_users_task","copilot_mission_control_agent_merge_fix_ci","copilot_mission_control_agent_merge_resolve_conflicts","copilot_mission_control_early_stop","copilot_mission_control_managed_sandbox_environments","copilot_mission_control_needs_attention","copilot_mission_control_reasoning_effort","copilot_mission_control_sandbox_remote_bypass","copilot_mission_control_task_alive_updates","copilot_mission_control_task_sharing","copilot_org_policy_page_focus_mode","copilot_share_active_subthread","copilot_spaces_ga","copilot_spaces_individual_policies_ga","copilot_swe_agent_authorization_status_ui","copilot_swe_agent_automation_resource_scoped_writes","copilot_swe_agent_discussion_comment_trigger","copilot_swe_agent_discussion_opened_trigger","copilot_swe_agent_discussion_updated_trigger","copilot_swe_agent_hide_model_picker_if_only_auto","copilot_swe_agent_issue_assigned_trigger","copilot_swe_agent_issue_comment_trigger","copilot_swe_agent_issue_labeled_trigger","copilot_swe_agent_pr_comment_model_picker","copilot_swe_agent_pull_request_assigned_trigger","copilot_swe_agent_pull_request_comment_trigger","copilot_swe_agent_pull_request_labeled_trigger","copilot_swe_agent_pull_request_merged_trigger","copilot_swe_agent_pull_request_opened_trigger","copilot_swe_agent_pull_request_ready_for_review_trigger","copilot_swe_agent_pull_request_review_requested_trigger","copilot_swe_agent_pull_request_review_submitted_trigger","copilot_swe_agent_pull_request_synchronize_trigger","copilot_swe_agent_sub_issue_added_trigger","copilot_swe_agent_use_subagents","copilot_task_api_github_rest_style","copilot_task_scoped_alive_channel","copilot_token_based_billing","copilot_unconfigured_is_inherited","copilot_user_can_upgrade_plan_field","copilot_workbench_sunset_redirect","dashboard_indexeddb_caching","dashboard_lists_max_age_filter","datadog_rum","fgpat_permissions_selector_redesign","glc_code_quality_repo_settings_workflow_config","hyperspace_2025_logged_out_batch_1","hyperspace_2025_logged_out_batch_2","hyperspace_2025_logged_out_batch_3","in_product_messaging_datadog_monitoring","ipm_ubb_individual_budget_banner","issue_fields_multi_select","issue_inline_avatars","issue_pinned_views","issue_pinned_views_team_vs_personal","issue_relative_time_micro","issue_viewer_paved_path","issues_dashboard_sso_structured_errors","issues_expanded_file_types","issues_hide_closed_sub_issues","issues_index_data_router","issues_index_query_persistence","issues_lazy_load_comment_box_suggestions","issues_react_chrome_container_query_fix","issues_react_include_bots_in_pickers","issues_react_ui_feedback","labels_archiving","labels_archiving_info","landing_pages_ninetailed","lifecycle_label_name_updates","marketing_cookie_consent_banner","marketing_pages_search_explore_provider","memex_default_issue_create_repository","memex_live_update_hovercard","memex_mwl_filter_field_delimiter","memex_remove_deprecated_type_issue","memex_roadmap_drag_style","merge_queue_restricted_pushers_warning","merge_status_header_feedback","mergeability_refetch_dedupe","milestone_closed_issues_prioritization","milestone_show_data_router","octocaptcha_origin_optimization","pr_sfv_new_diff_fetch","primer_react_css_anchor_positioning","primer_react_merged_forwarded_refs","prs_copilot_app_open_action","prs_css_anchor_positioning","prs_docked_comments_replies","prs_timeline_filters","prx_files","pull_request_copilot_attribution_header","pull_request_files_virtualization","pull_request_overview_panel_edit_description","pull_request_persister","pull_request_stacks_feedback_dialog","pull_request_virtualization_image_estimate","pull_request_virtualization_loader_batching","pull_request_virtualization_scroll_compensation","pull_request_virtualization_scroll_intent","quick_search_lazy_suggestions","react_blob_isolate_code_lines","react_blob_overlay","react_blob_ssr_content_visibility","react_data_router_tanstack_allowed","react_query_props_with_key","react_sandbox_future_tanstack","repo_app_turbo","repo_issues_sidebar_layout","repo_pulls_dashboard_declutter","repo_pulls_dashboard_ga","repo_pulls_dashboard_persistence","repo_pulls_dashboard_sidebar_links","repo_pulls_dashboard_surface","repos_contributors_limited_default_range","repository_suggester_elastic_search","review_involves_filter","rule_ignored_file_paths","rulesets_actor_list_editor","sample_network_conn_type","security_center_artifact_filters_popover","see_who_reacted","semantic_similarity_duplicate_issue_detection","session_logs_ungroup_reasoning_text","set_sha256_on_repo_creation_form","site_banner_desktop_copilot_app","site_ghca_pixel_mona","site_github_app_ga_page","site_github_app_ga_page_highlight","site_github_app_mobile_native_share","site_global_banner_dev_days_attendee","site_global_nav_spark_models_removed","speculation_rules_ui_service","suggest_custom_property_values_copilot","suppress_automated_browser_vitals","swp_forms_disable_octocaptcha","thread_resolution_reason","track_notifications_settings_usage","ui_route_code_view","ui_route_repos","unified_batch_pr_comments","universe26_banners_septsession","update_issue_suggestions","viewscreen_sandbox","warn_inaccessible_attachments","webp_support","workstream_plugin_bootstrap"],"login":"brajeshpanigrahi7-byte","githubDomain":"https://github.com","copilotApiOverrideUrl":"https://api.individual.githubcopilot.com","cmcApiUrl":"https://api.github.com/cmc_internal/api"}</script>
+<script type="application/json" id="datadog-rum-config">{"version":1,"applicationId":"851db457-c3a9-463b-b2e5-906d1ef37118","clientToken":"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaEpoZFhSb1pXNTBhV05oZEdWa0Jqb0dSVlE9IiwiZXhwIjoiMjAyNi0xMC0wNlQxNzo1MTo0MC42NjlaIiwicHVyIjoiYnJvd3Nlcl9zdGF0czpjbGllbnRfdG9rZW4ifX0--fa8c466124478d3e9a9f16b6a878cf9526e1fea4","site":"datadoghq.com","service":"github-ui","env":"production","proxyUrl":"https://api.github.com/_private/browser/rum","sessionSampleRate":100.0,"profilingSampleRate":5.0}</script>
+
+
+
+
+
+
+<script crossorigin="anonymous" type="module" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/environment-82d75849977a0900.js.download" defer="defer"></script>
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/app-runtime.21efd4c13d304220.module.css">
+
+
+
+
+
+
+
+
+
+
+<script crossorigin="anonymous" type="module" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/github-elements-b701b3708663d44f.js.download" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/element-registry-8a6f18a92c5cb416.js.download" defer="defer"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script crossorigin="anonymous" type="module" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/behaviors-6e5c12ad61428896.js.download" defer="defer"></script>
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/react-core.e5fe3ed0c8d7aa01.module.css">
+
+<script crossorigin="anonymous" type="module" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/codespaces-297ba1ab73353654.js.download" defer="defer"></script>
+
+<script crossorigin="anonymous" type="module" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/repositories-0809966a7928c3a6.js.download" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/code-menu-e94acdc311db30a3.js.download" defer="defer"></script>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script crossorigin="anonymous" type="module" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/code-view-049430f3a860b336.js.download" defer="defer"></script>
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/primer-react-css.e4334163c54cccf5.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ql0.086711a5ef93434c.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/6.ece623acccd76c4e.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/xc.877a51df9233c9c4.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/41.0f77c5864aaea9c5.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/code-view.6a24978a79612a07.module.css">
+
+
+  
+
+
+
+  
+  
+  
+  
+
+    
+  
+
+
+  
+
+
+    
+
+
+  
+  
+
+  
+  
+
+    
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+    
+
+  
+
+    
+
+    
+
+      
+
+      
+
+    
+    
+    
+
+      
+  
+  
+
+
+      
+
+
+      
+
+
+      
+      
+      
+
+        
+
+
+  <meta http-equiv="x-pjax-version" content="38f7f4eae61c099b9da9072dc4fd177a9b2eb820bc5a38b580922c1696797c7b" data-turbo-track="reload">
+  <meta http-equiv="x-pjax-csp-version" content="c4a65e47b0c850e1157ae8e66298070851d7e3b558038de5a3b4ff7a93e630ed" data-turbo-track="reload">
+  <meta http-equiv="x-pjax-css-version" content="4e64a97e5e886e99bcf47a5adeecf4c238f1ab18ffbc37e890c65003e5c96056" data-turbo-track="reload">
+  <meta http-equiv="x-pjax-js-version" content="e3729c504d54bc83aba0fe5cb0b016b722724b63634c4e1dacac024dfff82336" data-turbo-track="reload">
+
+  
+
+      
+
+    
+
+  
+
+  
+  
+
+
+
+    
+
+    
+  
+
+
+  
+
+
+  
+
+  <meta name="release" content="cbe74ea6203718aacb9c7182e8eed1470faad7be" data-turbo-track="reload">
+  
+
+  
+  
+  
+
+
+
+
+
+  
+
+  <link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/kq9.8ad2074125dec7f9.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/bv.00d37126803648d2.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/u2l.734a5f51056e244e.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/5j.0ef4e2c198e02742.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/5r.aae84376abc656a1.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/0l.a259276a44ef9b5c.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/fg.2616179aabbabe22.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/m4.66f181cce0f868ae.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/p.3a30520348203276.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/438.99a7cc173d55ba97.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/2u.ac737d5a8415749d.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/u.81e7a8cf0543e2b3.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/gq.76cc2e0242c428f2.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/4q.e0a1c04cd0104308.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/8t.8bd59e6f2eded8a4.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/q.703425ae29fa128e.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ej.6420c2f53dd51d57.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/f.e2311af8053cb570.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/4t.2eea5c91f1d31930.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/pu.b1c89b416eb81020.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/v.e085c3f4807b206b.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/djc.ccd69436e008fa35.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/yj.b2bf58cfba884626.module.css" crossorigin="anonymous"><link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/repo.a2e992701cba85ca.module.css"><link rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/e8.893b1c3cdc898554.module.css" media="all" crossorigin="anonymous"><link rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/iq.612c5217e9df914e.module.css" media="all" crossorigin="anonymous"><link rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/a60.638a64863567af68.module.css" media="all" crossorigin="anonymous"><link rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/uz.37917b553246dfd0.module.css" media="all" crossorigin="anonymous"><link rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/c.c85c80b760835c04.module.css" media="all" crossorigin="anonymous"><link rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/b.db218be45656dcb1.module.css" media="all" crossorigin="anonymous"><script type="module" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/repo-8726bbf29780626f.js.download"></script><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ge.51dbf805cfcd3778.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/fm.dfcda21399b316c6.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ccu.ef5283564bbb1920.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/t.cf41448f4caf5106.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/s.14d549be019bb052.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ft.eaffb596062f88ab.module.css" crossorigin="anonymous"><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/wp-runtime-235d224d5c0cc07c.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/runtime-helpers-5ca1e1883536e092.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/app-foundation-43d0e5853f867baa.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/app-runtime-48a665ae5031ffb0.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/catalyst-044fa3a2acdaf0a9.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/aria-live-76b18916d0c8ec4d.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/selector-observer-e88088f989b27670.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/fetch-utilities-4b62182bc6e3c348.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/n9c-16e227ac48072d2b.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/4t6-e156dfe598157a27.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/bte-ba189f3879f95988.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/pk-0b348d4e4c15243a.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/iv-b38863d959e6b2e2.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/j0-41a4cf04cbd99503.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/diffs-de506faa5817e89a.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/hotkey-45921f564e4706a3.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ser-304cac05a866d0c2.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/fhn-1fb6d05afc6d25e6.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/pull-requests-list-513d091f9f917856.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/scanning-42e61efcb930ce50.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/relative-time-element-fa0968675d128a19.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/primer-react-cb31dbca0f7897fa.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/react-core-92a207955f2e0fe4.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ncx-9a860680a5f230b9.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/a9-6602e6cd810d97c7.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/by-6b3c07383371bf58.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/j6-363f0ebf4f62f310.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/t7l-bf6f21d7e7a43c35.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/4u-3fb51fd5b58f1705.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ws-f1530f278b2b86e5.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/d4-052601b28dcad97b.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/s0-c32db9ffa873726f.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/kn-91328d2a7a5f0ace.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/guo-6c3c4a54e58c6ca7.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/krh-600948276a7d8d0e.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ur-024971cb63acad59.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/gzx-759e0d4a07a7858d.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/dmf-ed3028324205d5d2.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/14-428313098974292f.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/n4u-36177e16e2310a6b.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ns-65bc1e8fea42ae55.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/j8-fb603d239f87c714.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/gda-839591e97bdffa24.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/a6-9562127ae8990ece.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/sa-6185d140ab8590ab.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/s5-64efbe2785c83394.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/q5-0e5813e28790c52e.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ph-470468dfe9e0a017.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/rv-7c04ff3a72ff24c0.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/kj-d61d56b7a2bb10dc.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/la-d2cd96f070e6b52a.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/dty-3d22591199b73e1f.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/47-1b5c64d51f72e6ea.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/69-974b6f2def47a0b8.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/1xi-5c4e0822a435ab10.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/xf-9fc1a567d143f175.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/4es-64a124db5ab9dacf.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ugx-f88e84d4232afab3.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/xl-1462705a71157f07.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/q1-c083af7a1b4d2f6f.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/jf7-80bf971053b7ecf1.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/5l-9e47ae3ec4d56ed7.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/g38-1fd389a6d8d53eaf.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/8g-6aad6255cbc96947.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/rqf-5cc5eb13fb1fa21d.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/fcl-09fbdf3b9d3e0a97.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/62q-bb0b2540b26c4a4d.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/del-74eedaba7811b613.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/gzu-30b6e9209fc1a27b.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/wo-8044e1bac6e0c328.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/bi-a86635a324060342.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/on-898389fbf97246b6.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/b1l-7f0d0cf6de4804fd.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/fzy-b8766f7763e1b580.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/0l5-0d16cce87b27780e.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/r3-cb610f7e04efa29d.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/c2z-c10e51960850b47e.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/62i-46f9a803a22e44a4.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/zo-b542cc91640f13db.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/e8-310cf64547f13087.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/m4-4184f4071a2a27e8.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/y6c-dd7a3b2bf8c11106.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/f9-038758dcbfe08dab.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/eq-0c25654d3e7b5f63.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/sp-5a0311ac8d3daf45.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/8n0-0163c6001d984b30.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/4x8-50c0ed4ed22e2a1b.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/zkm-f54872aa7b972e51.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/1r-bf6523ee17201b32.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/811-9149ed113289ff80.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/vw-e48ccaa442b34856.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/zlf-d05007b52efec8d7.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/9hy-2349fe22e6246320.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/c44-e4f5c13b32b2d0e5.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/r0v-fd641a959901cf27.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ls-7204032435cafbf7.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/gkp-236b34e32a2bcca0.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/7u-0455bead40dbb7a3.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/2d5-0086723cb0da6f11.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/b9-ec17c337670f9c07.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/es5-72f2f3d620d36dd3.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/tbp-6a17d17e429fe2d0.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/p-55e42e5c1562e1c1.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/438-7760f24bc03d650e.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/zia-5b63a463bba917cd.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/pz-c5f9739499c1d8d5.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/53-088666ad9cb8a51d.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/qr-e6e9405b35b8676f.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/k7k-00f350a68bcd0e97.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/mca-22b744f4be0919b4.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/du-9695d8032ef894d8.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/20-d2bd7b0efc4289b0.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/v2-a7d5cc3acee246bd.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/y7f-ab8d178a4ee3db07.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/jcx-0f113061378e921a.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/wb-bbe8bb0838a26330.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/2u-0f0f725a8c74e550.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ci-dd859b0f6a059ccc.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ez3-121d0a85804d5229.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/b3-734f9afaff81ad54.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/6j-42aee0366fb5d1ad.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/cz-f03b71419001adc0.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/dl-dc0c8f67bade58eb.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/z0-e1168871752e46e8.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/jx-dc44b2fb62816d80.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/t73-207626e9a0342004.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ux-1ab2f89b077bb89c.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/va-eaf143011cee8576.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/kp-46d0cc0518a4a99f.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/0g-db6a5ae4ee17e536.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/16-6d9f6db89b11f4ee.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/dp-1c70f7fab6a289eb.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/8t-7919195f55ee6354.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/7po-df1f8a04a83f0936.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/q-7f6c8a7a289f277d.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/wp-9f5235d335ab624b.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/in-c9f8ebe42af8fdab.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/fc-47f8b2a82985e638.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ou-e650931c75080c44.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/lr4-b870aa7e6dd048e4.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/3x6-0afd4772d2c50ca1.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ygz-4c53855e2f105062.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/cj-51c6fe7d87184826.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/6t-2669312db92cdab0.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/h6-c95ef573c5c46f50.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/5xc-082eb4c84478315e.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/4h-8b156185ca8e2baf.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/xip-df56f4a23bdc03cc.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/sli-de249d5f623f8015.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/iq-d016ee42b8d0e21e.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/nf-2f13b0c739bf0418.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/uw-d8fb033b031ccc75.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/g2-d852f2cb45967285.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/xg-414167138b579af4.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/a60-a6579c43ce144918.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/h50-7bf53319d90857f9.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/qeo-722a38af52654ad9.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/d9-da9d95c9a15e195f.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/uz-770e944b2a3710e6.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/6-eac11141b17b6c4d.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/c-a3f6e2c30ad5ce7d.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/b-d99c83c581c18f95.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/j6r-e4cdfc42298ab4d9.js.download" crossorigin="anonymous"></script><script type="module" async="" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/pull-requests-1c7174012ac27348.js.download" crossorigin="anonymous"></script><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/cr.a55610a568d6656a.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/1l.79f3fedd751a66d7.module.css" crossorigin="anonymous"><link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/editor.5b792caad3971df9.module.css"><script type="module" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/editor-ec1e4194a01226df.js.download"></script><link rel="dns-prefetch" href="https://github.githubassets.com/"><link rel="dns-prefetch" href="https://avatars.githubusercontent.com/"><link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/"><link rel="dns-prefetch" href="https://user-images.githubusercontent.com/"><link rel="preconnect" href="https://github.githubassets.com/" crossorigin=""><link rel="preconnect" href="https://avatars.githubusercontent.com/"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/react-e27d1b3e03961e68.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/react-compiler-runtime-4610bd6d3de9c049.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/scheduler-58b860b049ca307c.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/react-dom-e5fd46a22d5c4058.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/react-dom-client-1b4a3ee065998cea.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/react-is-e0b593954b4706d8.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/react-jsx-runtime-4915cb0f5b3aff04.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/react-reconciler-8e99e505c4429605.js"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/wp-runtime-235d224d5c0cc07c.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/app-foundation-43d0e5853f867baa.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/app-runtime-48a665ae5031ffb0.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/fetch-utilities-4b62182bc6e3c348.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ser-304cac05a866d0c2.js.download"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/tp-34eaad11125a9e67.js"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/catalyst-044fa3a2acdaf0a9.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/selector-observer-e88088f989b27670.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/relative-time-element-fa0968675d128a19.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/by-6b3c07383371bf58.js.download"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/ja9-36f036c13c2e3a4c.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/kw-866fd9513ae95106.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/r1-b075aab3204f32f9.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/jz5-7c5d1669717041f8.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/hj-5126390ff433704d.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/j05-5779fe7abd4d8255.js"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/runtime-helpers-5ca1e1883536e092.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/aria-live-76b18916d0c8ec4d.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/hotkey-45921f564e4706a3.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/react-core-92a207955f2e0fe4.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/a9-6602e6cd810d97c7.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ur-024971cb63acad59.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/4t6-e156dfe598157a27.js.download"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/6n-71c0ae3e489775ef.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/yhq-3a209035a30b1a09.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/z1v-da5b33b877bfa358.js"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/wo-8044e1bac6e0c328.js.download"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/9y-cd2a0ff87351e9aa.js"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/j0-41a4cf04cbd99503.js.download"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/0p-81491ed0d9d666e2.js"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/n9c-16e227ac48072d2b.js.download"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/ic-991f04433f366e7b.js"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/primer-react-cb31dbca0f7897fa.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ncx-9a860680a5f230b9.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/j6-363f0ebf4f62f310.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/t7l-bf6f21d7e7a43c35.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/4u-3fb51fd5b58f1705.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/s0-c32db9ffa873726f.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/n4u-36177e16e2310a6b.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/j8-fb603d239f87c714.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/la-d2cd96f070e6b52a.js.download"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/7a-3e6271c2f53fd449.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/g35-3134591dc03bcd32.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/11-8ad61f4b8471fafb.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/za-a57e74f9849eb3f2.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/6o-c0f33001bfce25f5.js"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/gzu-30b6e9209fc1a27b.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/bi-a86635a324060342.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/b1l-7f0d0cf6de4804fd.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/0l5-0d16cce87b27780e.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/c2z-c10e51960850b47e.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/f9-038758dcbfe08dab.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/sp-5a0311ac8d3daf45.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/zkm-f54872aa7b972e51.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/b9-ec17c337670f9c07.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/zia-5b63a463bba917cd.js.download"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/dsj-cb1e4ddbce4f007b.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/pe-0996411d3a882f4b.js"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/du-9695d8032ef894d8.js.download"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/20-d2bd7b0efc4289b0.js.download"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/ql0-826185c7e414438f.js"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/wp-9f5235d335ab624b.js.download"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/p0-917d47d17033694c.js"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/uw-d8fb033b031ccc75.js.download"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/th-5bd53302e6db9640.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/7c-51b9e794c65c18dc.js"><link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/6-eac11141b17b6c4d.js.download"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/99w-70b82126e50ad60b.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/5st-c2ae20a4f23623db.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/xy-fc5ef8d4f9279f3d.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/y8-5af033d9dab6496d.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/xc-065e7847e4da513d.js"><link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/41-b57ce4c051618735.js"><title>Resolve Conflicts · Pull Request #8 · rudythetechy/revive</title><meta name="fetch-nonce" content="v2:5f24a650-7ead-7655-12fa-0d816bf8107d"><meta name="current-catalog-service-hash" content="f3abb0cc802f3d7b95fc8762b94bdcb13bf39634c40c357301c4aa1d67a256fb"><link rel="assets" href="https://github.githubassets.com/"><meta name="google-site-verification" content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I"><meta name="octolytics-url" content="https://collector.github.com/github/collect"><meta name="octolytics-actor-id" content="244821370"><meta name="octolytics-actor-login" content="brajeshpanigrahi7-byte"><meta name="octolytics-actor-hash" content="7b9e64baf3f3da12317e7b5171db00216e49b91f28c8348036178a7e350998bd"><meta name="user-login" content="brajeshpanigrahi7-byte"><link rel="sudo-modal" href="https://github.com/sessions/sudo_modal"><meta name="viewport" content="width=device-width"><meta name="description" content="Contribute to rudythetechy/revive development by creating an account on GitHub."><link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub"><link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub"><meta property="fb:app_id" content="1401488693436528"><meta name="apple-itunes-app" content="app-id=1477376905, app-argument=https://github.com/rudythetechy/revive"><meta name="twitter:image" content="https://opengraph.githubassets.com/7a1a1645f847c745048b50ce7296f90129a1e22a1a5487cd49f83fba2d3e97ce/rudythetechy/revive"><meta name="twitter:site" content="@github"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="rudythetechy/revive"><meta name="twitter:description" content="Contribute to rudythetechy/revive development by creating an account on GitHub."><meta property="og:image" content="https://opengraph.githubassets.com/7a1a1645f847c745048b50ce7296f90129a1e22a1a5487cd49f83fba2d3e97ce/rudythetechy/revive"><meta property="og:image:alt" content="Contribute to rudythetechy/revive development by creating an account on GitHub."><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:site_name" content="GitHub"><meta property="og:type" content="object"><meta property="og:title" content="rudythetechy/revive"><meta property="og:url" content="https://github.com/rudythetechy/revive"><meta property="og:description" content="Contribute to rudythetechy/revive development by creating an account on GitHub."><link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/244821370/ws?session=eyJ2IjoiVjMiLCJ1IjoyNDQ4MjEzNzAsInMiOjIyMTQ2MTI1OTIsImMiOjI1NzczOTAwOTYsInQiOjE3OTEyMjI3MDB9--b267cff8774589e23134e61b9109148258759f8a8d5c4cae783f4cabc5d3ff62" data-refresh-url="/_alive" data-session-id="eff9e886849a61f998e5fc0e01125214925e2190e2f51608b87638807a7027c6"><meta name="hostname" content="github.com"><meta name="keyboard-shortcuts-preference" content="all"><meta name="hovercards-preference" content="true"><meta name="announcement-preference-hovercard" content="true"><meta name="expected-hostname" content="github.com"><meta data-hydrostats="publish"><meta name="go-import" content="github.com/rudythetechy/revive git https://github.com/rudythetechy/revive.git"><meta name="octolytics-dimension-user_id" content="207907237"><meta name="octolytics-dimension-user_login" content="rudythetechy"><meta name="octolytics-dimension-repository_id" content="1397626143"><meta name="octolytics-dimension-repository_nwo" content="rudythetechy/revive"><meta name="octolytics-dimension-repository_public" content="true"><meta name="octolytics-dimension-repository_is_fork" content="false"><meta name="octolytics-dimension-repository_network_root_id" content="1397626143"><meta name="octolytics-dimension-repository_network_root_nwo" content="rudythetechy/revive"><meta name="current-repo-nwo" content="rudythetechy/revive"><meta name="turbo-body-classes" content="logged-in env-production page-responsive text-rendering-optimize-speed"><meta name="disable-turbo" content="false"><meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats"><meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors"><meta name="ui-target" content="full"><link rel="mask-icon" href="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" color="#000000"><link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png"><link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg" data-base-href="https://github.githubassets.com/favicons/favicon"><meta name="theme-color" content="#1e2327"><meta name="color-scheme" content="light dark"><link rel="manifest" href="https://github.com/manifest.json" crossorigin="use-credentials"><link rel="preload" as="style" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/pull-requests.73d354db42807f43.module.css" crossorigin="anonymous" media="all"><link rel="preload" as="style" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/pull-requests-00ebbc4aead61d58.css" crossorigin="anonymous" media="all"><link rel="preload" as="style" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/copilot-code-review-e950277080a9b21d.css" crossorigin="anonymous" media="all"><link rel="preload" as="style" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/actions-5fbab84bbce55307.css" crossorigin="anonymous" media="all"><meta name="react-profiling" content="0" data-turbo-transient=""><meta name="route-pattern" content="/:user_id/:repository/pull/:id/conflicts(.:format)" data-turbo-transient=""><meta name="route-controller" content="pull_requests" data-turbo-transient=""><meta name="route-action" content="resolve_conflicts" data-turbo-transient=""><meta name="selected-link" value="repo_pulls" data-turbo-transient=""><meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/pull_requests/resolve_conflicts" data-turbo-transient=""><meta name="request-id" content="E32B:14C51C:351ED1:3AA640:6AC3E3F4" data-turbo-transient=""><meta name="html-safe-nonce" content="b055b4dd0f0fd79028c3c2d84773bb70c236f51af07bbb62e1b25f595a115a07" data-turbo-transient=""><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9ydWR5dGhldGVjaHkvcmV2aXZlL3B1bGwvOC9jb21taXRzIiwicmVxdWVzdF9pZCI6IkUzMkI6MTRDNTFDOjM1MUVEMTozQUE2NDA6NkFDM0UzRjQiLCJ2aXNpdG9yX2lkIjoiMTU2MzMxNjEwNjkzNTQ4NzYzOSIsInJlZ2lvbl9lZGdlIjoiY2VudHJhbGluZGlhIiwicmVnaW9uX3JlbmRlciI6ImNlbnRyYWx1cyJ9" data-turbo-transient=""><meta name="visitor-hmac" content="39b50c2e0bfc486cf39f7bf5d647a5825d2fabf36dcb5c10ff30497cadbc0c49" data-turbo-transient=""><meta name="github-keyboard-shortcuts" content="repository,pull-request-list,pull-request-conversation,pull-request-files-changed,copilot" data-turbo-transient=""><meta name="hovercard-subject-tag" content="repository:1397626143" data-turbo-transient=""><meta name="turbo-cache-control" content="no-preview" data-turbo-transient=""><link rel="stylesheet" type="text/css" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/k9.f5d17e1c41a3e9f0.module.css" crossorigin="anonymous"></head>
+
+  <body class="logged-in env-production page-responsive full-width text-rendering-optimize-speed" style="overflow-wrap: break-word; --dialog-scrollgutter: 15px;">
+    <div data-turbo-body="" class="logged-in env-production page-responsive full-width text-rendering-optimize-speed" style="word-wrap: break-word;">
+      <div id="__primerPortalRoot__" style="z-index: 1000; position: absolute; width: 100%;" data-turbo-permanent=""></div>
+      
+
+    <div class="position-relative header-wrapper js-header-wrapper ">
+      <a href="https://github.com/rudythetechy/revive/pull/8/conflicts#start-of-content" data-skip-target-assigned="false" class="tmp-p-3 color-bg-accent-emphasis color-fg-on-emphasis show-on-focus js-skip-to-content">Skip to content</a>
+
+      <span data-view-component="true" class="progress-pjax-loader Progress position-fixed width-full">
+    <span style="width: 0%;" data-view-component="true" class="Progress-item progress-pjax-loader-bar left-0 top-0 color-bg-accent-emphasis"></span>
+</span>      
+      <link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/5tt-fd8e75a3d744d5d3.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/sk8-c74c924d272b89ba.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/keyboard-shortcuts-dialog-1d57c028820295ca.js" fetchpriority="low">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/primer-react-css.e4334163c54cccf5.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/keyboard-shortcuts-dialog.3fe929f968209404.module.css">
+
+<react-partial partial-name="keyboard-shortcuts-dialog" data-ssr="false" data-attempted-ssr="false" data-react-profiling="false" data-catalyst="" class="loaded">
+  
+  <script type="application/json" data-target="react-partial.embeddedData">{"props":{"docsUrl":"https://docs.github.com/get-started/accessibility/keyboard-shortcuts"}}</script>
+  <div data-target="react-partial.reactRoot"><div class="d-none"></div></div>
+</react-partial>
+
+
+
+
+
+      
+
+          <link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/bur-0c370260ea746537.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/app-install-banner-partial-42a1e22aa5a04e53.js" fetchpriority="low">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/primer-react-css.e4334163c54cccf5.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/app-install-banner-partial.04e2615c5431bfae.module.css">
+
+<react-partial partial-name="app-install-banner-partial" data-ssr="false" data-attempted-ssr="false" data-react-profiling="false" data-catalyst="" class="loaded">
+  
+  <script type="application/json" data-target="react-partial.embeddedData">{"props":{}}</script>
+  <div data-target="react-partial.reactRoot"></div>
+</react-partial>
+
+
+          
+
+                  <link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/8t4-5029c1a6deb18526.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/dh-b2f3762e16cb5f15.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/ry-9d5893b8c8da59ee.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/2d5-0086723cb0da6f11.js.download" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/mca-22b744f4be0919b4.js.download" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/dgq-2d5e83075cd8ecc7.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/0wa-741f9f1a15fcd570.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/nn-49b7bc3f99dd99d9.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/af-09ab642a744f6890.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/b1-f3403814138f40b8.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/bn-90ed6f0ace539eca.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/2jk-83c73d136e6c7dff.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/gez-7728464cd50791a8.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/1b-4a4cdb9bdf0ffac3.js" fetchpriority="low">
+<link crossorigin="anonymous" rel="modulepreload" href="https://github.githubassets.com/assets/global-nav-bar-3d4f5cfe404a0fa3.js" fetchpriority="low">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/primer-react-css.e4334163c54cccf5.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/ql0.086711a5ef93434c.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/global-nav-bar.ef8fc7a72757b0aa.module.css">
+
+<react-partial partial-name="global-nav-bar" data-ssr="true" data-attempted-ssr="true" data-react-profiling="false" data-catalyst="" class="loaded">
+  
+  <script type="application/json" data-target="react-partial.embeddedData">{"props":{"contextRegion":{"crumbs":[{"crumb_type":"user","label":"rudythetechy","is_root":false,"href":"/rudythetechy"},{"crumb_type":"repository","label":"revive","is_root":false,"href":"/rudythetechy/revive"}],"localNavigation":[{"id":"code","icon":"code","label":"Code","href":"/rudythetechy/revive","selectedLinks":["repo_source","repo_downloads","repo_commits","repo_releases","repo_tags","repo_branches","repo_packages","repo_deployments","repo_attestations"],"popoverTarget":false,"commandId":"repositories:go-to-code","reactNav":{"appTarget":"code-view","anchor":"code-view-repo-link"},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"issues","icon":"issue-opened","label":"Issues","href":"/rudythetechy/revive/issues","selectedLinks":["repo_issues","repo_labels","repo_milestones"],"count":0,"popoverTarget":false,"commandId":"repositories:go-to-issues","reactNav":{"appTarget":"repo","anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"pull-requests","icon":"git-pull-request","label":"Pull requests","href":"/rudythetechy/revive/pulls","selectedLinks":["repo_pulls","checks"],"count":1,"popoverTarget":false,"commandId":"repositories:go-to-pull-requests","reactNav":{"appTarget":"repo","anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"agents","icon":"agent","label":"Agents","href":"/rudythetechy/revive/agents?author=brajeshpanigrahi7-byte","selectedLinks":["repo_agents","repo_agents_task"],"popoverTarget":false,"commandId":"repositories:go-to-agents","reactNav":{"appTarget":"repo","anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"actions","icon":"play","label":"Actions","href":"/rudythetechy/revive/actions","selectedLinks":["repo_actions"],"popoverTarget":false,"commandId":"repositories:go-to-actions","reactNav":{"appTarget":"actions-workflows","anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"projects","icon":"table","label":"Projects","href":"/rudythetechy/revive/projects","selectedLinks":["repo_projects","new_repo_project","repo_project"],"popoverTarget":false,"commandId":"repositories:go-to-projects","reactNav":{"appTarget":"repo","anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"wiki","icon":"book","label":"Wiki","href":"/rudythetechy/revive/wiki","selectedLinks":["repo_wiki"],"popoverTarget":false,"commandId":"repositories:go-to-wiki","reactNav":{"appTarget":null,"anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"security-and-quality","icon":"shield","label":"Security and quality","href":"/rudythetechy/revive/security","selectedLinks":["security","overview","alerts","policy","token_scanning","code_scanning"],"count":0,"popoverTarget":false,"commandId":"repositories:go-to-security","reactNav":{"appTarget":null,"anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"insights","icon":"graph","label":"Insights","href":"/rudythetechy/revive/pulse","selectedLinks":["repo_graphs","repo_contributors","dependency_graph","dependabot_updates","pulse","people","community"],"popoverTarget":false,"commandId":"repositories:go-to-insights","reactNav":{"appTarget":null,"anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"settings","icon":"gear","label":"Settings","href":"/rudythetechy/revive/settings","selectedLinks":["code_review_limits","code_quality","codespaces_repository_settings","collaborators","custom_tabs","hooks","integration_installations","interaction_limits","issue_template_editor","key_links_settings","license_policy","notifications","repo_announcements","repo_branch_settings","repo_custom_properties","repo_keys_settings","repo_pages_settings","repo_protected_tags_settings","repo_rule_insights","repo_rule_insights_dashboard","repo_rules_bypass_requests","repo_rulesets","repo_settings_copilot_coding_guidelines","repo_settings_copilot_content_exclusion","repo_settings_copilot_dreams","repo_settings_copilot_internet_access","repo_settings_copilot_mcp","repo_settings_copilot_swe_agent","repo_settings","repo_suggestions_settings","reported_content","repository_actions_settings_add_new_runner","repository_actions_settings_general","repository_actions_settings_runner_details","repository_actions_settings_runners","repository_actions_settings","repository_actions_settings_policies","repository_actions_settings_policies_insights","repository_actions_settings_oidc_configuration","repository_drives_settings","repository_environments","role_details","secrets_settings_actions","secrets_settings_agents","secrets_settings_codespaces","secrets_settings_dependabot","secrets","security_analysis","security_products"],"popoverTarget":false,"commandId":"repositories:go-to-settings","reactNav":{"appTarget":null,"anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}}],"localNavigationUpdateChannel":"eyJjIjoicmVwbzoxMzk3NjI2MTQzOnVzZXI6MjQ0ODIxMzcwOnNldHRpbmdzIiwidCI6MTc5MTIyMjcwMH0=--21cae715d1520e81cd7d0b451bb7a8c80d965e19faf816f745e0b95f7181b786","selectedLink":null,"currentPath":"/rudythetechy/revive"},"owner":{"login":"brajeshpanigrahi7-byte","name":"Brajesh Panigrahi","avatarUrl":"https://avatars.githubusercontent.com/u/244821370?v=4"},"headerLogo":{"href":"/","aria-label":"Homepage "},"notifications":{"indicatorMode":"none","websocketChannel":"eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6MjQ0ODIxMzcwIiwidCI6MTc5MTIyMjcwMH0=--026b7310df1b9d02dbb85b5361d4089196039c8920cb71f7f9a35775b8abec93","fetchIndicatorSrc":"/notifications/indicator","fetchIndicatorEnabled":true},"issues":{"href":"/issues"},"pulls":{"href":"/pulls"},"contributedRepos":{"href":"/repos"},"copilot":{"show":true,"showAgentsButton":false,"showRelaunchAnnouncement":false,"copilotChatUrl":"/github-copilot/chat?skip_anchor=true","copilotApiUrl":"https://api.individual.githubcopilot.com"},"search":{"show":true,"showCommandPalette":false,"isSearchPage":false,"isJumpToSearch":false,"searchContext":{"scope":"repo:rudythetechy/revive","current_repo_name":"revive","current_repo_nwo":"rudythetechy/revive","user_id":"rudythetechy"}},"enterpriseBar":{"show":false},"globalTransactionalMessage":[],"payloadsUrl":"/_global-navigation/payloads.json?can_toggle_site_admin_and_employee_status=0\u0026is_admin_mode_on=0\u0026is_ui_opted_out=0\u0026show_ui_opt_out=0\u0026v=5","contextRegionUrl":"/_global-navigation/context-region.json"}}</script>
+  <div data-target="react-partial.reactRoot"><link rel="preload" as="image" href="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/244821370"><header aria-label="Global navigation menu" data-component="Stack" class="GlobalNav styles-module__appHeader__YzYWk prc-Stack-Stack-UQ9k6" data-gap="none" data-direction="vertical" data-align="stretch" data-wrap="nowrap" data-justify="start" data-padding="none"><div data-component="Stack" class="prc-Stack-Stack-UQ9k6" data-direction="horizontal" data-align="center" data-wrap="nowrap" data-justify="center" data-padding="none"><div data-testid="top-nav-left" data-component="Stack" class="styles-module__left__Fylw7 styles-module__withLocalNavigation__rjTJ_ prc-Stack-Stack-UQ9k6" data-gap="condensed" data-direction="horizontal" data-align="stretch" data-wrap="nowrap" data-justify="start" data-padding="normal"><div data-loading-wrapper="true"><button data-component="IconButton" type="button" aria-haspopup="dialog" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_1b5_"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-three-bars" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"></path></svg></button></div><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" data-component="Tooltip" aria-hidden="true" id="_R_1b5_" popover="auto">Open menu</span><div class="d-none"></div><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderHome__nkA_U prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_1j5_" href="https://github.com/" data-discover="true"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-mark-github" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" data-component="Tooltip" aria-hidden="true" popover="auto"><span id="_R_1j5_">Homepage <span class="prc-src-InternalVisuallyHidden-2YaI6">(<!-- -->g then d<!-- -->)</span></span><span class="prc-TooltipV2-KeybindingHintContainer-Ymj-3 prc-TooltipV2-HasTextBefore-fdOXj" aria-hidden="true" data-component="Tooltip.KeybindingHintContainer"><kbd class="prc-KeybindingHint-KeybindingHint-qpYIs prc-Text-Text-9mHv3" data-component="KeybindingHint" data-testid="keybinding-hint"><span class="prc-components-Chord-DdhWN prc-components-ChordOnEmphasis-O-4BS prc-components-ChordSmall-c-P-x prc-Text-Text-9mHv3" data-component="Text" data-kbd-chord="true"> <span class="prc-src-InternalVisuallyHidden-2YaI6">g</span><span aria-hidden="true">G</span></span><span class="prc-src-InternalVisuallyHidden-2YaI6">then</span> <span class="prc-components-Chord-DdhWN prc-components-ChordOnEmphasis-O-4BS prc-components-ChordSmall-c-P-x prc-Text-Text-9mHv3" data-component="Text" data-kbd-chord="true"> <span class="prc-src-InternalVisuallyHidden-2YaI6">d</span><span aria-hidden="true">D</span></span></kbd></span></span><div class="d-none"></div></div><div data-testid="top-nav-center" data-component="Stack" class="styles-module__center__R3QRv styles-module__withLocalNavigation__rjTJ_ prc-Stack-Stack-UQ9k6" data-gap="condensed" data-direction="horizontal" data-align="stretch" data-wrap="nowrap" data-justify="start" data-padding="normal"><nav class="styles-module__contextRegion__VbSp2 prc-Breadcrumbs-BreadcrumbsBase-3Gb-B" aria-label="Breadcrumbs" data-overflow="menu" data-variant="normal" data-component="Breadcrumbs"><ol class="prc-Breadcrumbs-BreadcrumbsList-BKjpe"><li class="prc-Breadcrumbs-ItemWrapper-k0NLn"><a class="styles-module__contextCrumb__IzGIq prc-Breadcrumbs-Item-jcraJ" data-component="Breadcrumbs.Item" href="https://github.com/rudythetechy" data-discover="true"><span class="">rudythetechy</span></a></li><li class="prc-Breadcrumbs-ItemWrapper-k0NLn"><a class="styles-module__contextCrumb__IzGIq styles-module__contextCrumbLast__tI2e3 styles-module__repoPickerCrumb__dk81Q prc-Breadcrumbs-Item-jcraJ" data-component="Breadcrumbs.Item" href="https://github.com/rudythetechy/revive" data-discover="true">revive</a><div class="d-none"></div><button data-component="IconButton" type="button" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-9n-Xk styles-module__contextCrumb__IzGIq styles-module__repoPickerDropdownButton__WjHYX prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="small" data-variant="invisible" aria-labelledby="_R_3eqd5_" id="_R_eqd5_" style="anchor-name: --anchored-overlay-anchor-_R_eqd5H1_;"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-triangle-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" data-component="Tooltip" aria-hidden="true" popover="auto"><span id="_R_3eqd5_">Switch repository<span class="prc-src-InternalVisuallyHidden-2YaI6">(<!-- -->alt shift r<!-- -->)</span></span><span class="prc-TooltipV2-KeybindingHintContainer-Ymj-3 prc-TooltipV2-HasTextBefore-fdOXj" aria-hidden="true" data-component="Tooltip.KeybindingHintContainer"><kbd class="prc-KeybindingHint-KeybindingHint-qpYIs prc-Text-Text-9mHv3" data-component="KeybindingHint" data-testid="keybinding-hint"><span class="prc-components-Chord-DdhWN prc-components-ChordOnEmphasis-O-4BS prc-components-ChordSmall-c-P-x prc-Text-Text-9mHv3" data-component="Text" data-kbd-chord="true"> <span class="prc-src-InternalVisuallyHidden-2YaI6">alt</span><span aria-hidden="true">Alt</span> <span class="prc-src-InternalVisuallyHidden-2YaI6">shift</span><span aria-hidden="true">⇧</span> <span class="prc-src-InternalVisuallyHidden-2YaI6">r</span><span aria-hidden="true">R</span></span></kbd></span></span></li></ol></nav><div class="Search-module__searchButtonGroup__aetw5 prc-ButtonGroup-ButtonGroup-vFUrY" data-component="ButtonGroup"><div class="prc-ButtonGroup-Item-PqvDl"><button data-component="Button" type="button" aria-label="Open quick search dialog, type / to search" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ Search-module__searchButton__aiE0a" data-loading="false" data-size="medium" data-variant="invisible"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="leadingVisual" class="prc-Button-Visual-YNt2F prc-Button-LeadingVisual-UySKu prc-Button-VisualWrap-E4cnq"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-search" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path></svg></span><span data-component="text" class="prc-Button-Label-FWkx3"><span class="Search-module__placeholder__p9hbG Search-module__text__veSYi Search-module__value__TFoak">Type <kbd class="Search-module__kbd__WCskr">/</kbd> to search</span></span></span></button></div><div class="prc-ButtonGroup-Item-PqvDl"></div></div><button data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ Search-module__smallSearchButton___8Gvn prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_al5_"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-search" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" data-component="Tooltip" aria-hidden="true" popover="auto"><span id="_R_al5_">Open quick search dialog, type / to search<span class="prc-src-InternalVisuallyHidden-2YaI6">(<!-- -->forward slash<!-- -->)</span></span><span class="prc-TooltipV2-KeybindingHintContainer-Ymj-3 prc-TooltipV2-HasTextBefore-fdOXj" aria-hidden="true" data-component="Tooltip.KeybindingHintContainer"><kbd class="prc-KeybindingHint-KeybindingHint-qpYIs prc-Text-Text-9mHv3" data-component="KeybindingHint" data-testid="keybinding-hint"><span class="prc-components-Chord-DdhWN prc-components-ChordOnEmphasis-O-4BS prc-components-ChordSmall-c-P-x prc-Text-Text-9mHv3" data-component="Text" data-kbd-chord="true"> <span class="prc-src-InternalVisuallyHidden-2YaI6">forward slash</span><span aria-hidden="true">/</span></span></kbd></span></span><div class="d-none"></div></div><div data-testid="top-nav-right" data-component="Stack" class="styles-module__right__mlBQg styles-module__withLocalNavigation__rjTJ_ styles-module__rightWithResponsiveCreateButton__SKn2W prc-Stack-Stack-UQ9k6" data-gap="condensed" data-direction="horizontal" data-align="center" data-wrap="nowrap" data-justify="start" data-padding="normal"><div data-testid="top-bar-actions" data-component="Stack" class="prc-Stack-Stack-UQ9k6" data-gap="condensed" data-direction="horizontal" data-align="center" data-wrap="nowrap" data-justify="start" data-padding="none"><div class="hide-sm hide-md"><div class="CopilotItems-module__Wrapper__BFG9q"><div class="prc-ButtonGroup-ButtonGroup-vFUrY" data-component="ButtonGroup"><div class="prc-ButtonGroup-Item-PqvDl"><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_1aif5_" href="https://github.com/copilot" data-discover="true"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-copilot" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M7.998 15.035c-4.562 0-7.873-2.914-7.998-3.749V9.338c.085-.628.677-1.686 1.588-2.065.013-.07.024-.143.036-.218.029-.183.06-.384.126-.612-.201-.508-.254-1.084-.254-1.656 0-.87.128-1.769.693-2.484.579-.733 1.494-1.124 2.724-1.261 1.206-.134 2.262.034 2.944.765.05.053.096.108.139.165.044-.057.094-.112.143-.165.682-.731 1.738-.899 2.944-.765 1.23.137 2.145.528 2.724 1.261.566.715.693 1.614.693 2.484 0 .572-.053 1.148-.254 1.656.066.228.098.429.126.612.012.076.024.148.037.218.924.385 1.522 1.471 1.591 2.095v1.872c0 .766-3.351 3.795-8.002 3.795Zm0-1.485c2.28 0 4.584-1.11 5.002-1.433V7.862l-.023-.116c-.49.21-1.075.291-1.727.291-1.146 0-2.059-.327-2.71-.991A3.222 3.222 0 0 1 8 6.303a3.24 3.24 0 0 1-.544.743c-.65.664-1.563.991-2.71.991-.652 0-1.236-.081-1.727-.291l-.023.116v4.255c.419.323 2.722 1.433 5.002 1.433ZM6.762 2.83c-.193-.206-.637-.413-1.682-.297-1.019.113-1.479.404-1.713.7-.247.312-.369.789-.369 1.554 0 .793.129 1.171.308 1.371.162.181.519.379 1.442.379.853 0 1.339-.235 1.638-.54.315-.322.527-.827.617-1.553.117-.935-.037-1.395-.241-1.614Zm4.155-.297c-1.044-.116-1.488.091-1.681.297-.204.219-.359.679-.242 1.614.091.726.303 1.231.618 1.553.299.305.784.54 1.638.54.922 0 1.28-.198 1.442-.379.179-.2.308-.578.308-1.371 0-.765-.123-1.242-.37-1.554-.233-.296-.693-.587-1.713-.7Z"></path><path d="M6.25 9.037a.75.75 0 0 1 .75.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 .75-.75Zm4.25.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 1.5 0Z"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" data-component="Tooltip" aria-hidden="true" id="_R_1aif5_" popover="auto">Chat with Copilot</span></div><div class="prc-ButtonGroup-Item-PqvDl"><div class="d-none"></div><button data-component="ActionMenu.Button" type="button" aria-label="Open Copilot…" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ CopilotItems-module__CopilotMenu__DVdfE" data-loading="false" data-size="medium" data-variant="invisible" id="_R_2iif5_" style="anchor-name: --anchored-overlay-anchor-_R_eiif5H1_;"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="leadingVisual" class="prc-Button-Visual-YNt2F prc-Button-LeadingVisual-UySKu prc-Button-VisualWrap-E4cnq"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-copilot" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M7.998 15.035c-4.562 0-7.873-2.914-7.998-3.749V9.338c.085-.628.677-1.686 1.588-2.065.013-.07.024-.143.036-.218.029-.183.06-.384.126-.612-.201-.508-.254-1.084-.254-1.656 0-.87.128-1.769.693-2.484.579-.733 1.494-1.124 2.724-1.261 1.206-.134 2.262.034 2.944.765.05.053.096.108.139.165.044-.057.094-.112.143-.165.682-.731 1.738-.899 2.944-.765 1.23.137 2.145.528 2.724 1.261.566.715.693 1.614.693 2.484 0 .572-.053 1.148-.254 1.656.066.228.098.429.126.612.012.076.024.148.037.218.924.385 1.522 1.471 1.591 2.095v1.872c0 .766-3.351 3.795-8.002 3.795Zm0-1.485c2.28 0 4.584-1.11 5.002-1.433V7.862l-.023-.116c-.49.21-1.075.291-1.727.291-1.146 0-2.059-.327-2.71-.991A3.222 3.222 0 0 1 8 6.303a3.24 3.24 0 0 1-.544.743c-.65.664-1.563.991-2.71.991-.652 0-1.236-.081-1.727-.291l-.023.116v4.255c.419.323 2.722 1.433 5.002 1.433ZM6.762 2.83c-.193-.206-.637-.413-1.682-.297-1.019.113-1.479.404-1.713.7-.247.312-.369.789-.369 1.554 0 .793.129 1.171.308 1.371.162.181.519.379 1.442.379.853 0 1.339-.235 1.638-.54.315-.322.527-.827.617-1.553.117-.935-.037-1.395-.241-1.614Zm4.155-.297c-1.044-.116-1.488.091-1.681.297-.204.219-.359.679-.242 1.614.091.726.303 1.231.618 1.553.299.305.784.54 1.638.54.922 0 1.28-.198 1.442-.379.179-.2.308-.578.308-1.371 0-.765-.123-1.242-.37-1.554-.233-.296-.693-.587-1.713-.7Z"></path><path d="M6.25 9.037a.75.75 0 0 1 .75.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 .75-.75Zm4.25.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 1.5 0Z"></path></svg></span></span><span data-component="trailingAction" class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-triangle-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path></svg></span></button></div></div></div></div><div class="CopilotImmersiveEmbedded-module__CopilotChatContainer__Hqz45" data-testid="copilot-immersive-embedded-header-button"></div><div class="styles-module__itemDivider__nunbs hide-sm hide-md"></div><button data-component="ActionMenu.Button" type="button" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-9n-Xk GlobalCreateMenu-module__actionMenuButton__Hj_iB GlobalCreateMenu-module__responsiveCreateMenu__zTmSP hide-sm" data-loading="false" data-size="medium" data-variant="invisible" aria-labelledby="global-create-menu-tooltip-_R_6f5_" id="_R_mf5_" style="anchor-name: --anchored-overlay-anchor-_R_bmf5H1_;"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="leadingVisual" class="prc-Button-Visual-YNt2F prc-Button-LeadingVisual-UySKu prc-Button-VisualWrap-E4cnq"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-plus" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"></path></svg></span></span><span data-component="trailingAction" class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-triangle-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path></svg></span></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" data-component="Tooltip" aria-hidden="true" id="global-create-menu-tooltip-_R_6f5_" popover="auto">Create new...</span><div data-component="Stack" class="hide-sm hide-md prc-Stack-Stack-UQ9k6" data-gap="condensed" data-direction="horizontal" data-align="center" data-wrap="nowrap" data-justify="start" data-padding="none"><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_2of5_" href="https://github.com/issues" data-discover="true"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-issue-opened" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" data-component="Tooltip" aria-hidden="true" id="_R_2of5_" popover="auto">All issues</span><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_38f5_" href="https://github.com/pulls" data-discover="true"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-git-pull-request" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" data-component="Tooltip" aria-hidden="true" id="_R_38f5_" popover="auto">All pull requests</span><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_3of5_" href="https://github.com/repos" data-discover="true"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-repo" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" data-component="Tooltip" aria-hidden="true" id="_R_3of5_" popover="auto">All repositories</span><div class="d-none"></div></div></div><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_2n5_" href="https://github.com/notifications" data-discover="true"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-inbox" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M2.8 2.06A1.75 1.75 0 0 1 4.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395c.04.093.06.194.06.295v4.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25v-4.5c0-.101.02-.202.06-.295Zm1.61.44a.25.25 0 0 0-.23.152L1.887 8H4.75a.75.75 0 0 1 .6.3L6.625 10h2.75l1.275-1.7a.75.75 0 0 1 .6-.3h2.863L11.82 2.652a.25.25 0 0 0-.23-.152Zm10.09 7h-2.875l-1.275 1.7a.75.75 0 0 1-.6.3h-3.5a.75.75 0 0 1-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Z"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" data-component="Tooltip" aria-hidden="true" popover="auto"><span id="_R_2n5_">You have no unread notifications<span class="prc-src-InternalVisuallyHidden-2YaI6">(<!-- -->g then n<!-- -->)</span></span><span class="prc-TooltipV2-KeybindingHintContainer-Ymj-3 prc-TooltipV2-HasTextBefore-fdOXj" aria-hidden="true" data-component="Tooltip.KeybindingHintContainer"><kbd class="prc-KeybindingHint-KeybindingHint-qpYIs prc-Text-Text-9mHv3" data-component="KeybindingHint" data-testid="keybinding-hint"><span class="prc-components-Chord-DdhWN prc-components-ChordOnEmphasis-O-4BS prc-components-ChordSmall-c-P-x prc-Text-Text-9mHv3" data-component="Text" data-kbd-chord="true"> <span class="prc-src-InternalVisuallyHidden-2YaI6">g</span><span aria-hidden="true">G</span></span><span class="prc-src-InternalVisuallyHidden-2YaI6">then</span> <span class="prc-components-Chord-DdhWN prc-components-ChordOnEmphasis-O-4BS prc-components-ChordSmall-c-P-x prc-Text-Text-9mHv3" data-component="Text" data-kbd-chord="true"> <span class="prc-src-InternalVisuallyHidden-2YaI6">n</span><span aria-hidden="true">N</span></span></kbd></span></span><div class="d-none"></div><div class="GlobalNavUserMenu-module__container__NaVIt"><button data-component="IconButton" type="button" aria-haspopup="menu" data-login="brajeshpanigrahi7-byte" class="prc-Button-ButtonBase-9n-Xk GlobalNavUserMenu-module__anchor__Dcej6 prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_av5_"><img data-component="Avatar" class="prc-Avatar-Avatar-0xaUi" alt="Brajesh Panigrahi" width="32" height="32" style="--avatarSize-regular:32px" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/244821370" data-testid="github-avatar"></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" data-component="Tooltip" aria-hidden="true" id="_R_av5_" popover="auto">Open user navigation menu</span></div></div></div><h2 class="prc-src-InternalVisuallyHidden-2YaI6">Repository navigation</h2><nav class="prc-components-UnderlineWrapper-eT-Yj prc-UnderlineNav-UnderlineWrapper-GWONT LocalNavigation-module__LocalNavigation__b0Xc0" aria-label="Repository" data-variant="inset" data-overflow-mode="wrap" data-hide-icons-breakpoint="medium"><ul class="prc-UnderlineNav-ItemsList-oj8gN prc-components-UnderlineItemList-xKlKC" role="list"><li role="presentation" aria-hidden="true" class="prc-UnderlineNav-WrapSpacer--aLgz"></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a data-tab-item="code" data-react-nav="code-view" data-react-nav-anchor="code-view-repo-link" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" href="https://github.com/rudythetechy/revive" data-discover="true"><span data-component="icon"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-code" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path></svg></span><span data-component="text" data-content="Code">Code</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a data-tab-item="issues" data-react-nav="repo" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" href="https://github.com/rudythetechy/revive/issues" data-discover="true"><span data-component="icon"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-issue-opened" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"></path></svg></span><span data-component="text" data-content="Issues">Issues</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a data-tab-item="pull-requests" data-react-nav="repo" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" href="https://github.com/rudythetechy/revive/pulls" data-discover="true" aria-current="page"><span data-component="icon"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-git-pull-request" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"></path></svg></span><span data-component="text" data-content="Pull requests">Pull requests</span><span data-component="counter"><span aria-hidden="true" data-variant="secondary" data-component="CounterLabel" class="prc-CounterLabel-CounterLabel-X-kRU">1</span><span class="prc-VisuallyHidden-VisuallyHidden-Q0qSB">&nbsp;(<!-- -->1<!-- -->)</span></span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a data-tab-item="agents" data-react-nav="repo" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" href="https://github.com/rudythetechy/revive/agents?author=brajeshpanigrahi7-byte" data-discover="true"><span data-component="icon"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-agent" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M14.5 8.9v-.052A2.956 2.956 0 0 0 11.542 5.9a.815.815 0 0 1-.751-.501l-.145-.348A3.496 3.496 0 0 0 7.421 2.9h-.206a3.754 3.754 0 0 0-3.736 4.118l.011.121a.822.822 0 0 1-.619.879A1.81 1.81 0 0 0 1.5 9.773v.14c0 1.097.89 1.987 1.987 1.987H4.5a.75.75 0 0 1 0 1.5H3.487A3.487 3.487 0 0 1 0 9.913v-.14C0 8.449.785 7.274 1.963 6.75A5.253 5.253 0 0 1 7.215 1.4h.206a4.992 4.992 0 0 1 4.586 3.024A4.455 4.455 0 0 1 16 8.848V8.9a.75.75 0 0 1-1.5 0Z"></path><path d="m8.38 7.67 2.25 2.25a.749.749 0 0 1 0 1.061L8.38 13.23a.749.749 0 1 1-1.06-1.06l1.719-1.72L7.32 8.731A.75.75 0 0 1 8.38 7.67ZM15 13.45h-3a.75.75 0 0 1 0-1.5h3a.75.75 0 0 1 0 1.5Z"></path></svg></span><span data-component="text" data-content="Agents">Agents</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a data-tab-item="actions" data-react-nav="actions-workflows" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" href="https://github.com/rudythetechy/revive/actions" data-discover="true"><span data-component="icon"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-play" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm4.879-2.773 4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215Z"></path></svg></span><span data-component="text" data-content="Actions">Actions</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a data-tab-item="projects" data-react-nav="repo" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" href="https://github.com/rudythetechy/revive/projects" data-discover="true"><span data-component="icon"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-table" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"></path></svg></span><span data-component="text" data-content="Projects">Projects</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a data-tab-item="wiki" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" href="https://github.com/rudythetechy/revive/wiki" data-discover="true"><span data-component="icon"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-book" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"></path></svg></span><span data-component="text" data-content="Wiki">Wiki</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a data-tab-item="security-and-quality" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" href="https://github.com/rudythetechy/revive/security" data-discover="true"><span data-component="icon"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-shield" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M7.467.133a1.748 1.748 0 0 1 1.066 0l5.25 1.68A1.75 1.75 0 0 1 15 3.48V7c0 1.566-.32 3.182-1.303 4.682-.983 1.498-2.585 2.813-5.032 3.855a1.697 1.697 0 0 1-1.33 0c-2.447-1.042-4.049-2.357-5.032-3.855C1.32 10.182 1 8.566 1 7V3.48a1.75 1.75 0 0 1 1.217-1.667Zm.61 1.429a.25.25 0 0 0-.153 0l-5.25 1.68a.25.25 0 0 0-.174.238V7c0 1.358.275 2.666 1.057 3.86.784 1.194 2.121 2.34 4.366 3.297a.196.196 0 0 0 .154 0c2.245-.956 3.582-2.104 4.366-3.298C13.225 9.666 13.5 8.36 13.5 7V3.48a.251.251 0 0 0-.174-.237l-5.25-1.68ZM8.75 4.75v3a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 1.5 0ZM9 10.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span><span data-component="text" data-content="Security and quality">Security and quality</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a data-tab-item="insights" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" href="https://github.com/rudythetechy/revive/pulse" data-discover="true"><span data-component="icon"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-graph" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M1.5 1.75V13.5h13.75a.75.75 0 0 1 0 1.5H.75a.75.75 0 0 1-.75-.75V1.75a.75.75 0 0 1 1.5 0Zm14.28 2.53-5.25 5.25a.75.75 0 0 1-1.06 0L7 7.06 4.28 9.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.25-3.25a.75.75 0 0 1 1.06 0L10 7.94l4.72-4.72a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path></svg></span><span data-component="text" data-content="Insights">Insights</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a data-tab-item="settings" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" href="https://github.com/rudythetechy/revive/settings" data-discover="true"><span data-component="icon"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-gear" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M8 0a8.2 8.2 0 0 1 .701.031C9.444.095 9.99.645 10.16 1.29l.288 1.107c.018.066.079.158.212.224.231.114.454.243.668.386.123.082.233.09.299.071l1.103-.303c.644-.176 1.392.021 1.82.63.27.385.506.792.704 1.218.315.675.111 1.422-.364 1.891l-.814.806c-.049.048-.098.147-.088.294.016.257.016.515 0 .772-.01.147.038.246.088.294l.814.806c.475.469.679 1.216.364 1.891a7.977 7.977 0 0 1-.704 1.217c-.428.61-1.176.807-1.82.63l-1.102-.302c-.067-.019-.177-.011-.3.071a5.909 5.909 0 0 1-.668.386c-.133.066-.194.158-.211.224l-.29 1.106c-.168.646-.715 1.196-1.458 1.26a8.006 8.006 0 0 1-1.402 0c-.743-.064-1.289-.614-1.458-1.26l-.289-1.106c-.018-.066-.079-.158-.212-.224a5.738 5.738 0 0 1-.668-.386c-.123-.082-.233-.09-.299-.071l-1.103.303c-.644.176-1.392-.021-1.82-.63a8.12 8.12 0 0 1-.704-1.218c-.315-.675-.111-1.422.363-1.891l.815-.806c.05-.048.098-.147.088-.294a6.214 6.214 0 0 1 0-.772c.01-.147-.038-.246-.088-.294l-.815-.806C.635 6.045.431 5.298.746 4.623a7.92 7.92 0 0 1 .704-1.217c.428-.61 1.176-.807 1.82-.63l1.102.302c.067.019.177.011.3-.071.214-.143.437-.272.668-.386.133-.066.194-.158.211-.224l.29-1.106C6.009.645 6.556.095 7.299.03 7.53.01 7.764 0 8 0Zm-.571 1.525c-.036.003-.108.036-.137.146l-.289 1.105c-.147.561-.549.967-.998 1.189-.173.086-.34.183-.5.29-.417.278-.97.423-1.529.27l-1.103-.303c-.109-.03-.175.016-.195.045-.22.312-.412.644-.573.99-.014.031-.021.11.059.19l.815.806c.411.406.562.957.53 1.456a4.709 4.709 0 0 0 0 .582c.032.499-.119 1.05-.53 1.456l-.815.806c-.081.08-.073.159-.059.19.162.346.353.677.573.989.02.03.085.076.195.046l1.102-.303c.56-.153 1.113-.008 1.53.27.161.107.328.204.501.29.447.222.85.629.997 1.189l.289 1.105c.029.109.101.143.137.146a6.6 6.6 0 0 0 1.142 0c.036-.003.108-.036.137-.146l.289-1.105c.147-.561.549-.967.998-1.189.173-.086.34-.183.5-.29.417-.278.97-.423 1.529-.27l1.103.303c.109.029.175-.016.195-.045.22-.313.411-.644.573-.99.014-.031.021-.11-.059-.19l-.815-.806c-.411-.406-.562-.957-.53-1.456a4.709 4.709 0 0 0 0-.582c-.032-.499.119-1.05.53-1.456l.815-.806c.081-.08.073-.159.059-.19a6.464 6.464 0 0 0-.573-.989c-.02-.03-.085-.076-.195-.046l-1.102.303c-.56.153-1.113.008-1.53-.27a4.44 4.44 0 0 0-.501-.29c-.447-.222-.85-.629-.997-1.189l-.289-1.105c-.029-.11-.101-.143-.137-.146a6.6 6.6 0 0 0-1.142 0ZM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM9.5 8a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 8Z"></path></svg></span><span data-component="text" data-content="Settings">Settings</span></a></li></ul><div class="prc-UnderlineNav-MoreButtonContainer-Dnrq6"><div class="prc-UnderlineNav-MoreButtonDivider-dN0a-"></div><button data-component="overflow-menu-button" type="button" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-9n-Xk prc-UnderlineNav-MoreButton-Y8soj" data-loading="false" data-size="medium" data-variant="invisible" id="_R_1afl_" style="anchor-name: --anchored-overlay-anchor-_R_7aflH1_;"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="text" class="prc-Button-Label-FWkx3"><span>More<span class="prc-src-InternalVisuallyHidden-2YaI6"> items</span></span></span></span><span data-component="trailingAction" class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"><svg data-component="Octicon" aria-hidden="true" focusable="false" class="octicon octicon-triangle-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path></svg></span></button></div></nav><div class="d-none"></div></header></div>
+</react-partial>
+
+
+
+
+      <div hidden="hidden" data-view-component="true" class="js-stale-session-flash stale-session-flash flash flash-warn flash-full">
+  
+        <svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+        <span class="js-stale-session-flash-signed-in" hidden="">You signed in with another tab or window. <a class="Link--inTextBlock" href="https://github.com/rudythetechy/revive/pull/8/conflicts">Reload</a> to refresh your session.</span>
+        <span class="js-stale-session-flash-signed-out" hidden="">You signed out in another tab or window. <a class="Link--inTextBlock" href="https://github.com/rudythetechy/revive/pull/8/conflicts">Reload</a> to refresh your session.</span>
+        <span class="js-stale-session-flash-switched" hidden="">You switched accounts on another tab or window. <a class="Link--inTextBlock" href="https://github.com/rudythetechy/revive/pull/8/conflicts">Reload</a> to refresh your session.</span>
+
+    <button id="icon-button-2675ea72-95c0-4f03-a527-d664018dddb7" aria-labelledby="tooltip-643ecfd6-e6d2-4f88-9195-f0b1d59fa1cf" type="button" data-view-component="true" class="Button Button--iconOnly Button--invisible Button--medium flash-close js-flash-close">  <svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x Button-visual">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+</button><tool-tip id="tooltip-643ecfd6-e6d2-4f88-9195-f0b1d59fa1cf" for="icon-button-2675ea72-95c0-4f03-a527-d664018dddb7" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute" aria-hidden="true" role="tooltip"><template shadowrootmode="open"><style>
+      :host {
+        --tooltip-top: var(--tool-tip-position-top, 0);
+        --tooltip-left: var(--tool-tip-position-left, 0);
+        padding: var(--overlay-paddingBlock-condensed) var(--overlay-padding-condensed) !important;
+        font: var(--text-body-shorthand-small);
+        color: var(--tooltip-fgColor, var(--fgColor-onEmphasis)) !important;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: none;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: break-word;
+        white-space: pre;
+        background: var(--tooltip-bgColor, var(--bgColor-emphasis)) !important;
+        border-radius: var(--borderRadius-medium);
+        border: 0 !important;
+        opacity: 0;
+        max-width: min(var(--overlay-width-small), 100vw);
+        word-wrap: break-word;
+        white-space: normal;
+        width: max-content !important;
+        inset: var(--tooltip-top) auto auto var(--tooltip-left) !important;
+        overflow: visible !important;
+        text-wrap: balance;
+      }
+
+      :host(:is(.tooltip-n, .tooltip-nw, .tooltip-ne)) {
+        --tooltip-top: calc(var(--tool-tip-position-top, 0) - var(--overlay-offset, 0.25rem));
+        --tooltip-left: var(--tool-tip-position-left);
+      }
+
+      :host(:is(.tooltip-s, .tooltip-sw, .tooltip-se)) {
+        --tooltip-top: calc(var(--tool-tip-position-top, 0) + var(--overlay-offset, 0.25rem));
+        --tooltip-left: var(--tool-tip-position-left);
+      }
+
+      :host(.tooltip-w) {
+        --tooltip-top: var(--tool-tip-position-top);
+        --tooltip-left: calc(var(--tool-tip-position-left, 0) - var(--overlay-offset, 0.25rem));
+      }
+
+      :host(.tooltip-e) {
+        --tooltip-top: var(--tool-tip-position-top);
+        --tooltip-left: calc(var(--tool-tip-position-left, 0) + var(--overlay-offset, 0.25rem));
+      }
+
+      :host:after{
+        position: absolute;
+        display: block;
+        right: 0;
+        left: 0;
+        height: var(--overlay-offset, 0.25rem);
+        content: "";
+      }
+
+      :host(.tooltip-s):after,
+      :host(.tooltip-se):after,
+      :host(.tooltip-sw):after {
+        bottom: 100%
+      }
+
+      :host(.tooltip-n):after,
+      :host(.tooltip-ne):after,
+      :host(.tooltip-nw):after {
+        top: 100%;
+      }
+
+      @keyframes tooltip-appear {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      :host(:popover-open),
+      :host(:popover-open):before {
+        animation-name: tooltip-appear;
+        animation-duration: .1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+      }
+
+      :host(.\:popover-open) {
+        animation-name: tooltip-appear;
+        animation-duration: .1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+      }
+
+      @media (forced-colors: active) {
+        :host {
+          outline: solid 1px transparent;
+        }
+
+        :host:before {
+          display: none;
+        }
+      }
+    </style><slot></slot></template>Dismiss alert</tool-tip>
+
+
+  
+</div>
+        
+          
+          <include-fragment src="/in-product-messaging/code-scanning-ai-findings-preview-banner?page_path=%2Frudythetechy%2Frevive" data-nonce="v2:5f24a650-7ead-7655-12fa-0d816bf8107d" data-view-component="true" class="is-error"><template shadowrootmode="open"><style>:host {display: block;}</style><slot></slot></template>
+  
+  <div data-show-on-forbidden-error="" hidden="">
+    <div class="Box">
+  <div class="blankslate-container">
+    <div data-view-component="true" class="blankslate blankslate-spacious color-bg-default rounded-2">
+      
+
+      <h3 data-view-component="true" class="blankslate-heading">        Uh oh!
+</h3>
+      <p data-view-component="true" class="blankslate-description">        </p><p class="color-fg-muted my-2 mb-2 ws-normal">There was an error while loading. <a class="Link--inTextBlock" data-turbo="false" href="https://github.com/rudythetechy/revive/pull/8/conflicts" aria-label="Please reload this page">Please reload this page</a>.</p>
+<p></p>
+
+</div>  </div>
+</div>  </div>
+</include-fragment>
+
+          
+    </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+
+
+
+
+
+
+
+    <div id="js-flash-container" class="flash-container" data-turbo-replace="">
+
+
+
+
+
+
+  <template class="js-flash-template"></template>
+</div>
+
+
+    
+  <notification-shelf-watcher data-base-url="https://github.com/notifications/beta/shelf" data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6MjQ0ODIxMzcwIiwidCI6MTc5MTIyMjcwMH0=--026b7310df1b9d02dbb85b5361d4089196039c8920cb71f7f9a35775b8abec93" data-view-component="true" class="js-socket-channel" data-refresh-delay="500" data-catalyst="" data-throttle-delay="5000"></notification-shelf-watcher>
+  <div hidden="" data-initial="" data-target="notification-shelf-watcher.placeholder"></div>
+
+
+
+
+
+
+  <div class="application-main " data-commit-hovercards-enabled="" data-discussion-hovercards-enabled="" data-issue-and-pr-hovercards-enabled="" data-project-hovercards-enabled="">
+        <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <main id="js-repo-pjax-container">
+      
+      
+
+
+
+
+
+
+
+
+    
+  <div id="repository-container-header" data-turbo-replace="" hidden=""></div>
+
+
+
+<turbo-frame id="repo-content-turbo-frame" target="_top" data-turbo-action="advance" class="" src="https://github.com/rudythetechy/revive/pull/8/conflicts" complete="">
+    
+    
+<div class="clearfix new-discussion-timeline tmp-mt-4 p-0">
+  <div class="tmp-px-4 mx-2">
+    <a href="https://github.com/rudythetechy/revive/pull/8" class="Link--primary no-underline" data-pjax="">
+      <h1 class="d-inline text-normal">
+        District Officer +State Admin dashboard first type <span class="color-fg-muted">#8</span>
+      </h1>
+    </a>
+
+    <div class="d-flex flex-justify-between flex-items-start tmp-mb-3">
+      <div class="flex-auto">
+        <span class="color-fg-muted">
+          <span class="text-bold">Resolving conflicts</span> between <span title="rudythetechy/revive:feature/brajesh" class="commit-ref css-truncate user-select-contain expandable head-ref"><span class="css-truncate-target">feature/brajesh</span></span><span></span> and <span title="rudythetechy/revive:main" class="commit-ref css-truncate user-select-contain expandable base-ref"><span class="css-truncate-target">main</span></span><span></span> and committing changes <span class="mx-1"><svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-arrow-right">
+    <path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"></path>
+</svg></span> <span title="rudythetechy/revive:feature/brajesh" class="commit-ref css-truncate user-select-contain expandable head-ref"><span class="css-truncate-target">feature/brajesh</span></span><span></span>
+        </span>
+      </div>
+      <div>
+        <div class="stale-files-tab d-none js-resolve-conflicts-failed">
+          This page is out of date. <a class="stale-files-tab-link Link--inTextBlock" href="https://github.com/rudythetechy/revive/pull/8/conflicts">Start over</a>
+        </div>
+
+        <div class="stale-files-tab d-none js-resolve-conflicts-repository-rule-violations">
+          Repository rule violations found. <a class="stale-files-tab-link Link--inTextBlock" href="https://github.com/rudythetechy/revive/rules?ref=refs%2Fheads%2Fmain">View rules</a> or <a class="stale-files-tab-link Link--inTextBlock" href="https://github.com/rudythetechy/revive/pull/8/conflicts">Start over</a>
+        </div>
+
+          <div class="d-none js-resolve-conflicts-complete wants-full-width-container">
+              
+<!-- '"` --><!-- </textarea></xmp> --><form class="js-resolve-conflicts-form d-flex flex-wrap flex-row-reverse" data-turbo="false" action="https://github.com/rudythetechy/revive/pull/8/conflicts/resolve" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="9HWrtd36PmlFS436KePYT5b9NdKLBuY_4Qb3pE_ZUFrcjKzH0RqmH_OB26I5J4IyT18fuRYM6nLdfq1-cFlYKg">
+    <input type="hidden" name="files[src%2Fapp%2Fgov%2Flayout.tsx]" class="js-file">
+    <input type="hidden" name="files[src%2Ffeatures%2Fauth%2Fdemo-accounts.ts]" class="js-file">
+  <input type="hidden" name="pr_head_sha" value="82ad68f4cd2b7e8be8e84898e7e3bf8b9664543a">
+  <input type="hidden" name="pr_base_sha" value="4f3fbb29bfa9bc6a46347ddc5e7eb020b4fa3f4c">
+
+    <button type="submit" class="btn btn-sm btn-primary flash-action js-resolve-conflicts-button" data-disable-with="Committing merge…">Commit merge</button>
+</form>
+          </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-3 float-left border-top">
+      <h3 class="tmp-py-3 tmp-px-4 color-fg-muted f6 color-bg-subtle border-bottom">
+        2 conflicting files
+      </h3>
+
+      <div class="conflicts-nav menu border-bottom rounded-0 color-bg-subtle overflow-scroll js-conflict-list">
+          <a href="https://github.com/rudythetechy/revive/pull/8/conflict?name=src%252Fapp%252Fgov%252Flayout.tsx&amp;ancestor_oid=644418e38aee2282976baa6d0d44d518e17d7f2b&amp;base_oid=23d6f2a20ec3d5cde8b3217e3e7853097f434c21&amp;head_oid=a6d24167861ac72160036a6b2e581e2c8358a6aa" class="menu-item conflict-nav-item border-bottom tmp-py-3 tmp-pl-4 tmp-pr-3 rounded-0 js-conflicted-file resolved" data-filename="src%2Fapp%2Fgov%2Flayout.tsx">
+
+            <div class="clearfix">
+              <div class="float-left mr-2">
+                <svg aria-hidden="true" data-component="Octicon" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-file-code color-fg-muted mt-1 tmp-mt-1">
+    <path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"></path><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"></path>
+</svg>
+              </div>
+              <div class="overflow-hidden">
+                <div class="discussion-item-icon color-bg-success-emphasis float-right mt-1">
+                  <svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check mr-0 tmp-mr-0 color-fg-on-emphasis">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+                </div>
+                <div class="color-fg-default css-truncate css-truncate-target">
+                  layout.tsx
+                </div>
+                <div class="color-fg-muted f6">
+                  src/app/gov/layout.tsx
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://github.com/rudythetechy/revive/pull/8/conflict?name=src%252Ffeatures%252Fauth%252Fdemo-accounts.ts&amp;ancestor_oid=b284a0a946f3c8af31155b928949387e7457823b&amp;base_oid=057b8ea9788ec48a9731e8ceac082a5d232bb6dc&amp;head_oid=3dfef1d55508cae58da1919ccef0c19b03941910" class="menu-item conflict-nav-item border-bottom tmp-py-3 tmp-pl-4 tmp-pr-3 rounded-0 js-conflicted-file selected" data-filename="src%2Ffeatures%2Fauth%2Fdemo-accounts.ts">
+
+            <div class="clearfix">
+              <div class="float-left mr-2">
+                <svg aria-hidden="true" data-component="Octicon" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-file-code color-fg-muted mt-1 tmp-mt-1">
+    <path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H4.75a.75.75 0 0 1 0-1.5H19a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4H5a.5.5 0 0 0-.5.5v6.25a.75.75 0 0 1-1.5 0Zm12-.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"></path><path d="M4.53 12.24a.75.75 0 0 1-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 1 1-1.022 1.1l-3.23-3a.75.75 0 0 1 0-1.1l3.23-3a.75.75 0 0 1 1.06.04Zm3.979 1.06a.75.75 0 1 1 1.02-1.1l3.231 3a.75.75 0 0 1 0 1.1l-3.23 3a.75.75 0 1 1-1.021-1.1l2.639-2.45-2.64-2.45Z"></path>
+</svg>
+              </div>
+              <div class="overflow-hidden">
+                <div class="discussion-item-icon color-bg-success-emphasis float-right mt-1">
+                  <svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check mr-0 tmp-mr-0 color-fg-on-emphasis">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+                </div>
+                <div class="color-fg-default css-truncate css-truncate-target">
+                  demo-accounts.ts
+                </div>
+                <div class="color-fg-muted f6">
+                  src/features/auth/demo-accounts.ts
+                </div>
+              </div>
+            </div>
+          </a>
+      </div>
+    </div>
+
+  <div class="col-9 float-right">
+    <div class="clearfix conflict-resolver js-conflict-resolver" data-hpc="">
+      <form class="resolve-file-form js-resolve-file-form">
+        <div class="form-group mt-0">
+          <input type="hidden" name="filename" value="files[src%2Ffeatures%2Fauth%2Fdemo-accounts.ts]">
+          <div class="file border rounded-0 js-code-editor mt-0" data-editor-loaded="">
+            <div class="file-header border-bottom color-bg-subtle tmp-px-4">
+              <span class="file-info js-filename">src/features/auth/demo-accounts.ts</span>
+
+              <div class="resolved-notice float-right mt-1 color-fg-muted">
+                <svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg> Resolved
+              </div>
+
+              <div class="file-actions mr-2">
+                  <button data-disabled="" data-disabled-label="Remove all conflict markers to resolve this file" type="submit" data-view-component="true" class="tooltipped-nw js-mark-resolved tmp-ml-3 btn-sm btn float-right disabled tooltipped" aria-label="Remove all conflict markers to resolve this file" aria-disabled="true">    Mark as resolved
+</button>
+
+                <details class="dropdown float-right tmp-mx-3 details-reset details-overlay js-dropdown-details">
+                    <summary aria-label="Editor setting" data-view-component="true" class="btn-link mt-1 tmp-mt-1">    <svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-gear Link--secondary">
+    <path d="M8 0a8.2 8.2 0 0 1 .701.031C9.444.095 9.99.645 10.16 1.29l.288 1.107c.018.066.079.158.212.224.231.114.454.243.668.386.123.082.233.09.299.071l1.103-.303c.644-.176 1.392.021 1.82.63.27.385.506.792.704 1.218.315.675.111 1.422-.364 1.891l-.814.806c-.049.048-.098.147-.088.294.016.257.016.515 0 .772-.01.147.038.246.088.294l.814.806c.475.469.679 1.216.364 1.891a7.977 7.977 0 0 1-.704 1.217c-.428.61-1.176.807-1.82.63l-1.102-.302c-.067-.019-.177-.011-.3.071a5.909 5.909 0 0 1-.668.386c-.133.066-.194.158-.211.224l-.29 1.106c-.168.646-.715 1.196-1.458 1.26a8.006 8.006 0 0 1-1.402 0c-.743-.064-1.289-.614-1.458-1.26l-.289-1.106c-.018-.066-.079-.158-.212-.224a5.738 5.738 0 0 1-.668-.386c-.123-.082-.233-.09-.299-.071l-1.103.303c-.644.176-1.392-.021-1.82-.63a8.12 8.12 0 0 1-.704-1.218c-.315-.675-.111-1.422.363-1.891l.815-.806c.05-.048.098-.147.088-.294a6.214 6.214 0 0 1 0-.772c.01-.147-.038-.246-.088-.294l-.815-.806C.635 6.045.431 5.298.746 4.623a7.92 7.92 0 0 1 .704-1.217c.428-.61 1.176-.807 1.82-.63l1.102.302c.067.019.177.011.3-.071.214-.143.437-.272.668-.386.133-.066.194-.158.211-.224l.29-1.106C6.009.645 6.556.095 7.299.03 7.53.01 7.764 0 8 0Zm-.571 1.525c-.036.003-.108.036-.137.146l-.289 1.105c-.147.561-.549.967-.998 1.189-.173.086-.34.183-.5.29-.417.278-.97.423-1.529.27l-1.103-.303c-.109-.03-.175.016-.195.045-.22.312-.412.644-.573.99-.014.031-.021.11.059.19l.815.806c.411.406.562.957.53 1.456a4.709 4.709 0 0 0 0 .582c.032.499-.119 1.05-.53 1.456l-.815.806c-.081.08-.073.159-.059.19.162.346.353.677.573.989.02.03.085.076.195.046l1.102-.303c.56-.153 1.113-.008 1.53.27.161.107.328.204.501.29.447.222.85.629.997 1.189l.289 1.105c.029.109.101.143.137.146a6.6 6.6 0 0 0 1.142 0c.036-.003.108-.036.137-.146l.289-1.105c.147-.561.549-.967.998-1.189.173-.086.34-.183.5-.29.417-.278.97-.423 1.529-.27l1.103.303c.109.029.175-.016.195-.045.22-.313.411-.644.573-.99.014-.031.021-.11-.059-.19l-.815-.806c-.411-.406-.562-.957-.53-1.456a4.709 4.709 0 0 0 0-.582c-.032-.499.119-1.05.53-1.456l.815-.806c.081-.08.073-.159.059-.19a6.464 6.464 0 0 0-.573-.989c-.02-.03-.085-.076-.195-.046l-1.102.303c-.56.153-1.113.008-1.53-.27a4.44 4.44 0 0 0-.501-.29c-.447-.222-.85-.629-.997-1.189l-.289-1.105c-.029-.11-.101-.143-.137-.146a6.6 6.6 0 0 0-1.142 0ZM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM9.5 8a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 8Z"></path>
+</svg>
+                    <div class="dropdown-caret Link--secondary"></div>
+</summary>
+                  <div class="dropdown-menu dropdown-menu-sw code-formatting-menu mt-1">
+                    <div class="d-table table-fixed width-full tmp-px-3 py-2 border-bottom">
+                      <label for="formatting-code-indent-mode" class="text-normal d-table-cell v-align-middle col-6">Indent mode</label>
+                      <div class="d-table-cell">
+                        <select class="form-select select-sm js-code-indent-mode" id="formatting-code-indent-mode">
+                          <option value="space">Spaces</option>
+<option value="tab">Tabs</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="d-table table-fixed width-full tmp-px-3 py-2 border-bottom">
+                      <label for="formatting-code-indent-width" class="text-normal d-table-cell v-align-middle col-6">Indent size</label>
+                      <div class="d-table-cell">
+                        <select class="form-select select-sm js-code-indent-width" id="formatting-code-indent-width">
+                          <option selected="selected" value="2">2</option>
+<option value="4">4</option>
+<option value="8">8</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="d-table table-fixed width-full tmp-px-3 py-2">
+                      <label for="formatting-code-wrap-mode" class="text-normal d-table-cell v-align-middle col-6">Line wrap mode</label>
+                      <div class="d-table-cell">
+                        <select class="form-select select-sm js-code-wrap-mode" id="formatting-code-wrap-mode">
+                          <option selected="selected" value="off">No wrap</option>
+<option value="on">Soft wrap</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+                <div class="mt-1 f6 tmp-mr-3 float-right">
+                  <strong class="color-fg-danger">
+                    <span class="js-conflict-count">0</span>
+                    <span class="js-conflict-label" data-singular-string="conflict" data-plural-string="conflicts">conflicts</span>
+                  </strong>
+                  <button id="conflict-keyboard-hint-button" data-show-dialog-id="conflict-resolution-help-dialog" type="button" data-view-component="true" class="js-conflict-keyboard-hint-button tmp-ml-3 Button--link Button--medium Button color-fg-muted" aria-labelledby="tooltip-a81aab5b-cfcf-4ae6-a319-b5c57d086816">  <span class="Button-content">
+    <span class="Button-label"><svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-info Link--muted">
+    <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
+</svg></span>
+  </span>
+</button>
+                  <tool-tip id="tooltip-a81aab5b-cfcf-4ae6-a319-b5c57d086816" for="conflict-keyboard-hint-button" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="position-absolute sr-only" aria-hidden="true" role="tooltip" style="--tool-tip-position-top: 244.421875px; --tool-tip-position-left: 928.234375px;"><template shadowrootmode="open"><style>
+      :host {
+        --tooltip-top: var(--tool-tip-position-top, 0);
+        --tooltip-left: var(--tool-tip-position-left, 0);
+        padding: var(--overlay-paddingBlock-condensed) var(--overlay-padding-condensed) !important;
+        font: var(--text-body-shorthand-small);
+        color: var(--tooltip-fgColor, var(--fgColor-onEmphasis)) !important;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: none;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: break-word;
+        white-space: pre;
+        background: var(--tooltip-bgColor, var(--bgColor-emphasis)) !important;
+        border-radius: var(--borderRadius-medium);
+        border: 0 !important;
+        opacity: 0;
+        max-width: min(var(--overlay-width-small), 100vw);
+        word-wrap: break-word;
+        white-space: normal;
+        width: max-content !important;
+        inset: var(--tooltip-top) auto auto var(--tooltip-left) !important;
+        overflow: visible !important;
+        text-wrap: balance;
+      }
+
+      :host(:is(.tooltip-n, .tooltip-nw, .tooltip-ne)) {
+        --tooltip-top: calc(var(--tool-tip-position-top, 0) - var(--overlay-offset, 0.25rem));
+        --tooltip-left: var(--tool-tip-position-left);
+      }
+
+      :host(:is(.tooltip-s, .tooltip-sw, .tooltip-se)) {
+        --tooltip-top: calc(var(--tool-tip-position-top, 0) + var(--overlay-offset, 0.25rem));
+        --tooltip-left: var(--tool-tip-position-left);
+      }
+
+      :host(.tooltip-w) {
+        --tooltip-top: var(--tool-tip-position-top);
+        --tooltip-left: calc(var(--tool-tip-position-left, 0) - var(--overlay-offset, 0.25rem));
+      }
+
+      :host(.tooltip-e) {
+        --tooltip-top: var(--tool-tip-position-top);
+        --tooltip-left: calc(var(--tool-tip-position-left, 0) + var(--overlay-offset, 0.25rem));
+      }
+
+      :host:after{
+        position: absolute;
+        display: block;
+        right: 0;
+        left: 0;
+        height: var(--overlay-offset, 0.25rem);
+        content: "";
+      }
+
+      :host(.tooltip-s):after,
+      :host(.tooltip-se):after,
+      :host(.tooltip-sw):after {
+        bottom: 100%
+      }
+
+      :host(.tooltip-n):after,
+      :host(.tooltip-ne):after,
+      :host(.tooltip-nw):after {
+        top: 100%;
+      }
+
+      @keyframes tooltip-appear {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      :host(:popover-open),
+      :host(:popover-open):before {
+        animation-name: tooltip-appear;
+        animation-duration: .1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+      }
+
+      :host(.\:popover-open) {
+        animation-name: tooltip-appear;
+        animation-duration: .1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+      }
+
+      @media (forced-colors: active) {
+        :host {
+          outline: solid 1px transparent;
+        }
+
+        :host:before {
+          display: none;
+        }
+      }
+    </style><slot></slot></template>Keyboard hints</tool-tip>
+                  
+<dialog-helper>
+  <dialog id="conflict-resolution-help-dialog" aria-modal="true" aria-labelledby="conflict-resolution-help-dialog-title" aria-describedby="conflict-resolution-help-dialog-description" data-view-component="true" class="Overlay Overlay-whenNarrow Overlay--size-large Overlay--motion-scaleFade Overlay--disableScroll">
+    <div data-view-component="true" class="Overlay-header">
+  <div class="Overlay-headerContentWrap">
+    <div class="Overlay-titleWrap">
+      <h1 class="Overlay-title " id="conflict-resolution-help-dialog-title">
+        How to interact with code conflict editor via keyboard
+      </h1>
+        
+    </div>
+    <div class="Overlay-actionWrap">
+      <button data-close-dialog-id="conflict-resolution-help-dialog" aria-label="Close" type="button" data-view-component="true" class="close-button Overlay-closeButton"><svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg></button>
+    </div>
+  </div>
+  
+</div>
+      <scrollable-region data-labelled-by="conflict-resolution-help-dialog-title" data-catalyst="" style="overflow: auto;">
+        <div data-view-component="true" class="Overlay-body">                        <table class="conflict-resolution-hint-table">
+                          <thead class="sr-only">
+                            <tr><th>Action</th><th>Keyboard Shortcut</th></tr>
+                          </thead>
+                          <tbody>
+                            <tr class="conflict-resolution-hint-row">
+                              <td>Toggle between edit mode and tab focus mode</td>
+                              <td class="conflict-resolution-hint-hint"><kbd class="hx_kbd">Ctrl</kbd>+<kbd class="hx_kbd">Shift</kbd>+<kbd class="hx_kbd">m</kbd></td>
+                            </tr>
+                            <tr class="conflict-resolution-hint-row">
+                              <td>Navigation between elements with tab focus mode on</td>
+                              <td class="conflict-resolution-hint-hint"><kbd class="hx_kbd">Tab</kbd>/ <kbd class="hx_kbd">Shift</kbd>+<kbd class="hx_kbd">Tab</kbd></td>
+                            </tr>
+                            <tr class="conflict-resolution-hint-row">
+                              <td>Move to next conflict control after accepting suggestion</td>
+                              <td class="conflict-resolution-hint-hint"><kbd class="hx_kbd">Shift</kbd>+<kbd class="hx_kbd">Tab</kbd></td>
+                            </tr>
+                            <tr class="conflict-resolution-hint-row border-bottom-0">
+                              <td>Exit editor</td>
+                              <td class="conflict-resolution-hint-hint"><kbd class="hx_kbd">Esc</kbd> then <kbd class="hx_kbd">Tab</kbd></td>
+                            </tr>
+                          </tbody>
+                        </table>
+</div>
+      </scrollable-region>
+      <div data-view-component="true" class="Overlay-footer Overlay-footer--alignEnd">                        <button data-close-dialog-id="conflict-resolution-help-dialog" type="button" data-view-component="true" class="Button--secondary Button--medium Button">  <span class="Button-content">
+    <span class="Button-label">Close</span>
+  </span>
+</button>
+
+</div>
+</dialog></dialog-helper>
+                    <button aria-label="Previous conflict" type="button" data-view-component="true" class="Link--primary no-underline js-prev-conflict tmp-ml-3 btn-link">    Prev <svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-up v-align-middle color-fg-muted">
+    <path d="M3.22 10.53a.749.749 0 0 1 0-1.06l4.25-4.25a.749.749 0 0 1 1.06 0l4.25 4.25a.749.749 0 1 1-1.06 1.06L8 6.811 4.28 10.53a.749.749 0 0 1-1.06 0Z"></path>
+</svg>
+</button>                    <button aria-label="Next conflict" type="button" data-view-component="true" class="Link--primary no-underline js-next-conflict tmp-ml-3 btn-link">    Next <svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down v-align-middle color-fg-muted">
+    <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+</svg>
+</button>                </div>
+              </div>
+            </div>
+
+            <textarea class="form-control file-editor-textarea js-blob-contents js-code-textarea" rows="25" name="name" spellcheck="false" autofocus="" disabled="" data-merge-mode="true" style="display: none;"></textarea>
+
+            <div class="d-none focus-trap-banner">
+            Use <kbd>Control+Shift+m</kbd> to toggle the <kbd>tab</kbd> key moving focus.
+            </div>
+          <div class="CodeMirror cm-s-github-light"><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="bottom: 0px; display: block;"><div style="min-width: 1px; height: 1358px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="false"><div class="CodeMirror-sizer" style="margin-left: 67px; min-width: 561.203px; margin-bottom: -15px; border-right-width: 35px; min-height: 1358px; padding-right: 15px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/** "9000012341" becomes "90000 •••41", the same masking used across the portals. */</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""></div><div class="CodeMirror-code" role="presentation" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" tabindex="0" id="code-editor" aria-label="
+            Use Control+Shift+m to toggle the tab key moving focus.
+            " style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> { <span class="cm-def">CURRENT_TRAINEE</span> } <span class="cm-keyword">from</span> <span class="cm-string">"@/mocks/trainee-portal"</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-def">type</span> { <span class="cm-variable">Role</span> } <span class="cm-variable">from</span> <span class="cm-string">"@/types/domain"</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Prototype sign-in accounts. All values are fake: emails use the reserved .test</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// domain and the phone number starts with 90000 (rules.md, section 3).</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/** Where each role lands after signing in. */</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-keyword">const</span> <span class="cm-def">PORTAL_PATH_BY_ROLE</span>: <span class="cm-type">Record</span><span class="cm-operator">&lt;</span><span class="cm-type">Role</span>, <span class="cm-type">string</span><span class="cm-operator">&gt;</span> <span class="cm-operator">=</span> {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-property">TRAINEE</span>: <span class="cm-string">"/trainee"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-property">AGENT</span>: <span class="cm-string">"/agent"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-property">PROVIDER_STAFF</span>: <span class="cm-string">"/provider"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-property">EMPLOYER</span>: <span class="cm-string">"/employer"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-property">DISTRICT_OFFICER</span>: <span class="cm-string">"/gov"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-property">STATE_ADMIN</span>: <span class="cm-string">"/gov"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">};</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-keyword">const</span> <span class="cm-def">DEMO_STAFF_PASSWORD</span> <span class="cm-operator">=</span> <span class="cm-string">"Revive@2026"</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-keyword">interface</span> <span class="cm-def">DemoStaffAccount</span> {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-property">role</span>: <span class="cm-type">Exclude</span><span class="cm-operator">&lt;</span><span class="cm-type">Role</span>, <span class="cm-string">"TRAINEE"</span><span class="cm-operator">&gt;</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-property">email</span>: <span class="cm-type">string</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-property">displayName</span>: <span class="cm-type">string</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-comment">/** Scoped district for DISTRICT_OFFICER accounts; null for all others. */</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-property">districtCode</span>: <span class="cm-type">string</span> <span class="cm-operator">|</span> <span class="cm-atom">null</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">27</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">export</span> <span class="cm-keyword">const</span> <span class="cm-def">DEMO_STAFF_ACCOUNTS</span>: <span class="cm-type">readonly</span> <span class="cm-variable">DemoStaffAccount</span>[] <span class="cm-operator">=</span> [</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">28</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">29</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">   <span class="cm-property">role</span>: <span class="cm-string">"AGENT"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">30</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-property">email</span>: <span class="cm-string">"desk.agent@revive.test"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">31</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-property">displayName</span>: <span class="cm-string">"Desk agent (sample)"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">32</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-property">districtCode</span>: <span class="cm-atom">null</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">33</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  },</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">34</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">35</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-property">role</span>: <span class="cm-string">"PROVIDER_STAFF"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">36</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-property">email</span>: <span class="cm-string">"centre.sahyadri@revive.test"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">37</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-property">displayName</span>: <span class="cm-string">"Centre manager, Sahyadri Trades Institute (sample)"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">38</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-property">districtCode</span>: <span class="cm-atom">null</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" contenteditable="false" style="left: -67px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">39</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  },</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 35px; width: 1px; border-bottom: 0px solid transparent; top: 1358px;"></div><div class="CodeMirror-gutters" style="height: 1393px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 53px;"></div><div class="CodeMirror-gutter merge-gutter"></div></div></div></div></div>
+        </div>
+      </form>
+      <img alt="" class="conflict-loader mx-auto" src="./Resolve Conflicts · Pull Request #8 · rudythetechy_revive_files/octocat-spinner-128.gif" width="64" height="64">
+    </div>
+  </div>
+
+  <div class="d-none js-conflict-gutters">
+    <div class="js-start conflict-gutter-marker conflict-gutter-marker-start">&nbsp;</div>
+    <div class="js-middle conflict-gutter-marker conflict-gutter-marker-middle">&nbsp;</div>
+    <div class="js-end conflict-gutter-marker conflict-gutter-marker-end">&nbsp;</div>
+    <div class="js-line conflict-gutter-marker conflict-gutter-marker-line">&nbsp;</div>
+  </div>
+</div>
+
+  </turbo-frame>
+
+    </main>
+  </div>
+
+  </div>
+
+          <footer class="footer f6 color-fg-muted color-border-subtle tmp-pt-7 tmp-pb-6 p-responsive" role="contentinfo" style="">
+  <h2 class="sr-only">Footer</h2>
+
+  
+
+
+  <div class="d-flex flex-justify-center flex-items-center flex-column-reverse flex-lg-row flex-wrap flex-lg-nowrap">
+    <div class="d-flex flex-items-center flex-shrink-0 mx-2">
+      <a aria-label="GitHub Homepage" class="footer-octicon mr-2" href="https://github.com/">
+        <svg aria-hidden="true" data-component="Octicon" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-mark-github">
+    <path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"></path>
+</svg>
+</a>
+      <span>
+        © 2026 GitHub,&nbsp;Inc.
+      </span>
+    </div>
+
+    <nav aria-label="Footer">
+      <h3 class="sr-only" id="sr-footer-heading">Footer navigation</h3>
+
+      <ul class="list-style-none d-flex flex-justify-center flex-wrap mb-2 mb-lg-0" aria-labelledby="sr-footer-heading">
+
+
+          <li class="mx-2">
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to Terms&quot;,&quot;label&quot;:&quot;text:terms&quot;}" href="https://docs.github.com/site-policy/github-terms/github-terms-of-service" data-view-component="true" class="Link--secondary Link">Terms</a>
+          </li>
+
+          <li class="mx-2">
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to privacy&quot;,&quot;label&quot;:&quot;text:privacy&quot;}" href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" data-view-component="true" class="Link--secondary Link">Privacy</a>
+          </li>
+
+
+            <li class="mx-2">
+              <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to security&quot;,&quot;label&quot;:&quot;text:security&quot;}" href="https://github.com/security" data-view-component="true" class="Link--secondary Link">Security</a>
+            </li>
+
+            <li class="mx-2">
+              <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to status&quot;,&quot;label&quot;:&quot;text:status&quot;}" href="https://www.githubstatus.com/" data-view-component="true" class="Link--secondary Link">Status</a>
+            </li>
+
+          <li class="mx-2">
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to community&quot;,&quot;label&quot;:&quot;text:community&quot;}" href="https://github.community/" data-view-component="true" class="Link--secondary Link">Community</a>
+          </li>
+
+          <li class="mx-2">
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to docs&quot;,&quot;label&quot;:&quot;text:docs&quot;}" href="https://docs.github.com/" data-view-component="true" class="Link--secondary Link">Docs</a>
+          </li>
+
+          <li class="mx-2">
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to contact&quot;,&quot;label&quot;:&quot;text:contact&quot;}" href="https://support.github.com/?tags=dotcom-footer" data-view-component="true" class="Link--secondary Link">Contact</a>
+          </li>
+
+          
+<li class="mx-2">
+  <cookie-consent-link data-catalyst="">
+    <button type="button" class="Link--secondary underline-on-hover border-0 p-0 color-bg-transparent" data-action="click:cookie-consent-link#showConsentManagement" data-analytics-event="{&quot;location&quot;:&quot;footer&quot;,&quot;action&quot;:&quot;cookies&quot;,&quot;context&quot;:&quot;subfooter&quot;,&quot;tag&quot;:&quot;link&quot;,&quot;label&quot;:&quot;cookies_link_subfooter_footer&quot;}">
+      Manage cookies
+    </button>
+  </cookie-consent-link>
+</li>
+
+  <li class="mx-2">
+    <cookie-consent-link data-catalyst="">
+      <button type="button" class="Link--secondary underline-on-hover border-0 p-0 color-bg-transparent text-left" data-action="click:cookie-consent-link#showConsentManagement" data-analytics-event="{&quot;location&quot;:&quot;footer&quot;,&quot;action&quot;:&quot;dont_share_info&quot;,&quot;context&quot;:&quot;subfooter&quot;,&quot;tag&quot;:&quot;link&quot;,&quot;label&quot;:&quot;dont_share_info_link_subfooter_footer&quot;}">
+        Do not share my personal information
+      </button>
+    </cookie-consent-link>
+  </li>
+
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+
+    <ghcc-consent id="ghcc" class="position-fixed bottom-0 left-0" style="z-index: 999999" data-locale="en" data-initial-cookie-consent-allowed="" data-cookie-consent-required="false" data-catalyst=""></ghcc-consent>
+
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error" hidden="">
+    <svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg aria-hidden="true" data-component="Octicon" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+    <template id="site-details-dialog"></template>
+
+    <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box color-shadow-large" style="width:360px;"></div>
+</div>
+
+    <template id="snippet-clipboard-copy-button"></template>
+<template id="snippet-clipboard-copy-button-unpositioned"></template>
+
+
+    <style>
+      .user-mention[href$="/brajeshpanigrahi7-byte"] {
+        color: var(--color-user-mention-fg);
+        background-color: var(--bgColor-attention-muted, var(--color-attention-subtle));
+        border-radius: 2px;
+        margin-left: -2px;
+        margin-right: -2px;
+      }
+      .user-mention[href$="/brajeshpanigrahi7-byte"]:before,
+      .user-mention[href$="/brajeshpanigrahi7-byte"]:after {
+        content: '';
+        display: inline-block;
+        width: 2px;
+      }
+    </style>
+
+
+    </div>
+    <div id="js-global-screen-reader-notice" class="sr-only mt-n1" aria-live="polite" aria-atomic="true"></div>
+    <div id="js-global-screen-reader-notice-assertive" class="sr-only mt-n1" aria-live="assertive" aria-atomic="true"></div>
+  
+
+
+<div class="sr-only mt-n1" id="screenReaderAnnouncementDiv" role="alert" data-testid="screenReaderAnnouncement" aria-live="assertive">src/app/gov/layout.tsx marked as resolved</div></body></html>

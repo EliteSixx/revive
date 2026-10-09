@@ -20,33 +20,40 @@ export interface DemoStaffAccount {
   role: Exclude<Role, "TRAINEE">;
   email: string;
   displayName: string;
+  /** Scoped district for DISTRICT_OFFICER accounts; null for all others. */
+  districtCode: string | null;
 }
 
 export const DEMO_STAFF_ACCOUNTS: readonly DemoStaffAccount[] = [
   {
     role: "AGENT",
     email: "desk.agent@revive.test",
-    displayName: "Desk agent",
+    displayName: "Desk agent (sample)",
+    districtCode: null,
   },
   {
     role: "PROVIDER_STAFF",
     email: "centre.sahyadri@revive.test",
-    displayName: "Centre manager, Sahyadri Trades Institute",
+    displayName: "Centre manager, Sahyadri Trades Institute (sample)",
+    districtCode: null,
   },
   {
     role: "EMPLOYER",
     email: "hr.precision@revive.test",
-    displayName: "HR desk, Precision Auto Parts",
+    displayName: "HR desk, Precision Auto Parts (sample)",
+    districtCode: null,
   },
   {
     role: "DISTRICT_OFFICER",
     email: "district.pune@revive.test",
-    displayName: "District officer, Pune",
+    displayName: "District officer, Pune (sample)",
+    districtCode: "pune",
   },
   {
     role: "STATE_ADMIN",
     email: "state.admin@revive.test",
-    displayName: "State admin",
+    displayName: "State admin (sample)",
+    districtCode: null,
   },
 ];
 
