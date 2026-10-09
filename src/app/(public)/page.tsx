@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Carousel } from "@/components/ui/carousel";
 
 export const metadata = {
   title: { absolute: "Revive: skilling outcomes for Maharashtra" },
@@ -98,21 +99,21 @@ export default function HomePage() {
           <h2 id="audiences-heading" className="text-h2">
             Who uses Revive
           </h2>
-          <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <Carousel label="Who uses Revive" className="mt-6">
             {AUDIENCES.map((audience) => {
               const Icon = audience.icon;
               return (
-                <li
+                <article
                   key={audience.title}
-                  className="rounded-md border border-border bg-surface p-5"
+                  className="h-full rounded-md border border-border bg-surface p-5"
                 >
                   <Icon className="size-6 text-primary" aria-hidden="true" />
                   <h3 className="mt-3 text-h3">{audience.title}</h3>
                   <p className="mt-2 text-fg-muted">{audience.description}</p>
-                </li>
+                </article>
               );
             })}
-          </ul>
+          </Carousel>
         </div>
       </section>
 

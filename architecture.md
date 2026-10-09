@@ -278,7 +278,7 @@ In Phase 1 there is no database, no auth and no server code:
 - Rates are still calculated only through `src/lib/metrics.ts`, so the formulas carry over unchanged when real data arrives.
 - Sign-in pages are static forms. The sign-in page lists every portal under "Prototype preview" so the team can open each one.
 - In the merged UI shell, buttons have no handlers and forms do not submit. Filters are visual only. Each member adds frontend behaviour for their own area using section 11.
-- `AppShell` and `TraineeShell` show the "Sample data" notice on every portal page. Remove it from the shells when real data is connected.
+- `AppShell` and `TraineeShell` show the sample-data label ("Figures shown use sample data") on every portal page. Remove it from the shells when real data is connected.
 - No `src/server` folder exists yet.
 
 ## 11. Frontend phase: simulating actions

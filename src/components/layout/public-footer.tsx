@@ -27,9 +27,7 @@ export function PublicFooter() {
           </ul>
         </nav>
         <p className="mt-6 max-w-3xl text-small text-fg-muted">
-          Revive is a prototype built for Smart India Hackathon 2026 (Problem
-          Statement 26135). It is not an official Government of Maharashtra
-          website.
+          Revive. Skilling outcomes and impact measurement.
         </p>
       </div>
     </footer>

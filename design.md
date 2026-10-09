@@ -122,7 +122,7 @@ Trainee screens use a minimum body size of 16px for readability on phones.
 
 ### Page layouts
 
-**Public pages:** header (logotype left, links right, "Sign in" button) → content → footer (links to Privacy, Terms, Accessibility, Contact; project disclaimer).
+**Public pages:** header (logotype left, links right, "Sign in" button) → content → footer (links to Privacy, Terms, Accessibility, Contact; one line: "Revive. Skilling outcomes and impact measurement.").
 
 **Staff portals (agent, provider, employer, gov):**
 
@@ -160,7 +160,8 @@ All shared components live in `src/components`. Feature folders must not create 
 | **FilterBar** | Programme, period, district, course, provider, demographic filters. Shows active filters as removable chips (radius 4px). "Clear all" link. |
 | **PageHeader** | Title (h1), one-sentence description, optional actions on the right, optional breadcrumbs above. |
 | **EmptyState** | Short title, one sentence explaining why it is empty and what to do, one action. No illustrations. |
-| **SampleDataNotice** | Small info bar at the top of any page using mock data: "Sample data. These figures are synthetic and for demonstration only." |
+| **SampleDataNotice** | Quiet muted line at the top of any page using mock data: "Figures shown use sample data." with a "Reset sample data" link. No box or colour fill. |
+| **Carousel** | `src/components/ui/carousel.tsx`. Native scroll snapping, so touch swipe works. One slide plus a peek of the next on phones, two on tablets, three on desktop. Previous and Next buttons, position dots, arrow keys. Never moves on its own. |
 | **ConsentCard** | Purpose title, plain-language explanation (2 sentences max), required/optional label, current state, toggle or button, last changed date. |
 | **Stepper** | For trainee follow-up: "Question 2 of 5" text plus a thin progress bar. |
 | **Dialog** | Used for confirmations only. Destructive confirm button uses `danger`. |
@@ -186,7 +187,7 @@ All shared components live in `src/components`. Feature folders must not create 
 
 - Logotype: the word "Revive" set in Noto Sans semibold in `--color-fg`, with a small square mark in `--color-primary` to its left. No tagline.
 - Favicon: the square mark as `src/app/icon.svg`, plus `src/app/favicon.ico` (32px) and `src/app/apple-icon.png` (180px). Next.js adds the `<link>` tags from these file names.
-- Footer disclaimer on every public page: "Revive is a prototype built for Smart India Hackathon 2026 (Problem Statement 26135). It is not an official Government of Maharashtra website."
+- Footer line on every public page: "Revive. Skilling outcomes and impact measurement." The site never claims to be an official government service.
 
 ## 10. Page inventory (Phase 1 UI shell)
 
